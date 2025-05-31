@@ -62,21 +62,20 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4rem 2rem;
-  min-height: 40vh;
-  background-color: transparent; /* keep background clean */
+  padding: 8rem 2rem; /* Adjusted padding for top/bottom and left/right */
+  background-color: transparent;
   text-align: center;
+  min-height: 50vh; /* Ensures the section takes up at least half the viewport height */
 }
 
 #hero h1 {
-  color: #E27591 !important; /* force the pink */
+  color: #E27591 !important; /* Forces the dark pink color */
   font-family: 'Genty', sans-serif;
   font-weight: 900;
   font-size: 2.2rem;
   margin: 0;
   max-width: 800px;
 }
-
 /* Design Trifecta */
 #design-trifecta h2 {
   font-family: 'Merriweather', serif;
@@ -89,17 +88,17 @@ main {
 .card-container {
   display: flex;
   gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  justify-content: center;
   margin-top: 2rem;
 }
 
 .card {
-  flex: 1 1 300px;
+  flex: 1 1 300px; /* Allows cards to grow and shrink, with a base width of 300px */
   background-color: #fff;
   padding: 1.5rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   max-width: 350px;
 }
 
