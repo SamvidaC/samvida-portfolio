@@ -86,20 +86,19 @@ main {
   line-height: 1.2;
   text-align: center;
   color: #F49BB2; /* light pink fill */
-  letter-spacing: 1.5px;
-  word-spacing: 1.5px;
-  padding: 40px 20px;
+  letter-spacing: 1.2px;
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-  /* Multiple shadows to simulate stroke */
   text-shadow:
     -1px -1px 0 #E27591,
     1px -1px 0 #E27591,
     -1px 1px 0 #E27591,
     1px 1px 0 #E27591,
-    0 2px 5px rgba(226, 117, 145, 0.5); /* soft shadow */
+    0 2px 5px rgba(226, 117, 145, 0.5);
 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 40px 20px;
 }
 #hero p {
   font-family: 'Genty', sans-serif;
