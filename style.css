@@ -85,7 +85,7 @@ main {
   display: flex;
   gap: 2rem; /* space between cards */
   flex-wrap: wrap; /* wrap on smaller screens */
-  justify-content: center; /* optional: center-align the cards */
+  justify-content: left; /* optional: center-align the cards */
   margin-top: 2rem;
 }
 
