@@ -27,7 +27,7 @@ header nav {
 }
 
 .logo {
-  height: 48px;
+  height: 56px;
   width: auto;
 }
 
@@ -68,13 +68,10 @@ header nav {
   font-weight: 900;
   font-size: 64px;
   line-height: 1.1;  /* tighter line spacing */
-  color: #1A1A1A; /* default black text */
+  color: #E27591; /* default black text */
   margin-bottom: 20px; /* spacing below h1 */
 }
 
-.pink {
-  color: #E27591;
-}
 
 .genty-full-line {
   font-family: 'Genty', serif;
