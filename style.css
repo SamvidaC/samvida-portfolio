@@ -1,50 +1,47 @@
-/* GENERAL */
+/* Reset & base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  margin: 0;
-  font-family: 'Merriweather', serif;
+  font-family: 'Genty', serif;
+  background-color: #FAFAFA;
   color: #1A1A1A;
-  background-color: #fff;
   line-height: 1.6;
+  min-height: 100vh;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* NAVBAR */
-
+/* Header and Nav */
 header nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 20px 40px;
-  /* No bottom border */
+  background: #FAFAFA;
+  box-shadow: none; /* No bottom line */
   border-bottom: none;
-  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
-  height: 50px;
+  height: 48px;
   width: auto;
-  object-fit: contain;
 }
 
 .nav-links {
+  list-style: none;
   display: flex;
-  gap: 30px;
-  font-weight: 700;
-  font-family: 'Merriweather', serif;
+  gap: 32px;
+  margin-left: auto;
 }
 
 .nav-links a {
+  text-decoration: none;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
   color: #1A1A1A;
   font-size: 1rem;
   transition: color 0.3s ease;
@@ -52,45 +49,42 @@ header nav {
 
 .nav-links a:hover {
   color: #E27591;
-  text-decoration: underline;
 }
 
-/* HERO SECTION */
-
+/* Hero Section */
 #hero {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 40px; /* less horizontal padding for wider text */
-  background-color: #fff;
+  padding: 0 80px;
   text-align: center;
+  position: relative;
 }
 
 .hero-text {
-  max-width: 700px;
+  max-width: 900px;
 }
 
 .hero-tagline {
-  font-family: 'Genty', serif;
   font-size: 64px;
-  color: #E27591; /* pink */
+  font-weight: 400;
+  color: #E27591;
+  font-family: 'Genty', serif;
   margin-bottom: 40px;
   line-height: 1.1;
-  font-weight: 400;
 }
-
-/* Scroll button */
 
 .btn-scroll {
   font-family: 'Merriweather', serif;
   font-weight: 700;
-  font-size: 1.3rem;
-  color: #1A1A1A; /* black */
+  font-size: 1.2rem;
+  color: #1A1A1A;
+  text-decoration: none;
   cursor: pointer;
   display: inline-block;
-  text-align: center;
-  user-select: none;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
 }
 
 .btn-scroll:hover {
@@ -98,147 +92,119 @@ header nav {
 }
 
 .arrow {
-  display: block; /* forces arrow below text */
-  font-size: 2rem;
-  margin-top: 6px;
-  color: #1A1A1A; /* black */
+  font-size: 2.4rem;
+  color: #1A1A1A;
   animation: bounce 1.5s infinite;
+  user-select: none;
 }
 
+/* Arrow bounce animation */
 @keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(6px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
 }
 
-/* DESIGN TRIFECTA */
-
+/* Design trifecta section */
 #design-trifecta {
+  margin-top: 1200px; /* pushes it down the page so it's off-screen on load */
+  padding: 40px 60px;
   max-width: 900px;
-  margin: 1200px auto 60px auto; /* pushed down off initial viewport */
-  padding: 0 40px;
-  text-align: left;
+  margin-left: 0; /* left aligned */
 }
 
 #design-trifecta h2 {
   font-family: 'Merriweather', serif;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 40px;
-  color: #1A1A1A;
+  text-align: left;
+}
+
+.highlight {
+  color: #E27591;
 }
 
 .card-container {
   display: flex;
-  gap: 20px;
-  justify-content: space-between;
+  gap: 24px;
+  justify-content: flex-start;
 }
 
 .card {
-  background-color: #FAFAFA; /* white background */
-  flex: 1;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  padding: 25px 20px 20px 20px;
+  background: #FAFAFA;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 24px 20px 40px;
+  width: 280px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
   position: relative;
-  font-family: 'Merriweather', serif;
+  font-family: 'Open Sans', sans-serif;
   color: #1A1A1A;
 }
 
-/* Colored top tab */
-
+/* Tabs on cards */
 .card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   height: 6px;
-  width: 100%;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  background-color: #E27591; /* brand pink */
+  width: 60px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
+/* Specific card tab colors */
+.card-container .card:nth-child(1)::before {
+  background-color: #E27591; /* pink */
+}
+
+.card-container .card:nth-child(2)::before {
+  background-color: #FFCC66; /* yellow */
+}
+
+.card-container .card:nth-child(3)::before {
+  background-color: #A8D5BA; /* green */
+}
+
+/* Card headings */
 .card h3 {
-  margin-top: 15px;
+  margin-bottom: 16px;
   font-weight: 700;
-  font-size: 1.3rem;
-  margin-bottom: 12px;
-}
-
-.card p {
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.4;
-}
-
-/* PROJECTS */
-
-#projects {
-  max-width: 900px;
-  margin: 60px auto 80px auto;
-  padding: 0 40px;
-}
-
-#projects h2 {
   font-family: 'Merriweather', serif;
-  font-weight: 700;
-  font-size: 2rem;
-  color: #1A1A1A;
-  margin-bottom: 30px;
 }
 
-.project-card {
-  background-color: #FAFAFA;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  color: #1A1A1A;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* FOOTER */
-
+/* Footer */
 footer {
   background-color: #FAFAFA;
-  color: #1A1A1A;
+  padding: 40px 60px;
   text-align: center;
-  padding: 40px 20px;
   font-family: 'Merriweather', serif;
-  margin-top: 60px;
+  color: #1A1A1A;
+  margin-top: 80px;
 }
 
 .footer-banner {
-  color: #1A1A1A;
-  margin-bottom: 20px;
+  color: #E27591;
   font-weight: 700;
-}
-
-footer .logo {
-  height: 40px;
-  margin: 20px 0;
-  filter: none;
+  font-size: 1.1rem;
+  margin-bottom: 24px;
 }
 
 .footer-name {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 0;
+  font-size: 2rem;
+  margin: 12px 0 6px;
 }
 
 .footer-tagline {
+  font-size: 1rem;
   font-weight: 400;
-  margin: 10px 0 20px 0;
+  margin-bottom: 20px;
 }
 
 .footer-links a {
   color: #1A1A1A;
+  text-decoration: none;
   font-weight: 600;
   margin: 0 8px;
   transition: color 0.3s ease;
@@ -248,13 +214,50 @@ footer .logo {
   color: #E27591;
 }
 
-/* RESPONSIVE */
+/* Projects section - minimal styling */
+#projects {
+  padding: 80px 60px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
 
+#projects h2 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.project-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 24px;
+  margin-bottom: 24px;
+  font-family: 'Open Sans', sans-serif;
+  color: #1A1A1A;
+  border-radius: 6px;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
+  .hero-tagline {
+    font-size: 40px;
+    padding: 0 20px;
+  }
+
   .card-container {
     flex-direction: column;
+    gap: 20px;
   }
+
   #design-trifecta {
-    margin: 1200px 20px 60px 20px;
+    margin-top: 600px; /* reduce offset on smaller screens */
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  #projects {
+    padding: 40px 20px;
   }
 }
