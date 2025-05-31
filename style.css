@@ -79,32 +79,28 @@ main {
   color: #E27591;
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
-  }
-  50% {
-    transform: translateY(-6px);
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15));
-  }
-}
-
 #hero h1 {
   font-family: 'Genty', sans-serif;
   font-size: 64px;
   font-weight: 900;
   line-height: 1.2;
   text-align: center;
-  color: #F49BB2;
+  color: #F49BB2; /* light pink fill */
   letter-spacing: 0.5px;
   word-spacing: 1.5px;
   padding: 40px 20px;
 
-  /* Animation */
-  animation: float 4s ease-in-out infinite;
-  /* Optional smoother rendering */
-  will-change: transform, filter;
+  /* Thin dark pink stroke */
+  -webkit-text-stroke: 0.7px #E27591;
+  text-stroke: 0.7px #E27591;
+
+  /* Soft blurred dark pink shadow */
+  text-shadow: 
+    0 2px 5px rgba(226, 117, 145, 0.5);
+
+  /* For better smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 #hero p {
   font-family: 'Genty', sans-serif;
