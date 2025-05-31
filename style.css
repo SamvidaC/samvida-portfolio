@@ -62,15 +62,17 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 4rem 2rem;
+  min-height: 40vh;
+  background-color: transparent; /* keep background clean */
   text-align: center;
-  padding: 4rem 2rem; /* top/bottom 4rem, left/right 2rem */
-  color: #E27591; /* your dark pink */
+}
+
+#hero h1 {
+  color: #E27591 !important; /* force the pink */
   font-family: 'Genty', sans-serif;
   font-weight: 900;
   font-size: 2.2rem;
-  min-height: 40vh; /* gives vertical breathing room */
-}
-#hero h1 {
   margin: 0;
   max-width: 800px;
 }
