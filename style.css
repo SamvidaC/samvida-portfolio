@@ -90,15 +90,14 @@ main {
   word-spacing: 1.5px;
   padding: 40px 20px;
 
-  /* Thin dark pink stroke */
-  -webkit-text-stroke: 0.7px #E27591;
-  text-stroke: 0.7px #E27591;
+  /* Multiple shadows to simulate stroke */
+  text-shadow:
+    -1px -1px 0 #E27591,
+    1px -1px 0 #E27591,
+    -1px 1px 0 #E27591,
+    1px 1px 0 #E27591,
+    0 2px 5px rgba(226, 117, 145, 0.5); /* soft shadow */
 
-  /* Soft blurred dark pink shadow */
-  text-shadow: 
-    0 2px 5px rgba(226, 117, 145, 0.5);
-
-  /* For better smoothing */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
