@@ -1,113 +1,127 @@
-/* Reset some basics */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* GENERAL */
 
 body {
+  margin: 0;
   font-family: 'Merriweather', serif;
   color: #1A1A1A;
-  background: #fff;
-  line-height: 1.5;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* NAVBAR */
-nav {
+
+header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px 40px;
-  /* Remove border or line */
+  /* No bottom border */
   border-bottom: none;
-  box-shadow: none;
-  background: white;
+  background-color: #fff;
 }
 
-nav ul.nav-links {
-  list-style: none;
+.logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.nav-links {
   display: flex;
   gap: 30px;
+  font-weight: 700;
+  font-family: 'Merriweather', serif;
 }
 
-nav ul.nav-links li a {
-  text-decoration: none;
+.nav-links a {
   color: #1A1A1A;
-  font-weight: 600;
-  font-family: 'Merriweather', serif;
+  font-size: 1rem;
   transition: color 0.3s ease;
 }
 
-nav ul.nav-links li a:hover {
+.nav-links a:hover {
   color: #E27591;
+  text-decoration: underline;
 }
 
 /* HERO SECTION */
+
 #hero {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* full viewport height */
-  padding: 0 40px;
-  box-sizing: border-box;
+  padding: 0 40px; /* less horizontal padding for wider text */
+  background-color: #fff;
   text-align: center;
-  position: relative;
 }
 
 .hero-text {
-  max-width: 900px; /* wider text container */
-  margin: 0 auto;
-  font-family: 'Genty', serif;
-  color: #E27591; /* pink text */
+  max-width: 700px;
 }
 
 .hero-tagline {
-  font-size: 64px !important;
-  line-height: 1.1;
+  font-family: 'Genty', serif;
+  font-size: 64px;
+  color: #E27591; /* pink */
   margin-bottom: 40px;
-  font-weight: normal;
-  color: #E27591; /* ensure pink */
+  line-height: 1.1;
+  font-weight: 400;
 }
 
-/* Scroll button styling */
+/* Scroll button */
+
 .btn-scroll {
-  display: inline-flex;
-  flex-direction: column; /* stack text & arrow vertically */
-  align-items: center;
   font-family: 'Merriweather', serif;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: #1A1A1A; /* black */
-  text-decoration: none;
   cursor: pointer;
-  gap: 6px;
-  transition: color 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  user-select: none;
 }
 
 .btn-scroll:hover {
   color: #b05168;
 }
 
-/* Arrow below See my work */
 .arrow {
-  font-size: 1.8rem;
+  display: block; /* forces arrow below text */
+  font-size: 2rem;
+  margin-top: 6px;
+  color: #1A1A1A; /* black */
   animation: bounce 1.5s infinite;
-  color: #1A1A1A; /* black arrow */
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(6px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
 }
 
-/* DESIGN TRIFECTA - pushed down on Y axis */
+/* DESIGN TRIFECTA */
+
 #design-trifecta {
-  margin-top: 1200px; /* push down so not visible on load */
   max-width: 900px;
-  text-align: left; /* left justified */
+  margin: 1200px auto 60px auto; /* pushed down off initial viewport */
   padding: 0 40px;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: left;
 }
 
 #design-trifecta h2 {
@@ -115,44 +129,58 @@ nav ul.nav-links li a:hover {
   font-weight: 700;
   font-size: 1.8rem;
   margin-bottom: 40px;
+  color: #1A1A1A;
 }
 
-/* Cards container */
 .card-container {
   display: flex;
   gap: 20px;
   justify-content: space-between;
 }
 
-/* Cards styling */
 .card {
+  background-color: #FAFAFA; /* white background */
   flex: 1;
   border-radius: 8px;
-  padding: 20px;
-  color: #1A1A1A;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 25px 20px 20px 20px;
+  position: relative;
   font-family: 'Merriweather', serif;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.card.pink {
-  background-color: #E27591;
-  color: white;
-}
-
-.card.yellow {
-  background-color: #FFEB99;
   color: #1A1A1A;
 }
 
-.card.green {
-  background-color: #8BC34A;
-  color: white;
+/* Colored top tab */
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: #E27591; /* brand pink */
 }
 
-/* PROJECTS SECTION */
+.card h3 {
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* PROJECTS */
+
 #projects {
   max-width: 900px;
-  margin: 80px auto 120px;
+  margin: 60px auto 80px auto;
   padding: 0 40px;
 }
 
@@ -160,56 +188,73 @@ nav ul.nav-links li a:hover {
   font-family: 'Merriweather', serif;
   font-weight: 700;
   font-size: 2rem;
-  margin-bottom: 40px;
+  color: #1A1A1A;
+  margin-bottom: 30px;
 }
 
-/* Simple project cards */
 .project-card {
-  background-color: #F9F9F9;
-  border-radius: 6px;
-  padding: 30px;
+  background-color: #FAFAFA;
+  padding: 20px;
+  border-radius: 8px;
   margin-bottom: 20px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-  font-family: 'Merriweather', serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
+  color: #1A1A1A;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* FOOTER */
+
 footer {
   background-color: #FAFAFA;
   color: #1A1A1A;
-  padding: 40px 20px;
   text-align: center;
+  padding: 40px 20px;
   font-family: 'Merriweather', serif;
-  border-top: 1px solid #ddd;
+  margin-top: 60px;
 }
 
-footer .footer-banner {
-  font-weight: 700;
-  font-size: 1.1rem;
+.footer-banner {
+  color: #1A1A1A;
   margin-bottom: 20px;
-  color: #E27591;
-}
-
-footer .footer-name {
   font-weight: 700;
-  font-size: 1.6rem;
-  margin: 10px 0 5px;
 }
 
-footer .footer-tagline {
+footer .logo {
+  height: 40px;
+  margin: 20px 0;
+  filter: none;
+}
+
+.footer-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.footer-tagline {
   font-weight: 400;
-  font-size: 1rem;
-  margin-bottom: 15px;
+  margin: 10px 0 20px 0;
 }
 
 .footer-links a {
   color: #1A1A1A;
-  text-decoration: none;
   font-weight: 600;
-  margin: 0 6px;
+  margin: 0 8px;
+  transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
   color: #E27591;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+  }
+  #design-trifecta {
+    margin: 1200px 20px 60px 20px;
+  }
 }
