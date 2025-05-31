@@ -52,9 +52,11 @@ header nav {
 }
 
 /* Hero Section */
+/* Hero Section */
 #hero {
   height: 100vh;
   display: flex;
+  flex-direction: column; /* stack content vertically */
   justify-content: center;
   align-items: center;
   padding: 0 80px;
@@ -63,19 +65,22 @@ header nav {
 }
 
 #hero h1 {
-  font-family: 'Genty', sans-serif;
+  font-family: 'Genty', serif;
   font-weight: 900;
   font-size: 64px;
-  line-height: 1.2;
+  line-height: 1.1;  /* tighter line spacing */
   color: #1A1A1A; /* default black text */
-  text-align: center;
-  padding: 40px 20px;
+  margin-bottom: 20px; /* spacing below h1 */
 }
 
 #hero .pink {
-  color: #E27591; /* your pink */
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  color: #E27591;
+  display: inline-block; /* better control on spacing */
 }
 
+/* Scroll button & arrow same as before, no changes */
 #hero .merriweather {
   font-family: 'Merriweather', serif;
   font-weight: 700;
