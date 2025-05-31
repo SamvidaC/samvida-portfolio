@@ -54,24 +54,26 @@ header nav {
   color: #E27591; /* pink color for hero text */
 }
 
+/* Hero text */
 .hero-tagline {
-  font-size: 64px; /* changed from 2rem */
+  font-size: 64px !important; /* enforce size */
+  color: #E27591 !important;  /* pink */
   line-height: 1.1;
   margin-bottom: 40px;
 }
 
+/* "See my work" button */
 .btn-scroll {
   font-family: 'Merriweather', serif;
   font-weight: 700;
   font-size: 1.1rem;
-  color: #000; /* black text */
+  color: #1A1A1A !important; /* your black */
   text-decoration: none;
   cursor: pointer;
   display: inline-flex;
   flex-direction: column; /* stack arrow below text */
   align-items: center;
-  gap: 4px; /* small gap between text and arrow */
-  transition: color 0.3s ease;
+  gap: 6px;
 }
 
 .btn-scroll:hover {
@@ -80,16 +82,27 @@ header nav {
 
 .arrow {
   font-size: 1.5rem;
-  color: #000; /* black arrow */
+  color: #1A1A1A !important; /* your black */
+  margin-top: 0;
   animation: bounce 1.5s infinite;
-  margin-top: 4px;
 }
 
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(6px); }
+/* Navbar - remove bottom border/line */
+header nav {
+  border-bottom: none !important;
 }
 
+/* Footer background color */
+footer {
+  background-color: #FAFAFA !important;
+}
+
+/* Design Trifecta: place offscreen below (Y-axis 1200px down) */
+#design-trifecta {
+  transform: translateY(1200px);
+  transition: transform 0.6s ease;
+  text-align: left;
+}
 /* ====== Design Trifecta Section ====== */
 
 #design-trifecta {
