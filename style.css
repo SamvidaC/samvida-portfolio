@@ -85,8 +85,8 @@ main {
   font-weight: 900;
   line-height: 1.2;
   text-align: center;
-  color: #F49BB2; /* light pink fill */
-  text-shadow: 2px 2px 3px #E27591; /* dark pink shadow for lift */
+  color: #F49BB2; /* Light pink fill */
+  text-shadow: 0 4px 12px #E27591; /* Soft, diffused darker pink shadow */
 }
 
 #hero p {
