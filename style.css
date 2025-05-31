@@ -65,62 +65,62 @@ main {
 
 /* Hero Layout */
 #hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 8rem 2rem 6rem;
-  color: #1A1A1A;
+  padding: 8rem 1.5rem 6rem;
   background-color: #FAFAFA;
 }
 
-.hero-lines {
-  max-width: 900px;
-  margin: 0 auto;
+.hero-text {
+  max-width: 800px;
+  line-height: 1.3;
 }
 
-.hero-line {
-  margin: 0.5rem 0;
-}
-
-.genty-black {
+.line-one {
   font-family: 'Genty', sans-serif;
   font-size: 72px;
   font-weight: 900;
   color: #1A1A1A;
+  margin-bottom: 1rem;
 }
 
-.merriweather-pink {
+.line-two {
   font-family: 'Merriweather', serif;
-  font-size: 48px;
+  font-size: 36px;
+  color: #E27591;
   font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.line-three {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.line-three .merri {
+  font-family: 'Merriweather', serif;
   color: #E27591;
 }
 
-.mixed-line {
-  font-size: 32px;
-  font-weight: 700;
-}
-
-.mixed-line .merriweather-pink {
-  font-family: 'Merriweather', serif;
-  color: #E27591;
-}
-
-.mixed-line .genty-black {
+.line-three .genty {
   font-family: 'Genty', sans-serif;
   color: #1A1A1A;
 }
 
-/* Responsive adjustments */
+/* Responsiveness */
 @media (max-width: 768px) {
-  .genty-black {
+  .line-one {
     font-size: 48px;
   }
 
-  .merriweather-pink {
-    font-size: 36px;
+  .line-two {
+    font-size: 28px;
   }
 
-  .mixed-line {
-    font-size: 24px;
+  .line-three {
+    font-size: 20px;
   }
 }
 
