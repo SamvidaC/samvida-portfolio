@@ -72,25 +72,17 @@ header nav {
   margin-bottom: 20px; /* spacing below h1 */
 }
 
-#hero h1 {
+.pink {
+  color: #E27591;
+}
+
+.genty-full-line {
   font-family: 'Genty', serif;
   font-weight: 900;
   font-size: 64px;
   line-height: 1.2;
-  color: #1A1A1A;
-  margin-bottom: 40px;
-  max-width: 900px;
   text-align: center;
-}
-
-#hero h1 .pink.merriweather {
-  font-family: 'Merriweather', serif;
-  font-weight: 700;
-  font-size: 44px;  /* smaller size than the first line for balance */
-  color: #E27591;
-  display: block; /* forces line break and proper spacing */
-  margin-top: 8px; /* small spacing above second line */
-  letter-spacing: 0.03em;
+  padding: 40px 20px;
 }
 
 .hero-text {
