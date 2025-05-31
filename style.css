@@ -81,8 +81,23 @@ main {
   margin-bottom: 3rem;
   justify-content: center;
 }
+.card-container {
+  display: flex;
+  gap: 2rem; /* space between cards */
+  flex-wrap: wrap; /* wrap on smaller screens */
+  justify-content: center; /* optional: center-align the cards */
+  margin-top: 2rem;
+}
 
 .card {
+  flex: 1 1 300px; /* grow, shrink, min width */
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 350px;
+}
+/*.card {
   flex: 1;
   padding: 2rem;
   border-radius: 12px;
@@ -95,7 +110,7 @@ main {
   transition: box-shadow 0.3s ease, border 0.3s ease;
   border: 3px solid transparent;
   user-select: none;
-}
+}*/
 
 .card.pink {
   background-color: #F49BB2;
