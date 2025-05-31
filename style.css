@@ -88,7 +88,7 @@ main {
   color: #F49BB2;
 
   /* Cleaner shadow with less blur and more contrast */
-  text-shadow: 0 3px 4px rgba(226, 117, 145, 0.8);
+  text-shadow: 0 2px 3px rgba(226, 117, 145, 0.8);
 
   letter-spacing: 0.5px;
   word-spacing: 1.5px;
