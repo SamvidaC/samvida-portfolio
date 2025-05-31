@@ -79,6 +79,24 @@
 
     <div class="hero-padding"></div>
 
+    <script>
+  // Show design trifecta after user scrolls past hero or after 2 seconds
+  window.addEventListener('scroll', () => {
+    const designSection = document.getElementById('design-trifecta');
+    if (window.scrollY > 200) {
+      designSection.style.display = 'block';
+    }
+  });
+
+  // Or show after 2 seconds if no scroll
+  setTimeout(() => {
+    const designSection = document.getElementById('design-trifecta');
+    if (window.scrollY < 200) {
+      designSection.style.display = 'block';
+    }
+  }, 2000);
+</script>
+    
     <section id="design-trifecta">
       <h2>
         My design trifecta for 
