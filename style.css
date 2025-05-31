@@ -86,8 +86,7 @@ main {
   line-height: 1.2;
   text-align: center;
   color: #F49BB2; /* light pink fill */
- /* -webkit-text-stroke: 0.5px #E27591; /* thinner darker pink stroke */*/
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15); /* lighter shadow for lift */
+  text-shadow: 2px 2px 3px #E27591; /* dark pink shadow for lift */
 }
 
 #hero p {
