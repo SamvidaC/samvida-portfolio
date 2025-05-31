@@ -59,20 +59,20 @@ main {
 
 /* Hero */
 #hero {
-  margin-top: 3rem;
-  text-align: left;
-}
-
-#hero h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem; /* top/bottom 4rem, left/right 2rem */
+  color: #E27591; /* your dark pink */
   font-family: 'Genty', sans-serif;
-  font-size: 2.2rem;
   font-weight: 900;
-  color: #1A1A1A;
+  font-size: 2.2rem;
+  min-height: 40vh; /* gives vertical breathing room */
 }
-
-/* Padding after hero */
-.hero-padding {
-  height: 100vh;
+#hero h1 {
+  margin: 0;
+  max-width: 800px;
 }
 
 /* Design Trifecta */
