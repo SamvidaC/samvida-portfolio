@@ -78,6 +78,42 @@ main {
   padding: 3rem 2rem;
   color: #E27591;
 }
+.hero-text {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.hero-text .line1 {
+  font-family: 'Genty', sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #1A1A1A;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text .line2 {
+  font-family: 'Merriweather', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text .line3 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.hero-text .highlight {
+  color: #E27591;
+  font-weight: 700;
+}
+
+.hero-text .rest {
+  color: #1A1A1A;
+}
 
 #hero h1 {
   font-family: 'Genty', sans-serif;
