@@ -3,10 +3,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Merriweather', serif;
 }
 
 body {
+  font-family: 'Open Sans', sans-serif;
   background-color: #FAFAFA;
   color: #1A1A1A;
   line-height: 1.6;
@@ -14,7 +14,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 /* Header/Nav */
 header {
   background: #FAFAFA;
@@ -31,7 +30,23 @@ nav {
 .logo {
   height: 64px;
 }
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600; /* semi-bold */
+  font-size: 18px;
+}
 
+.nav-links a {
+  text-decoration: none;
+  color: #1A1A1A;
+}
+
+.nav-links a:hover {
+  color: #E27591;
+}
 .nav-links {
   list-style: none;
   display: flex;
@@ -39,15 +54,6 @@ nav {
   font-weight: 700;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #1A1A1A;
-  font-family: 'Genty', sans-serif;
-}
-
-.nav-links a:hover {
-  color: #E27591;
-}
 
 /* Main Content */
 main {
@@ -67,21 +73,28 @@ main {
   min-height: 50vh;
 }
 
+#hero {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #E27591;
+}
+
 #hero h1 {
   font-family: 'Genty', sans-serif;
+  font-size: 64px;
   font-weight: 900;
-  font-size: 72px;
-  color: #E27591;
+  margin-bottom: 1rem;
   line-height: 1.2;
-  max-width: 1000px;
 }
-/* Design Trifecta */
-#design-trifecta h2 {
+
+#hero p {
+  font-family: 'Genty', sans-serif;
+  font-size: 32px;
+}
+
+/* Headings in Merriweather */
+h2, h3 {
   font-family: 'Merriweather', serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  color: #1A1A1A;
 }
 
 .card-container {
