@@ -79,6 +79,17 @@ main {
   color: #E27591;
 }
 
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+  }
+  50% {
+    transform: translateY(-6px);
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15));
+  }
+}
+
 #hero h1 {
   font-family: 'Genty', sans-serif;
   font-size: 64px;
@@ -89,6 +100,11 @@ main {
   letter-spacing: 0.5px;
   word-spacing: 1.5px;
   padding: 40px 20px;
+
+  /* Animation */
+  animation: float 4s ease-in-out infinite;
+  /* Optional smoother rendering */
+  will-change: transform, filter;
 }
 #hero p {
   font-family: 'Genty', sans-serif;
