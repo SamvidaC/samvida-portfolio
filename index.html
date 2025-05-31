@@ -8,6 +8,49 @@
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Genty&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Genty&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Inline minimal styles for the arrow and scroll button */
+    .hero-text {
+      text-align: center;
+      max-width: 600px;
+      margin: 100px auto 60px;
+      font-family: 'Genty', serif;
+      color: #1A1A1A;
+    }
+
+    .hero-tagline {
+      font-size: 2rem;
+      line-height: 1.4;
+      margin-bottom: 40px;
+    }
+
+    .btn-scroll {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #E27591;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s ease;
+    }
+
+    .btn-scroll:hover {
+      color: #b05168;
+    }
+
+    .arrow {
+      font-size: 1.5rem;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(6px); }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -22,16 +65,17 @@
   </header>
 
   <main>
-   <section id="hero">
-  <div class="hero-text">
-    <h1 class="samvida">Samvida here.</h1>
-    <h2 class="title">Design Strategist.</h2>
-    <p class="tagline">
-      <span class="merri">Designing for people planet</span><br>
-      <span class="genty">and maybe you.</span>
-    </p>
-  </div>
-</section>
+    <section id="hero">
+      <div class="hero-text">
+        <h1 class="hero-tagline">
+          I design systems people love, services they remember, and experiences that don’t wreck the planet.
+        </h1>
+        <a href="#projects" class="btn-scroll" id="scrollBtn">
+          See my work
+          <span class="arrow">↓</span>
+        </a>
+      </div>
+    </section>
 
     <div class="hero-padding"></div>
 
@@ -87,5 +131,13 @@
     </div>
     <p>©2025 Samvida Chennuri</p>
   </footer>
+
+  <script>
+    // Smooth scroll to projects section on clicking the button
+    document.getElementById('scrollBtn').addEventListener('click', function(event) {
+      event.preventDefault();
+      document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
