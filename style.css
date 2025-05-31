@@ -1,32 +1,207 @@
+/* Reset and base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Merriweather', serif;
+}
 
 body {
-    background-color: #FAFAFA;
-    color: #1A1A1A;
-    font-family: 'Merriweather', serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  background-color: #FAFAFA;
+  color: #1A1A1A;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+/* Header/Nav */
+header {
+  background: #FAFAFA;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 48px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  font-weight: 700;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1A1A1A;
+  font-family: 'Genty', sans-serif;
+}
+
+.nav-links a:hover {
+  color: #E27591;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Hero */
+#hero {
+  margin-bottom: 3rem;
+}
+
+#hero h1 {
+  font-family: 'Genty', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-bottom: 0.4rem;
+}
+
+#hero p {
+  font-size: 1.3rem;
+  color: #333;
+}
+
+/* Design Trifecta Cards */
+#design-trifecta {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+}
+
+.card {
+  flex: 1;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  font-family: 'Genty', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #1A1A1A;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+  border: 3px solid transparent;
+  user-select: none;
+}
+
+.card.pink {
+  background-color: #F49BB2;
+}
+
+.card.yellow {
+  background-color: #FFCC66;
+}
+
+.card.green {
+  background-color: #A8D5BA;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px rgba(226, 117, 145, 0.7);
+  border: 3px solid #E27591;
+  cursor: default;
+}
+
+/* About Section */
+#about {
+  margin-bottom: 3rem;
+}
+
+#about h2 {
+  font-family: 'Genty', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #E27591;
+}
+
+#about p {
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 600px;
+}
+
+/* Projects Section */
+#projects {
+  margin-bottom: 4rem;
+}
+
+#projects h2 {
+  font-family: 'Genty', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #E27591;
+}
+
+.project-card {
+  background-color: white;
+  border: 2px solid #E27591;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  font-weight: 700;
+  font-family: 'Genty', sans-serif;
+  color: #1A1A1A;
+}
+
+/* Footer */
+footer {
+  background-color: #FAFAFA;
+  text-align: center;
+  padding: 2rem 1rem 3rem;
+  border-top: 1px solid #ddd;
+  font-family: 'Merriweather', serif;
+  color: #1A1A1A;
+  user-select: none;
+}
+
 .footer-banner {
-    color: #E27591;
-    font-weight: bold;
-    padding: 20px 0;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
+
+.footer-logo {
+  height: 50px;
+  margin-bottom: 0.5rem;
+}
+
 .footer-name {
-    font-family: 'Genty', cursive;
-    font-size: 2rem;
-    margin-top: 10px;
+  font-family: 'Genty', sans-serif;
+  font-weight: 900;
+  font-size: 1.8rem;
+  margin-bottom: 0.2rem;
+  color: #E27591;
 }
+
 .footer-tagline {
-    font-family: 'Merriweather', serif;
-    text-transform: uppercase;
-    font-size: 0.9rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.05em;
 }
+
 .footer-links a {
-    color: #1A1A1A;
-    text-decoration: none;
-    margin: 0 5px;
+  color: #1A1A1A;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 0.5rem;
 }
+
 .footer-links a:hover {
-    color: #E27591;
+  color: #E27591;
 }
