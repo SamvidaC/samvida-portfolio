@@ -85,8 +85,11 @@ main {
   font-weight: 900;
   line-height: 1.2;
   text-align: center;
-  color: #F49BB2; /* Light pink fill */
-  text-shadow: 0 4px 12px #E27591; /* Soft, diffused darker pink shadow */
+  color: #F49BB2;
+  text-shadow: 0 4px 12px #E27591;
+
+  letter-spacing: 0.5px; /* Adds breathing room between letters */
+  word-spacing: 1.5px;   /* Adds a bit more space between words */
 }
 
 #hero p {
