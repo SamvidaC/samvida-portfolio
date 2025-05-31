@@ -1,0 +1,32 @@
+
+body {
+    background-color: #FAFAFA;
+    color: #1A1A1A;
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.footer-banner {
+    color: #E27591;
+    font-weight: bold;
+    padding: 20px 0;
+}
+.footer-name {
+    font-family: 'Genty', cursive;
+    font-size: 2rem;
+    margin-top: 10px;
+}
+.footer-tagline {
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+.footer-links a {
+    color: #1A1A1A;
+    text-decoration: none;
+    margin: 0 5px;
+}
+.footer-links a:hover {
+    color: #E27591;
+}
