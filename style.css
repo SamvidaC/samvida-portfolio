@@ -85,26 +85,10 @@ main {
   font-weight: 900;
   line-height: 1.2;
   text-align: center;
-  color: #F49BB2; /* your light pink fill */
-  letter-spacing: 1.35px; /* moderate spacing */
-  word-spacing: 2px; /* slight space between words */
-  font-kerning: normal;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  text-shadow:
-    -1px -1px 0 #E27591,
-    1px -1px 0 #E27591,
-    -1px 1px 0 #E27591,
-    1px 1px 0 #E27591,
-    0 2px 6px rgba(226, 117, 145, 0.45);
-
+  color: #F49BB2;
+  letter-spacing: 0.5px;
+  word-spacing: 1.5px;
   padding: 40px 20px;
-}
-#hero p {
-  font-family: 'Genty', sans-serif;
-  font-size: 32px;
 }
 
 /* Headings in Merriweather */
