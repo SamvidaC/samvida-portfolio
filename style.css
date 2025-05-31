@@ -1,50 +1,215 @@
-/* Hero text */
-.hero-tagline {
-  font-size: 64px !important;
-  color: #E27591 !important;  /* pink */
-  line-height: 1.1;
-  margin-bottom: 40px;
+/* Reset some basics */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* "See my work" button */
+body {
+  font-family: 'Merriweather', serif;
+  color: #1A1A1A;
+  background: #fff;
+  line-height: 1.5;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  /* Remove border or line */
+  border-bottom: none;
+  box-shadow: none;
+  background: white;
+}
+
+nav ul.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul.nav-links li a {
+  text-decoration: none;
+  color: #1A1A1A;
+  font-weight: 600;
+  font-family: 'Merriweather', serif;
+  transition: color 0.3s ease;
+}
+
+nav ul.nav-links li a:hover {
+  color: #E27591;
+}
+
+/* HERO SECTION */
+#hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* full viewport height */
+  padding: 0 40px;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+}
+
+.hero-text {
+  max-width: 900px; /* wider text container */
+  margin: 0 auto;
+  font-family: 'Genty', serif;
+  color: #E27591; /* pink text */
+}
+
+.hero-tagline {
+  font-size: 64px !important;
+  line-height: 1.1;
+  margin-bottom: 40px;
+  font-weight: normal;
+  color: #E27591; /* ensure pink */
+}
+
+/* Scroll button styling */
 .btn-scroll {
+  display: inline-flex;
+  flex-direction: column; /* stack text & arrow vertically */
+  align-items: center;
   font-family: 'Merriweather', serif;
   font-weight: 700;
   font-size: 1.1rem;
-  color: #1A1A1A !important; /* your black */
+  color: #1A1A1A; /* black */
   text-decoration: none;
   cursor: pointer;
-  display: inline-flex;
-  flex-direction: column; /* arrow below text */
-  align-items: center;
   gap: 6px;
+  transition: color 0.3s ease;
 }
 
 .btn-scroll:hover {
-  color: #333;
+  color: #b05168;
 }
 
+/* Arrow below See my work */
 .arrow {
-  font-size: 1.5rem;
-  color: #1A1A1A !important; /* your black */
-  margin-top: 0;
+  font-size: 1.8rem;
   animation: bounce 1.5s infinite;
+  color: #1A1A1A; /* black arrow */
 }
 
-/* Navbar - remove bottom border */
-header nav {
-  border-bottom: none !important;
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
 }
 
-/* Footer background color */
-footer {
-  background-color: #FAFAFA !important;
-}
-
-/* Design Trifecta: push down below hero, left aligned */
+/* DESIGN TRIFECTA - pushed down on Y axis */
 #design-trifecta {
-  margin-top: 1200px;
-  text-align: left;
-  max-width: 600px;
-  padding-left: 20px;
+  margin-top: 1200px; /* push down so not visible on load */
+  max-width: 900px;
+  text-align: left; /* left justified */
+  padding: 0 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#design-trifecta h2 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+}
+
+/* Cards container */
+.card-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Cards styling */
+.card {
+  flex: 1;
+  border-radius: 8px;
+  padding: 20px;
+  color: #1A1A1A;
+  font-family: 'Merriweather', serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card.pink {
+  background-color: #E27591;
+  color: white;
+}
+
+.card.yellow {
+  background-color: #FFEB99;
+  color: #1A1A1A;
+}
+
+.card.green {
+  background-color: #8BC34A;
+  color: white;
+}
+
+/* PROJECTS SECTION */
+#projects {
+  max-width: 900px;
+  margin: 80px auto 120px;
+  padding: 0 40px;
+}
+
+#projects h2 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+/* Simple project cards */
+.project-card {
+  background-color: #F9F9F9;
+  border-radius: 6px;
+  padding: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  font-family: 'Merriweather', serif;
+  font-weight: 600;
+}
+
+/* FOOTER */
+footer {
+  background-color: #FAFAFA;
+  color: #1A1A1A;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  border-top: 1px solid #ddd;
+}
+
+footer .footer-banner {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #E27591;
+}
+
+footer .footer-name {
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin: 10px 0 5px;
+}
+
+footer .footer-tagline {
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  color: #1A1A1A;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 6px;
+}
+
+.footer-links a:hover {
+  color: #E27591;
 }
