@@ -63,79 +63,65 @@ main {
   margin: 0 auto;
 }
 
-/* Hero */
-#hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8rem 2rem;
-  text-align: center;
-  min-height: 50vh;
-}
-
+/* Hero Layout */
 #hero {
   text-align: center;
-  padding: 3rem 2rem;
-  color: #E27591;
-}
-#hero {
-  text-align: center;
-  padding: 6rem 2rem;
+  padding: 8rem 2rem 6rem;
   color: #1A1A1A;
   background-color: #FAFAFA;
 }
 
-.hero-text {
+.hero-lines {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-line {
+  margin: 0.5rem 0;
+}
+
+.genty-black {
   font-family: 'Genty', sans-serif;
   font-size: 72px;
   font-weight: 900;
-  line-height: 1.25;
-  word-spacing: 1.5px;
-  letter-spacing: 0.5px;
   color: #1A1A1A;
 }
 
-.hero-text .line1,
-.hero-text .line2,
-.hero-text .line3 {
-  display: block;
-  margin-bottom: 20px;
-}
-
-.hero-text .highlight {
+.merriweather-pink {
+  font-family: 'Merriweather', serif;
+  font-size: 48px;
+  font-weight: 700;
   color: #E27591;
 }
 
-@media screen and (max-width: 768px) {
-  .hero-text {
-    font-size: 48px;
-  }
-
-  .hero-text .line1,
-  .hero-text .line2,
-  .hero-text .line3 {
-    margin-bottom: 16px;
-  }
-}
-.hero-text .highlight {
-  color: #E27591;
+.mixed-line {
+  font-size: 32px;
   font-weight: 700;
 }
 
-.hero-text .rest {
+.mixed-line .merriweather-pink {
+  font-family: 'Merriweather', serif;
+  color: #E27591;
+}
+
+.mixed-line .genty-black {
+  font-family: 'Genty', sans-serif;
   color: #1A1A1A;
 }
 
-#hero h1 {
-  font-family: 'Genty', sans-serif;
-  font-size: 64px;
-  font-weight: 900;
-  line-height: 1.2;
-  text-align: center;
-  color: #F49BB2;
-  letter-spacing: 0.5px;
-  word-spacing: 1.5px;
-  padding: 40px 20px;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .genty-black {
+    font-size: 48px;
+  }
+
+  .merriweather-pink {
+    font-size: 36px;
+  }
+
+  .mixed-line {
+    font-size: 24px;
+  }
 }
 
 /* Headings in Merriweather */
