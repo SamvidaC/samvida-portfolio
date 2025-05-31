@@ -1,62 +1,6 @@
-/* ====== Base styles ====== */
-
-body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  background: #fff;
-  color: #1A1A1A;
-}
-
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  /* Removed border-bottom */
-  /* border-bottom: 1px solid #ddd; */
-}
-
-.logo {
-  height: 64px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 24px;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links a {
-  text-decoration: none;
-  font-weight: 600;
-  color: #1A1A1A;
-  font-family: 'Open Sans', sans-serif;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #E27591;
-}
-
-/* ====== Hero Section ====== */
-
-#hero {
-  padding: 100px 20px 60px;
-  text-align: center;
-}
-
-.hero-text {
-  max-width: 600px;
-  margin: 0 auto;
-  font-family: 'Genty', sans-serif;
-  color: #E27591; /* pink color for hero text */
-}
-
 /* Hero text */
 .hero-tagline {
-  font-size: 64px !important; /* enforce size */
+  font-size: 64px !important;
   color: #E27591 !important;  /* pink */
   line-height: 1.1;
   margin-bottom: 40px;
@@ -71,7 +15,7 @@ header nav {
   text-decoration: none;
   cursor: pointer;
   display: inline-flex;
-  flex-direction: column; /* stack arrow below text */
+  flex-direction: column; /* arrow below text */
   align-items: center;
   gap: 6px;
 }
@@ -87,7 +31,7 @@ header nav {
   animation: bounce 1.5s infinite;
 }
 
-/* Navbar - remove bottom border/line */
+/* Navbar - remove bottom border */
 header nav {
   border-bottom: none !important;
 }
@@ -97,170 +41,10 @@ footer {
   background-color: #FAFAFA !important;
 }
 
-/* Design Trifecta: place offscreen below (Y-axis 1200px down) */
+/* Design Trifecta: push down below hero, left aligned */
 #design-trifecta {
-  transform: translateY(1200px);
-  transition: transform 0.6s ease;
+  margin-top: 1200px;
   text-align: left;
-}
-/* ====== Design Trifecta Section ====== */
-
-#design-trifecta {
-  padding: 60px 20px 80px;
-  max-width: 900px;
-  margin: 0 auto;
-  font-family: 'Open Sans', sans-serif;
-  text-align: left; /* left justified */
-  display: none; /* initially hidden */
-}
-
-#design-trifecta h2 {
-  font-weight: 700;
-  font-size: 1.6rem;
-  margin-bottom: 40px;
-}
-
-.highlight-pink {
-  color: #E27591;
-}
-
-.card-container {
-  display: flex;
-  gap: 24px;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-}
-
-.card {
-  background: #f9f9f9;
-  border-radius: 8px;
-  padding: 24px;
-  flex: 1 1 30%;
-  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
-}
-
-.card h3 {
-  margin-top: 0;
-  margin-bottom: 16px;
-  font-family: 'Merriweather', serif;
-  font-weight: 700;
-  font-size: 1.3rem;
-}
-
-.card p {
-  line-height: 1.5;
-  font-size: 1rem;
-}
-
-/* Color variants */
-
-.pink {
-  border-top: 4px solid #E27591;
-}
-
-.yellow {
-  border-top: 4px solid #F2D388;
-}
-
-.green {
-  border-top: 4px solid #9BC995;
-}
-
-/* ====== Projects Section ====== */
-
-#projects {
-  padding: 60px 20px 80px;
-  max-width: 900px;
-  margin: 0 auto;
-  font-family: 'Open Sans', sans-serif;
-}
-
-#projects h2 {
-  font-weight: 700;
-  font-size: 1.6rem;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-.project-card {
-  background: #eee;
-  margin-bottom: 20px;
-  padding: 20px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-align: center;
-}
-
-/* ====== Footer ====== */
-
-footer {
-  background: #FAFAFA; /* changed from pink to light gray */
-  padding: 40px 20px 60px;
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
-  color: #1A1A1A;
-}
-
-.footer-banner {
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: #E27591;
-}
-
-.footer-logo {
-  height: 80px;
-  margin: 12px 0;
-}
-
-.footer-name {
-  font-family: 'Merriweather', serif;
-  font-weight: 700;
-  font-size: 1.4rem;
-  margin: 8px 0 4px;
-}
-
-.footer-tagline {
-  font-weight: 600;
-  font-size: 1rem;
-  margin: 0 0 24px;
-}
-
-.footer-links {
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.footer-links a {
-  color: #E27591;
-  text-decoration: none;
-  margin: 0 8px;
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: #b05168;
-}
-
-/* ====== Responsive adjustments ====== */
-
-@media (max-width: 768px) {
-  .card-container {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .card {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-
-  header nav {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
+  max-width: 600px;
+  padding-left: 20px;
 }
