@@ -105,12 +105,13 @@ nav {
 
 .marquee-track {
   display: flex;
-  width: max-content;
-  animation: marquee 35s linear infinite;
+  width: 200%; /* Ensures space for two full copies */
+  animation: marquee 40s linear infinite;
 }
 
 .marquee-content {
-  padding-right: 0.25rem; /* spacing between repeats */
+  flex: 0 0 50%; /* Each copy takes exactly half of the track */
+  padding-right: 0.25rem; /* Optional spacing between items */
 }
 @keyframes marquee {
   0% {
