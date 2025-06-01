@@ -93,30 +93,30 @@ nav {
 }
 .marquee-container {
   overflow: hidden;
-  white-space: nowrap;
-  background-color: #E27591; /* Pink background */
-  color: #E27591 /* Text color */
+  background-color: #FAFAFA;
+  color: #E27591;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 24px;
   padding: 0.5rem 0;
+  white-space: nowrap;
   position: relative;
 }
 
 .marquee-content {
-  display: inline-block;
-  white-space: nowrap;
-  animation: marquee 16s linear infinite;
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
 }
 
 .marquee-content span {
-  display: inline-block;
-  padding-right: 0.5rem; /* Space between repetitions */
+  padding-right: 4rem; /* space between repetitions */
+  white-space: nowrap;
 }
 
 @keyframes marquee {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
   100% {
     transform: translateX(-50%);
