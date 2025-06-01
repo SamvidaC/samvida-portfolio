@@ -63,7 +63,7 @@ nav {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 1.2rem;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
   position: relative;
   width: 300px;
 }
@@ -91,6 +91,7 @@ nav {
   87.5% { transform: translateY(-14rem); }
   100% { transform: translateY(0); }
 }
+
 
 /* Design Trifecta Section */
 #design-trifecta {
