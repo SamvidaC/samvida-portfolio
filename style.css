@@ -34,7 +34,7 @@ header nav {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 32px;
+  gap: 18px;
   margin-left: auto;
 }
 
