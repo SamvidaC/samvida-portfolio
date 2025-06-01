@@ -103,7 +103,7 @@ header nav {
 
 /* Design trifecta section */
 #design-trifecta {
-  margin-top: 40px;
+  margin-top: 8px;
   padding: 40px 80px;
   max-width: 100%;
 }
@@ -151,7 +151,7 @@ header nav {
   position: absolute;
   top: 0;
   left: 0;
-  height: 6px;
+  height: 16px;
   width: 100%; /* full width of card */
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
