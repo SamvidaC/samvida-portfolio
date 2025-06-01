@@ -105,20 +105,20 @@ nav {
 
 .marquee-track {
   display: flex;
+  width: fit-content;
   animation: marquee 40s linear infinite;
 }
 
 .marquee-content {
   flex-shrink: 0;
-  padding-right: 0.25rem; /* Adjust spacing between repetitions */
+  padding-right: 0.25rem; /* controls spacing between repeats */
 }
-
 @keyframes marquee {
   0% {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
