@@ -106,12 +106,12 @@ nav {
 .marquee-content {
   display: inline-block;
   white-space: nowrap;
-  animation: marquee 1s linear infinite;
+  animation: marquee 16s linear infinite;
 }
 
 .marquee-content span {
   display: inline-block;
-  padding-right: 4px; /* Space between repetitions */
+  padding-right: 1rem; /* Space between repetitions */
 }
 
 @keyframes marquee {
