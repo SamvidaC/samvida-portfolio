@@ -52,6 +52,45 @@ nav {
   color: #E27591;
   font-weight: 600;
 }
+.scroll-box {
+  height: 2rem;
+  overflow: hidden;
+  background-color: #E27591;
+  color: #1A1A1A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  position: relative;
+  width: 300px;
+}
+
+.scroll-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  animation: scroll-roles 16s linear infinite;
+}
+
+.scroll-list li {
+  height: 2rem;
+  text-align: center;
+}
+
+@keyframes scroll-roles {
+  0% { transform: translateY(0); }
+  12.5% { transform: translateY(-2rem); }
+  25% { transform: translateY(-4rem); }
+  37.5% { transform: translateY(-6rem); }
+  50% { transform: translateY(-8rem); }
+  62.5% { transform: translateY(-10rem); }
+  75% { transform: translateY(-12rem); }
+  87.5% { transform: translateY(-14rem); }
+  100% { transform: translateY(0); }
+}
 
 /* Design Trifecta Section */
 #design-trifecta {
