@@ -48,9 +48,9 @@ nav {
 }
 
 /* Highlight */
-/*.highlight {
-  color: #E27591;
-  font-weight: 600;*/
+.highlight {
+  color: #FAFAFA;
+  font-weight: 600;
 }
 .scroll-box {
   height: 2rem;
