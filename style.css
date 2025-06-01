@@ -153,8 +153,8 @@ header nav {
   left: 0;
   height: 16px;
   width: 100%; /* full width of card */
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 /* Specific card tab colors */
