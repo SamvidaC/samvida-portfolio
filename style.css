@@ -101,7 +101,7 @@ header nav {
 
 .btn-scroll {
   font-family: 'Merriweather', serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 100;
   /*font-size: 1.2rem;*/
   color: #1A1A1A;
@@ -117,17 +117,17 @@ header nav {
 }
 
 .arrow {
-  font-size: 1.2rem;
+  font-size: 14px;
   color: #1A1A1A;
-  animation: bounce 1.5s infinite;
+  /*animation: bounce 1.5s infinite;*/
   user-select: none;
 }
 
 /* Arrow bounce animation */
-@keyframes bounce {
+/*@keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(8px); }
-}
+}*/
 
 /* Design trifecta section */
 #design-trifecta {
