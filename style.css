@@ -27,7 +27,7 @@ header nav {
 }
 
 .logo {
-  height: 56px;
+  height: 64px;
   width: auto;
 }
 
@@ -101,7 +101,8 @@ header nav {
 
 .btn-scroll {
   font-family: 'Merriweather', serif;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 300;
   font-size: 1.2rem;
   color: #1A1A1A;
   text-decoration: none;
@@ -112,7 +113,7 @@ header nav {
 }
 
 .btn-scroll:hover {
-  color: #b05168;
+  color: #E27591;
 }
 
 .arrow {
