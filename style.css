@@ -111,7 +111,7 @@ nav {
 
 .marquee-content span {
   display: inline-block;
-  padding-right: 1rem; /* Space between repetitions */
+  padding-right: 0.5rem; /* Space between repetitions */
 }
 
 @keyframes marquee {
