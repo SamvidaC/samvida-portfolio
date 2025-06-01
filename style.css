@@ -182,11 +182,10 @@ header nav {
   top: 0;
   left: 0;
   height: 6px;
-  width: 60px;
+  width: 100%; /* tab stretches across the card */
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 }
-
 /* Specific card tab colors */
 .card-container .card:nth-child(1)::before {
   background-color: #E27591; /* pink */
