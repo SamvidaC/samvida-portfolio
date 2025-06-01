@@ -101,9 +101,9 @@ header nav {
 
 .btn-scroll {
   font-family: 'Merriweather', serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 100;
-  font-size: 1.2rem;
+  /*font-size: 1.2rem;*/
   color: #1A1A1A;
   text-decoration: none;
   cursor: pointer;
@@ -117,7 +117,7 @@ header nav {
 }
 
 .arrow {
-  font-size: 2.4rem;
+  font-size: 1.2rem;
   color: #1A1A1A;
   animation: bounce 1.5s infinite;
   user-select: none;
@@ -139,7 +139,7 @@ header nav {
 
 /* Design trifecta section */
 #design-trifecta {
-  margin-top: 80px;
+  margin-top: 40px;
   padding: 40px 80px;
   max-width: 100%;
 }
