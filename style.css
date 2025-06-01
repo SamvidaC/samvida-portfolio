@@ -110,7 +110,7 @@ nav {
 }
 
 .marquee-content {
-  padding-right: 1rem; /* spacing between repeats */
+  padding-right: 0.25rem; /* spacing between repeats */
 }
 @keyframes marquee {
   0% {
