@@ -4,48 +4,46 @@
   padding: 0;
   box-sizing: border-box;
 }
- <style>
-    .intro-container {
-      background-color: #FAFAFA;
-      color: #FAFAFA;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-      padding: 2rem;
-    }
+ .intro-container {
+  background-color: #FAFAFA;
+  color: #FAFAFA;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 2rem;
+}
 
-    .name {
-      font-family: 'Playfair Display', serif;
-      font-weight: 900;
-      font-size: 3rem;
-      color: #1A1A1A;
-      margin-bottom: 1rem;
-    }
+.name {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 3rem;
+  color: #1A1A1A;
+  margin-bottom: 1rem;
+}
 
-    .scroll-text {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      line-height: 1.5;
-      max-width: 800px;
-    }
+.scroll-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.5;
+  max-width: 800px;
+}
 
-    .down-arrow {
-      margin-top: 2rem;
-      font-size: 2rem;
-      color: #1A1A1A;
-      cursor: pointer;
-      transition: color 0.3s ease;
-    }
+.down-arrow {
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: #1A1A1A;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
 
-    .down-arrow:hover {
-      color: #E27591;
-    }
-  </style>
+.down-arrow:hover {
+  color: #E27591;
+}
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #FAFAFA;
