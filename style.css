@@ -137,55 +137,62 @@ header nav {
 }
 
 /* Design trifecta section */
+/* Design trifecta section */
 #design-trifecta {
-  margin-top: 120px; /* reduced spacing from hero */
+  margin-top: 60px; /* reduced from 120px for tighter layout */
   padding: 40px 60px;
   max-width: 900px;
-  margin-left: 0; /* keeps left alignment */
+  margin-left: 0;
 }
 
 #design-trifecta h2 {
   font-family: 'Merriweather', serif;
   font-weight: 700;
-  font-size: 32px; /* updated font size */
+  font-size: 32px;
   margin-bottom: 40px;
   text-align: left;
-  color: #E27591; /* preserves color */
+  color: #1A1A1A; /* default text color */
 }
 
 .highlight {
-  color: #E27591;
+  color: #E27591; /* pink for only selected words */
 }
 
+/* Card container layout */
 .card-container {
   display: flex;
   gap: 24px;
   justify-content: flex-start;
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
 }
 
+/* Cards */
 .card {
   background: #FAFAFA;
   border: 1px solid #ddd;
   border-radius: 6px;
   padding: 24px 20px 40px;
-  width: 280px;
+  flex: 1 1 280px; /* responsive width */
   box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
   position: relative;
   font-family: 'Open Sans', sans-serif;
   color: #1A1A1A;
+  min-width: 280px;
+  max-width: 100%;
 }
 
-/* Tabs on cards */
+/* Card tabs */
 .card::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   height: 6px;
-  width: 100%; /* tab stretches across the card */
+  width: 100%; /* full width of card */
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 }
+
 /* Specific card tab colors */
 .card-container .card:nth-child(1)::before {
   background-color: #E27591; /* pink */
