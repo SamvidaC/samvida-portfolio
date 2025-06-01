@@ -53,7 +53,7 @@ header nav {
 
 /* Hero Section */
 #hero {
-  height: 100vh;
+  /*height: 100vh;*/
   display: flex;
   flex-direction: column; /* stack content vertically */
   justify-content: center;
