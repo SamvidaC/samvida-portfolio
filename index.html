@@ -6,7 +6,48 @@
   <title>Samvida Chennuri – Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
-  
+  <style>
+    .intro-container {
+      background-color: #E27591;
+      color: #FAFAFA;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 3rem;
+      color: #1A1A1A;
+      margin-bottom: 1rem;
+    }
+
+    .scroll-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      line-height: 1.5;
+      max-width: 800px;
+    }
+
+    .down-arrow {
+      margin-top: 2rem;
+      font-size: 2rem;
+      color: #1A1A1A;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .down-arrow:hover {
+      color: #E27591;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -22,27 +63,17 @@
 
   <main>
     <section class="intro-container" id="hero">
-      <div class="name">Samvida</div>
-<div class="scroll-box">
-  <ul class="scroll-list">
-    <li>Design Strategist</li>
-    <li>Service Designer</li>
-    <li>Sustainability Expert</li>
-    <li>Systems Thinker</li>
-    <li>Researcher</li>
-    <li>Storyteller</li>
-    <li>Inclusive Design</li>
-    <li>Circular Systems Designer</li>
-  </ul>
-</div>
-<div class="name">Chennuri</div>
-
+      <div class="name">Samvida Chennuri</div>
+      <div class="scroll-text">
+        Design Strategist • Service Designer • Researcher • Sustainability Expert • Circular Systems Designer • Inclusive Design • Storyteller • Systems Thinker • Creative Problem-solver
+      </div>
+      <div class="down-arrow" id="scrollBtn" aria-label="Scroll down">&#x25BC;</div>
     </section>
 
-    <div class="hero-padding"></div>
+    <div class="hero-padding" aria-hidden="true"></div>
 
-    <section id="design-trifecta">
-      <h2>
+    <section id="design-trifecta" aria-labelledby="trifecta-title">
+      <h2 id="trifecta-title">
         My design trifecta for <span class="highlight">Circular</span>,
         <span class="highlight">Ethical</span>, and
         <span class="highlight">Community-driven</span> solutions:
@@ -51,44 +82,57 @@
       <div class="card-container">
         <div class="card">
           <h3>Empathize</h3>
-          <p>• Ask why systems work the way they do and why they cannot work better<br>
-          • Dig into behaviors, structures, and lived experiences across touchpoints<br>
-          • Uncover the gaps, frictions, and opportunities that shape real-world interactions</p>
+          <p>
+            • Ask why systems work the way they do and why they cannot work better<br />
+            • Dig into behaviors, structures, and lived experiences across touchpoints<br />
+            • Uncover the gaps, frictions, and opportunities that shape real-world interactions
+          </p>
         </div>
 
         <div class="card">
           <h3>Simplify</h3>
-          <p>• Map out journeys, processes, and relationships to cut through complexity<br>
-          • Find the root problems beneath surface-level symptoms<br>
-          • Reframe messy systems into clear and actionable design opportunities</p>
+          <p>
+            • Map out journeys, processes, and relationships to cut through complexity<br />
+            • Find the root problems beneath surface-level symptoms<br />
+            • Reframe messy systems into clear and actionable design opportunities
+          </p>
         </div>
 
         <div class="card">
           <h3>Innovate</h3>
-          <p>• Design services, systems, and experiences that are equitable, adaptable, and regenerative<br>
-          • Build with people, not just for them, with an awareness of long-term impact<br>
-          • Create meaningful change that works in the real world</p>
+          <p>
+            • Design services, systems, and experiences that are equitable, adaptable, and regenerative<br />
+            • Build with people, not just for them, with an awareness of long-term impact<br />
+            • Create meaningful change that works in the real world
+          </p>
         </div>
       </div>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="project-card">Project 1</div>
-      <div class="project-card">Project 2</div>
-      <div class="project-card">Project 3</div>
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+      <div class="project-card" role="region" aria-label="Project 1">Project 1</div>
+      <div class="project-card" role="region" aria-label="Project 2">Project 2</div>
+      <div class="project-card" role="region" aria-label="Project 3">Project 3</div>
+    </section>
+
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About Me</h2>
+      <p>I believe in life-centered design and systems thinking. My work blends sustainability, strategy, and storytelling to design with empathy and purpose.</p>
     </section>
   </main>
 
   <footer>
-    <p class="footer-banner">
+    <p class="footer-banner" aria-hidden="true">
       • • • footer unlocked, let’s make design work for the planet • • •
     </p>
-    <img class="logo" src="assets/logo.svg" alt="Logo" />
+    <img class="logo" src="assets/logo.svg" alt="Samvida Chennuri Logo" />
     <h2 class="footer-name">Samvida Chennuri</h2>
     <p class="footer-tagline">LIFE-CENTERED | DESIGN-INSPIRED</p>
-    <div class="footer-links">
-      <a href="#">LinkedIn</a> | <a href="#">Instagram</a> | <a href="#">Email</a>
+    <div class="footer-links" aria-label="Social links">
+      <a href="#" aria-label="LinkedIn profile">LinkedIn</a> |
+      <a href="#" aria-label="Instagram profile">Instagram</a> |
+      <a href="#" aria-label="Send email">Email</a>
     </div>
     <p>©2025 Samvida Chennuri</p>
   </footer>
