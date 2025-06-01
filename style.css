@@ -17,7 +17,7 @@ body {
 header nav {
   display: flex;
   align-items: center;
-  padding: 20px 40px;
+  padding: 8px 40px;
   background: #FAFAFA;
   box-shadow: none; /* No bottom line */
   border-bottom: none;
