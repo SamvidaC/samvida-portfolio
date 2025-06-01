@@ -103,25 +103,21 @@ nav {
   position: relative;
 }
 
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
 .marquee-content {
-  display: inline-block;
-  padding-left: 100%;
-  animation: marquee 20s linear infinite;
-  white-space: nowrap;
-  position: relative;
+  padding-right: 1rem; /* spacing between repeats */
 }
-
-.marquee-content::after {
-  content: " DESIGN STRATEGIST • SERVICE DESIGNER • RESEARCHER • SUSTAINABILITY EXPERT • INNOVATOR • SYSTEMS THINKER • STORYTELLER • ";
-  padding-left: 0.25rem;
-}
-
 @keyframes marquee {
   0% {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
