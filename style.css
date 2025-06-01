@@ -130,16 +130,15 @@ header nav {
 
 /* Design trifecta section */
 #design-trifecta {
-  margin-top: 1200px; /* pushes it down the page so it's off-screen on load */
+  margin-top: 1080px; /* pushes it down the page so it's off-screen on load */
   padding: 40px 60px;
   max-width: 900px;
   margin-left: 0; /* left aligned */
 }
 
 /* Design trifecta section */
-/* Design trifecta section */
 #design-trifecta {
-  margin-top: 60px; /* reduced from 120px for tighter layout */
+  margin-top: 120px; /* reduced from 120px for tighter layout */
   padding: 40px 60px;
   max-width: 900px;
   margin-left: 0;
