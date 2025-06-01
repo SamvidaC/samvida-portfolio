@@ -108,7 +108,7 @@ header nav {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   transition: color 0.3s ease;
 }
 
@@ -117,7 +117,7 @@ header nav {
 }
 
 .arrow {
-  font-size: 14px;
+  font-size: 16px;
   color: #1A1A1A;
   /*animation: bounce 1.5s infinite;*/
   user-select: none;
