@@ -99,6 +99,7 @@ nav {
   font-weight: 500;
   font-size: 24px;
   white-space: nowrap;
+  position: relative;
 }
 
 .marquee-track {
@@ -108,8 +109,9 @@ nav {
 }
 
 .marquee-content {
-  padding-right: 0.25rem; /* optional spacing between items */
+  padding-right: 2rem; /* Adjust spacing between repetitions */
 }
+
 @keyframes scroll-left {
   0% {
     transform: translateX(0%);
