@@ -105,14 +105,14 @@ nav {
 
 .marquee-track {
   display: flex;
-  width: 200%; /* Ensures space for two full copies */
   animation: marquee 40s linear infinite;
 }
 
 .marquee-content {
-  flex: 0 0 50%; /* Each copy takes exactly half of the track */
-  padding-right: 0.25rem; /* Optional spacing between items */
+  flex-shrink: 0;
+  padding-right: 0.25rem; /* Adjust spacing between repetitions */
 }
+
 @keyframes marquee {
   0% {
     transform: translateX(0%);
@@ -121,6 +121,7 @@ nav {
     transform: translateX(-50%);
   }
 }
+
 
 /* Design Trifecta Section */
 #design-trifecta {
