@@ -58,7 +58,7 @@ header nav {
   flex-direction: column; /* stack content vertically */
   justify-content: center;
   align-items: center;
-  padding: 40 80px;
+  padding: 40 200px;
   text-align: center;
   position: relative;
 }
