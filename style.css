@@ -98,27 +98,24 @@ nav {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 24px;
-  padding: 0.5rem 0;
   white-space: nowrap;
-  position: relative;
 }
 
 .marquee-track {
   display: flex;
-  width: fit-content;
-  animation: marquee 40s linear infinite;
+  width: max-content;
+  animation: scroll-left 25s linear infinite;
 }
 
 .marquee-content {
-  flex-shrink: 0;
-  padding-right: 0.25rem; /* controls spacing between repeats */
+  padding-right: 0.25rem; /* optional spacing between items */
 }
-@keyframes marquee {
+@keyframes scroll-left {
   0% {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
