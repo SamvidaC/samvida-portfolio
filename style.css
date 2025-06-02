@@ -16,13 +16,13 @@
   padding: 2rem;
 }*/
 
-.name {
+/*.name {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
-  font-size: 64px;
+  font-size: 80px;
   color: #1A1A1A;
   margin-bottom: 1rem;
-}
+}*/
 .hero-text {
   padding: 4rem 2rem;
   text-align: center;
@@ -31,8 +31,8 @@
 }
 .hero-text h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 64;
-  margin-bottom: 24px;
+  font-size: 64px;
+  margin-bottom: 16px;
 }
 /*.scroll-text {
   font-family: 'Montserrat', sans-serif;
