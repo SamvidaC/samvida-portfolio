@@ -73,6 +73,8 @@ nav {
   line-height: 1.3;
   margin-bottom: 8px;
   word-break: break-word;
+  font-style: normal; /* Add this line */
+  font-weight: 900;    /* Optional: makes it bold if you want */
 }
 /*.scroll-text {
   font-family: 'Montserrat', sans-serif;
