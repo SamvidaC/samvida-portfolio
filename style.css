@@ -49,18 +49,18 @@
 .down-arrow {
   margin-top: 8rem;
   padding-bottom: 4rem;
-  font-size: 64px;
-  color: #1A1A1A;
   cursor: pointer;
-  transition: color 0.3s ease;
   text-align: center;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-.down-arrow:hover {
-  color: #E27591;
+.arrow-icon {
+  width: 64px;      /* Try increasing size here */
+  height: 64px;
+  transition: stroke 0.3s ease;
+}
+
+.down-arrow:hover .arrow-icon path {
+  stroke: #E27591;
 }
 body {
   font-family: 'Montserrat', sans-serif;
