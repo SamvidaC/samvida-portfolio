@@ -94,7 +94,6 @@ nav {
 .marquee-container {
   overflow: hidden;
   width: 100%;
-  background: transparent;
 }
 
 .marquee {
@@ -114,9 +113,9 @@ nav {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: #E27591;
-  padding-right: 0.25rem; /* slight spacing between spans */
+  margin: 0;
+  padding: 0;
 }
-
 
 /* Design Trifecta Section */
 #design-trifecta {
