@@ -94,8 +94,7 @@ nav {
 .marquee-container {
   overflow: hidden;
   width: 100%;
-  position: relative;
-  background-color: transparent;
+  background: transparent;
 }
 
 .marquee {
@@ -104,19 +103,20 @@ nav {
 }
 
 .marquee-track {
-  display: inline-flex;
+  display: flex;
   white-space: nowrap;
 }
 
-.marquee-track span {
+.marquee-content {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 24px;
-  padding-right: 0.25rem; /* Adjust spacing between repetitions */
-  color: #E27591;
+  font-size: 20px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
+  color: #E27591;
+  padding-right: 0.25rem; /* slight spacing between spans */
 }
+
 
 /* Design Trifecta Section */
 #design-trifecta {
