@@ -58,6 +58,9 @@
   height: 64px;
   transition: stroke 0.3s ease;
 }
+.down-arrow:hover .arrow-icon path {
+  stroke: #E27591;
+}
 
 }
 body {
