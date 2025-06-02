@@ -145,8 +145,8 @@ html {
   color: #1A1A1A;
   font-family: 'Playfair Display', serif;
   font-size: 24px;
-  max-width: 800px;
-  margin: 0 auto 2rem auto;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
 }
 
 .highlight-keyword {
@@ -171,6 +171,13 @@ html {
   font-size: 16px;
   font-weight: 400;
 }
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 20px;
+  margin-bottom: 1rem;
+  color: #1A1A1A;
+}
 
 /* Empathize - rectangle */
 .card:nth-child(1) {
@@ -182,6 +189,11 @@ html {
 .card:nth-child(2) {
   border: 2px solid #FFCC66;
   border-radius: 999px;
+  padding: 2rem 1.5rem;
+  min-height: 240px; /* optional: ensures visual consistency */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Innovate - rectangle */
