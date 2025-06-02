@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
- .intro-container {
+ /*.intro-container {
   background-color: #FAFAFA;
   color: #E27591;
   display: flex;
@@ -14,7 +14,7 @@
   height: 100vh;
   text-align: center;
   padding: 2rem;
-}
+}*/
 
 .name {
   font-family: 'Playfair Display', serif;
