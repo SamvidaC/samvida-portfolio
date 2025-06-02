@@ -101,7 +101,7 @@ nav {
 .marquee {
   display: inline-block;
   white-space: nowrap;
-  animation: scroll-left 30s linear infinite;
+  animation: scroll-left 20s linear infinite;
 }
 
 .marquee span {
@@ -110,7 +110,7 @@ nav {
   font-family: 'Montserrat', sans-serif; /* match your style */
   font-size: 24px;
   color: #E27591;
-  letter-spacing: 100px;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
 }
 
