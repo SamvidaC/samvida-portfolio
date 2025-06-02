@@ -93,35 +93,27 @@ nav {
 }
 .marquee-container {
   overflow: hidden;
-  white-space: nowrap;
   width: 100%;
-  background-color: transparent; /* preserve your design */
+  position: relative;
 }
 
 .marquee {
-  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: inline-flex; /* important for seamless scrolling */
   white-space: nowrap;
-  animation: scroll-left 20s linear infinite;
 }
 
-.marquee span {
-  display: inline-block;
-  padding-right: 0.25rem; /* slight spacing between loops */
-  font-family: 'Montserrat', sans-serif; /* match your style */
+.marquee-track span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   font-size: 24px;
-  color: #E27591;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+  padding-right: 4rem; /* spacing between repetitions */
 }
 
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
 /* Design Trifecta Section */
 #design-trifecta {
   padding: 4rem 2rem;
