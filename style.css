@@ -61,9 +61,6 @@
 .down-arrow:hover .arrow-icon path {
   stroke: #E27591;
 }
-html {
-  scroll-behavior: smooth;
-}
 
 body {
   font-family: 'Montserrat', sans-serif;
