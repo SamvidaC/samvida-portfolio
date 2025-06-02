@@ -8,7 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
  <!-- GSAP Library and Plugins -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ModifiersPlugin.min.js"></script>
 
 </head>
@@ -39,10 +38,6 @@
     </div>
   </div>
 </div>
-
-
-
-
 
 
       <div class="down-arrow" id="scrollBtn" aria-label="Scroll down">&#x25BC;</div>
@@ -131,7 +126,7 @@
 
     gsap.to(marqueeTrack, {
       x: `-=${contentWidth}`,
-      duration: 30, // slower speed
+      duration: 30, // Adjust speed as desired
       ease: "none",
       repeat: -1,
       modifiers: {
@@ -140,6 +135,7 @@
     });
   });
 </script>
+
 
 </body>
 </html>
