@@ -93,26 +93,35 @@ nav {
 }
 .marquee-container {
   overflow: hidden;
-  background-color: #FAFAFA;
-  color: #E27591;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
+  white-space: nowrap;
+  width: 100%;
+  background-color: transparent; /* preserve your design */
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 30s linear infinite;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-right: 0.25rem; /* slight spacing between loops */
+  font-family: 'Montserrat', sans-serif; /* match your style */
   font-size: 24px;
-  white-space: nowrap;
-  position: relative;
+  color: #E27591;
+  letter-spacing: 100px;
+  text-transform: uppercase;
 }
 
-.marquee-track {
-  display: inline-block;
-  white-space: nowrap;
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
-
-.marquee-content {
-  display: inline-block;
-  padding-right: 0.25rem;
-}
-
-
 /* Design Trifecta Section */
 #design-trifecta {
   padding: 4rem 2rem;
