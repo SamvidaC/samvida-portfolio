@@ -99,20 +99,21 @@ nav {
   font-weight: 500;
   font-size: 24px;
   white-space: nowrap;
-  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px; /* Adjust if needed */
 }
 
 .marquee-track {
   display: flex;
-  width: max-content;
-  animation: scroll-left 25s linear infinite;
+  animation: marquee-scroll 30s linear infinite;
 }
 
-.marquee-content {
-  padding-right: 2rem; /* Adjust spacing between repetitions */
+.marquee-text {
+  padding-right: 0.25rem; /* consistent space between loops */
 }
-
-@keyframes scroll-left {
+  
+@keyframes marquee-scroll {
   0% {
     transform: translateX(0%);
   }
@@ -120,7 +121,6 @@ nav {
     transform: translateX(-50%);
   }
 }
-
 
 /* Design Trifecta Section */
 #design-trifecta {
