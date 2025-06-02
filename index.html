@@ -118,12 +118,11 @@
     });
   </script>
   <script>
-  // Wait for the page to fully load
   window.addEventListener("load", function () {
+    gsap.registerPlugin(ScrollTrigger, ModifiersPlugin);
+
     const marquee = document.querySelector('.marquee-track');
     const marqueeWidth = marquee.offsetWidth;
-
-    gsap.registerPlugin(ScrollTrigger, ModifiersPlugin);
 
     gsap.to(marquee, {
       x: `-=${marqueeWidth}`,
@@ -136,6 +135,7 @@
     });
   });
 </script>
+
 
 </body>
 </html>
