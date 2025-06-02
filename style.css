@@ -47,9 +47,9 @@
 }*/
 
 .down-arrow {
-  margin-top: 12rem;
-  padding-bottom: 2rem;
-  font-size: 18px;
+  margin-top: 8rem;
+  padding-bottom: 4rem;
+  font-size: 32px;
   color: #1A1A1A;
   cursor: pointer;
   transition: color 0.3s ease;
