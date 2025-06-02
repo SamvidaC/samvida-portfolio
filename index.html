@@ -121,29 +121,25 @@
       document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' });
     });
   </script>
- <script>
+<script>
   window.addEventListener("load", function () {
     gsap.registerPlugin(ModifiersPlugin);
 
     const marqueeTrack = document.querySelector(".marquee-track");
     const content = marqueeTrack.querySelector(".marquee-content");
-
-    // Clone the content for seamless looping
-    const clone = content.cloneNode(true);
-    marqueeTrack.appendChild(clone);
-
-    const totalWidth = content.offsetWidth;
+    const contentWidth = content.offsetWidth;
 
     gsap.to(marqueeTrack, {
-      x: `-=${totalWidth}`,
-      duration: 30, // Adjust duration for desired speed
-      ease: "linear",
+      x: `-=${contentWidth}`,
+      duration: 30, // slower speed
+      ease: "none",
       repeat: -1,
       modifiers: {
-        x: gsap.utils.unitize(x => parseFloat(x) % totalWidth)
+        x: gsap.utils.unitize(x => parseFloat(x) % contentWidth)
       }
     });
   });
 </script>
+
 </body>
 </html>
