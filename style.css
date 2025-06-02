@@ -99,28 +99,19 @@ nav {
   font-weight: 500;
   font-size: 24px;
   white-space: nowrap;
-  display: flex;
-  align-items: center;
-  height: 60px; /* Adjust if needed */
+  position: relative;
 }
 
 .marquee-track {
-  display: flex;
-  animation: marquee-scroll 30s linear infinite;
+  display: inline-block;
+  white-space: nowrap;
 }
 
-.marquee-text {
-  padding-right: 0.25rem; /* consistent space between loops */
+.marquee-content {
+  display: inline-block;
+  padding-right: 0.25rem;
 }
-  
-@keyframes marquee-scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
+
 
 /* Design Trifecta Section */
 #design-trifecta {
