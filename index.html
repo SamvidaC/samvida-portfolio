@@ -29,11 +29,15 @@
       <div class="name">Hi,I am Samvida! I design systems <br>
         people love, services they remember, and <br>
         experiences that don’t wreck the planet.</div>
-      <div class="marquee-container">
+     <div class="marquee-container">
   <div class="marquee">
     <div class="marquee-track">
-      <span>DESIGN STRATEGIST • SERVICE DESIGNER • RESEARCHER • SUSTAINABILITY EXPERT • INNOVATOR • SYSTEMS THINKER • STORYTELLER •</span>
-      <span>DESIGN STRATEGIST • SERVICE DESIGNER • RESEARCHER • SUSTAINABILITY EXPERT • INNOVATOR • SYSTEMS THINKER • STORYTELLER •</span>
+      <span class="marquee-content">
+        DESIGN STRATEGIST • SERVICE DESIGNER • RESEARCHER • SUSTAINABILITY EXPERT • INNOVATOR • SYSTEMS THINKER • STORYTELLER • 
+      </span>
+      <span class="marquee-content">
+        DESIGN STRATEGIST • SERVICE DESIGNER • RESEARCHER • SUSTAINABILITY EXPERT • INNOVATOR • SYSTEMS THINKER • STORYTELLER • 
+      </span>
     </div>
   </div>
 </div>
@@ -119,24 +123,22 @@
   </script>
   <script>
   window.addEventListener("load", function () {
-    gsap.registerPlugin(ScrollTrigger, ModifiersPlugin);
+    gsap.registerPlugin(ModifiersPlugin);
 
-    const marquee = document.querySelector('.marquee-track');
-    const marqueeWidth = marquee.offsetWidth;
+    const marqueeTrack = document.querySelector(".marquee-track");
+    const totalWidth = marqueeTrack.scrollWidth / 2; // because we have 2 copies
 
-    gsap.to(marquee, {
-      x: `-=${marqueeWidth}`,
-      duration: 20,
-      ease: 'linear',
+    gsap.to(marqueeTrack, {
+      x: `-=${totalWidth}`,
+      duration: 40, // slower scroll
+      ease: "linear",
       repeat: -1,
       modifiers: {
-        x: gsap.utils.unitize(x => parseFloat(x) % marqueeWidth)
+        x: gsap.utils.unitize(x => parseFloat(x) % totalWidth)
       }
     });
   });
 </script>
-
-
 
 </body>
 </html>
