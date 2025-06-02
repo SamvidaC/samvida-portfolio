@@ -46,7 +46,7 @@
   max-width: 800px;
 }*/
 
-/*.down-arrow {
+.down-arrow {
   margin-top: 8rem;
   padding-bottom: 4rem;
   cursor: pointer;
@@ -57,26 +57,6 @@
   width: 64px;      /* Try increasing size here */
   height: 64px;
   transition: stroke 0.3s ease;
-}*/
-
-.down-arrow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%; /* Make it span full width */
-  margin-top: 8rem;
-  padding-bottom: 4rem;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.down-arrow:hover {
-  transform: translateY(4px);
-}
-
-.arrow-icon {
-  width: 40px;
-  height: 40px;
 }
 
 }
