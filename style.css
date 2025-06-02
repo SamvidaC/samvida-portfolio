@@ -94,11 +94,7 @@ nav {
 .marquee-container {
   overflow: hidden;
   width: 100%;
-}
-
-.marquee {
-  width: 100%;
-  overflow: hidden;
+  background-color: transparent;
 }
 
 .marquee-track {
@@ -108,13 +104,10 @@ nav {
 
 .marquee-content {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
   font-size: 20px;
+  color: #E27591;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #E27591;
-  margin: 0;
-  padding: 0;
 }
 
 /* Design Trifecta Section */
