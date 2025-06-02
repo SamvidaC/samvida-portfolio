@@ -6,7 +6,11 @@
   <title>Samvida Chennuri – Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
- 
+ <!-- GSAP Library and Plugins -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ModifiersPlugin.min.js"></script>
+
 </head>
 <body>
   <header>
@@ -114,5 +118,25 @@
       document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' });
     });
   </script>
+  <script>
+  // Wait for the page to fully load
+  window.addEventListener("load", function () {
+    const marquee = document.querySelector('.marquee-track');
+    const marqueeWidth = marquee.offsetWidth;
+
+    gsap.registerPlugin(ScrollTrigger, ModifiersPlugin);
+
+    gsap.to(marquee, {
+      x: `-=${marqueeWidth}`,
+      duration: 20,
+      ease: 'linear',
+      repeat: -1,
+      modifiers: {
+        x: gsap.utils.unitize(x => parseFloat(x) % marqueeWidth)
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
