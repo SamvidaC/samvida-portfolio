@@ -35,9 +35,6 @@
       <span class="marquee-content">
         DESIGN STRATEGIST • SERVICE DESIGNER • RESEARCHER • SUSTAINABILITY EXPERT • INNOVATOR • SYSTEMS THINKER • STORYTELLER • 
       </span>
-      <span class="marquee-content">
-        DESIGN STRATEGIST • SERVICE DESIGNER • RESEARCHER • SUSTAINABILITY EXPERT • INNOVATOR • SYSTEMS THINKER • STORYTELLER • 
-      </span>
     </div>
   </div>
 </div>
@@ -126,11 +123,17 @@
     gsap.registerPlugin(ModifiersPlugin);
 
     const marqueeTrack = document.querySelector(".marquee-track");
-    const totalWidth = marqueeTrack.scrollWidth / 2; // because we have 2 copies
+    const content = marqueeTrack.querySelector(".marquee-content");
+
+    // Clone the content so it loops seamlessly
+    const clone = content.cloneNode(true);
+    marqueeTrack.appendChild(clone);
+
+    const totalWidth = content.offsetWidth;
 
     gsap.to(marqueeTrack, {
       x: `-=${totalWidth}`,
-      duration: 40, // slower scroll
+      duration: 30, // Adjust for speed
       ease: "linear",
       repeat: -1,
       modifiers: {
@@ -139,6 +142,7 @@
     });
   });
 </script>
+
 
 </body>
 </html>
