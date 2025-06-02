@@ -59,11 +59,11 @@
   transition: stroke 0.3s ease;
 }*/
 
-.down-arrow:hover .arrow-icon path {
-  stroke: #E27591;
-  .down-arrow {
+.down-arrow {
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100%; /* Make it span full width */
   margin-top: 8rem;
   padding-bottom: 4rem;
   cursor: pointer;
