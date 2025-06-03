@@ -263,7 +263,7 @@ html {
 }
 
 .project-thumb {
-  border: 6px solid;
+  border: 5px solid;
   border-radius: 12px;
   overflow: hidden;
 }
@@ -290,7 +290,8 @@ html {
 .project h3 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 20px;
+  color: #1A1A1A;
   margin-top: 1rem;
   margin-bottom: 0.3rem;
 }
