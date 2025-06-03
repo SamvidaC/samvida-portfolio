@@ -260,15 +260,17 @@ html {
 
 .project {
   text-align: left;
-}
-
-.project-thumb {
   border: 5px solid;
   border-radius: 12px;
-  overflow: hidden;
+  padding: 1rem;
+  transition: transform 0.3s ease;
 }
 
-/* Individual color classes */
+.project:hover {
+  transform: scale(1.03);
+}
+
+/* Apply individual border color classes to .project instead of .project-thumb */
 .border-pink {
   border-color: #E27591;
 }
@@ -279,13 +281,21 @@ html {
   border-color: #A8D5BA;
 }
 
+.project-thumb {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  /* No border here anymore */
+}
 
 .project-thumb img {
   width: 100%;
   height: 220px;
   object-fit: cover;
   display: block;
+  border-radius: 8px;
 }
+
 
 .project h3 {
   font-family: 'Playfair Display', serif;
