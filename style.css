@@ -256,13 +256,20 @@ html {
   margin-bottom: 60px;
 }
 
-#work {
-  grid-column: span 2; /* make heading span full width */
+#projects-title {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
   font-size: 48px;
   text-align: center;
   margin-bottom: 40px;
+}
+
+.projects-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  padding: 0 80px;
+  margin-bottom: 60px;
 }
 
 .project-card {
@@ -296,6 +303,17 @@ html {
 .project-card p {
   font-size: 1rem;
   color: #1A1A1A;
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  #projects-title {
+    font-size: 36px;
+  }
 }
 
 /* Footer */
