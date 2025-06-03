@@ -288,16 +288,17 @@ html {
 }
 
 .project h3 {
-  font-size: 1.2rem;
+  font-family: 'Playfair Display', serif;
   font-weight: 700;
+  font-size: 24px;
   margin-top: 1rem;
   margin-bottom: 0.3rem;
 }
 
 .project-type {
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 600;
-  color: #666;
+  color: #1A1A1A;
   text-transform: uppercase;
   letter-spacing: 0.4px;
   display: block;
@@ -305,7 +306,7 @@ html {
 }
 
 .project p {
-  font-size: 1rem;
+  font-size: 16px;
   color: #1A1A1A;
 }
 
