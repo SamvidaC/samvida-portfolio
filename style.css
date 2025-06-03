@@ -215,6 +215,7 @@ html {
 .card-title {
   font-family: 'Playfair Display', serif;
   font-size: 20px;
+  font-style: italic;
   color: #1A1A1A;
   text-align: center; /* Centered title */
   margin-bottom: 1rem;
