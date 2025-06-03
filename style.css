@@ -181,24 +181,23 @@ html {
 /* Card base styling */
 
 .card {
-  position: relative; /* ADD THIS LINE */
+  position: relative; /* Add this line */
   background-color: #FAFAFA;
   border-radius: 4px;
-  padding: 2rem; /* Equal padding on all sides */
+  padding: 2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.3s ease;
 }
-
 /* Top tab using pseudo-element */
 .card::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 16px;
-  width: 48px;
+  left: 0;
+  width: 100%; /* Make it full width */
   height: 8px;
   border-radius: 4px 4px 0 0;
 }
