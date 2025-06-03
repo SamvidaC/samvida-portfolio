@@ -242,32 +242,50 @@ html {
   }
 }
 
-/* Projects Section */
-#projects {
-  padding: 4rem 2rem;
-}
-
-#projects h2 {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 2rem;
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .project-card {
-  background-color: #FAFAFA;
-  border: 1px solid #E0E0E0;
-  border-radius: 10px;
-  padding: 2rem;
-  margin: 1rem auto;
-  max-width: 600px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  text-align: center;
+  background: #FAFAFA;
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  padding: 1rem;
+  text-align: left;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #444;
 }
 
 /* Footer */
 footer {
-  background-color: #1A1A1A;
-  color: #FAFAFA;
+  background-color: #FAFAFA;
+  color: #1A1A1A;
   text-align: center;
   padding: 3rem 2rem;
 }
