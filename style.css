@@ -183,7 +183,7 @@ html {
 .card {
   position: relative; /* Add this line */
   background-color: #FAFAFA;
-  border-radius: 4px;
+  border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   display: flex;
