@@ -179,6 +179,7 @@ html {
 /* Card base styling */
 
 .card {
+  position: relative; /* ADD THIS LINE */
   background-color: #FAFAFA;
   border-radius: 4px;
   padding: 2rem; /* Equal padding on all sides */
