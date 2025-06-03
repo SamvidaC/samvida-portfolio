@@ -250,18 +250,21 @@ html {
 }
 .projects-section {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
-  gap: 40px; /* spacing between cards */
-  padding: 0 80px; /* left and right padding */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  padding: 0 80px;
   margin-bottom: 60px;
 }
+
 #work {
+  grid-column: span 2; /* make heading span full width */
   font-family: 'Playfair Display', serif;
-  font-weight: 900; /* 'Black' weight */
+  font-weight: 900;
   font-size: 48px;
   text-align: center;
   margin-bottom: 40px;
 }
+
 .project-card {
   background: #FAFAFA;
   border: 1px solid #e5e5e5;
