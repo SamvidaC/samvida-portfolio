@@ -183,7 +183,7 @@ html {
 .card {
   position: relative; /* Add this line */
   background-color: #FAFAFA;
-  border-radius: 16px;
+  border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   display: flex;
@@ -199,7 +199,7 @@ html {
   left: 0;
   width: 100%; /* Make it full width */
   height: 16px;
-  border-radius: 16px 16px 0 0;
+  border-radius: 12px 12px 0 0;
 }
 
 /* Tab colors for each card */
