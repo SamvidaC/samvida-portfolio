@@ -374,15 +374,15 @@ footer {
   display: block;
   font-family: 'Playfair Display', serif;
   font-weight: 900;
-  font-size: 16px;
+  font-size: 1.4rem;
   margin: 0.1rem 0;
 }
 
 
 .footer-tagline {
-  font-size: 14px;
+  font-size: 0.9rem;
   margin-bottom: 1.5rem;
-  margin-top: 0.2rem;
+  margin-top: 0.1rem;
 }
 
 .footer-links a {
