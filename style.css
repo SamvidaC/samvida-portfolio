@@ -358,16 +358,15 @@ footer {
 }
 
 .footer-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+  /* Remove display: flex */
+  text-align: center;
   margin-bottom: 0.1rem;
 }
 
 .footer-logo img {
   height: 72px;
   width: auto;
+  margin-bottom: 0.1rem;
 }
 
 .footer-name {
