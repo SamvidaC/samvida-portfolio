@@ -352,7 +352,7 @@ footer {
 .footer-banner {
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.1em;
-  font-size: 0.9rem;
+  font-size: 1.4rem;
   margin-bottom: 1rem;
   color: #E27591;
 }
@@ -389,7 +389,8 @@ footer {
   color: #1A1A1A;
   text-decoration: none;
   margin: 0 0.5rem;
-  font-weight: 500;
+  font-size: 0.5rem;
+  font-weight: 400;
 }
 
 .footer-links a:hover {
