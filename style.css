@@ -373,6 +373,7 @@ footer {
 .footer-name {
   display: block;
   font-family: 'Playfair Display', serif;
+  font-weight: 900;
   font-size: 1.4rem;
   margin: 0.1rem 0;
 }
