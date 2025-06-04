@@ -358,7 +358,8 @@ footer {
 }
 
 .footer-logo {
-  display: flex;
+  height: 80px
+  /*display: flex;*/
   align-items: center;
   gap: 0.5rem; /* controls spacing between logo and name */
 }
