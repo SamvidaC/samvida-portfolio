@@ -382,7 +382,7 @@ footer {
 
 .footer-tagline {
   font-size: 0.8rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   margin-top: 0.2rem;
 }
 
@@ -394,7 +394,7 @@ footer {
   font-family: 'Playfair Display', serif;
   font-size: 1rem;
   font-weight: 400;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .footer-links a:hover {
@@ -405,6 +405,7 @@ footer {
   font-size: 0.75rem;
   font-weight: 300;
   margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   color: #1A1A1A;
 }
 
