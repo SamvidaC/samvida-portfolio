@@ -389,7 +389,8 @@ footer {
   color: #1A1A1A;
   text-decoration: none;
   margin: 0 0.5rem;
-  font-size: 0.75rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 
