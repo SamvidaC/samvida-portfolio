@@ -366,19 +366,20 @@ footer {
 }
 
 .footer-logo img {
-  height: 22px; /* Try 20–24px depending on preference */
+  height: 72px;
   width: auto;
 }
 
 .footer-name {
   font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  margin-top: 8px;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .footer-tagline {
   font-size: 0.95rem;
   margin-bottom: 1.5rem;
+  margin-top: 0.2rem;
 }
 
 .footer-links a {
