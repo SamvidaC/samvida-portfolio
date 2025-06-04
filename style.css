@@ -262,12 +262,14 @@ html {
   text-align: left;
   border: 2px solid;
   border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(26, 26, 26, 0.08);
   padding: 1rem;
   transition: transform 0.3s ease;
 }
 
 .project:hover {
-  transform: scale(1.03);
+  box-shadow: 0 12px 24px rgba(26, 26, 26, 0.12);
+  transform: scale(1.05);
 }
 
 /* Apply individual border color classes to .project instead of .project-thumb */
