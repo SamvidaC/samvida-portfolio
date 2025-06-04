@@ -357,6 +357,12 @@ footer {
   color: #E27591;
 }
 
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* controls spacing between logo and name */
+}
+
 .footer-name {
   font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
