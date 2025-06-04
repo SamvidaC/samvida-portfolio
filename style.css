@@ -389,9 +389,11 @@ footer {
   color: #1A1A1A;
   text-decoration: none;
   margin: 0 0.5rem;
+  letter-spacing: 0.05em;
   font-family: 'Playfair Display', serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 400;
+  margin-bottom: 1.5rem;
 }
 
 .footer-links a:hover {
