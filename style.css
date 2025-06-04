@@ -358,7 +358,7 @@ footer {
 }
 
 .footer-logo {
-  /* Remove display: flex */
+  display: block; /* Force block layout to stack elements */
   text-align: center;
   margin-bottom: 0.1rem;
 }
@@ -366,14 +366,17 @@ footer {
 .footer-logo img {
   height: 72px;
   width: auto;
-  margin-bottom: 0.1rem;
+  display: block;
+  margin: 0 auto 0.1rem auto; /* centers image and adds spacing below */
 }
 
 .footer-name {
+  display: block;
   font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  margin: 0.1rem 0;
 }
+
 
 .footer-tagline {
   font-size: 0.95rem;
