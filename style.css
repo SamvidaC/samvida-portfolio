@@ -374,8 +374,8 @@ footer {
   display: block;
   font-family: 'Playfair Display', serif;
   font-weight: 900;
-  font-size: 1.8rem;
-  letter-spacing: 0.02em;
+  font-size: 1.85rem;
+  letter-spacing: 0.04em;
   margin: 0.1rem 0;
 }
 
@@ -403,7 +403,7 @@ footer {
 
 .footer-copyright {
   font-size: 0.75rem;
-  font-weight: 200;
+  font-weight: 300;
   margin-top: 1.5rem;
   color: #1A1A1A;
 }
