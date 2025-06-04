@@ -388,7 +388,7 @@ footer {
 .footer-links a {
   color: #1A1A1A;
   text-decoration: none;
-  margin: 0 0.5rem;
+  /*margin: 0 0.5rem;*/
   letter-spacing: 0.05em;
   font-family: 'Playfair Display', serif;
   font-size: 1rem;
