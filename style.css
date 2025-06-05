@@ -505,6 +505,8 @@ footer {
   max-width: 34ch;
   font-family: 'Playfair Display', serif;
   font-weight: 900;
+  font-size: 24px,
+  margin-bottom: 0.5rem;
   word-break: normal;
   line-height: 1.3;
 }
