@@ -510,6 +510,24 @@ footer {
   line-height: 1.6;
 }
 
+/* Define border color classes */
+.border-green {
+  border: 2px solid #A8D5BA;
+}
+
+.border-pink {
+  border: 2px solid #E27591;
+}
+
+.border-yellow {
+  border: 2px solid #FFCC66;
+}
+
+/* Apply to skill cards or other elements */
+.skill-card.border-green { /* Green border */ }
+.skill-card.border-pink {  /* Pink border */ }
+.skill-card.border-yellow { /* Yellow border */ }
+
 @media (max-width: 768px) {
   .about-content h1 {
     font-size: 36px;
