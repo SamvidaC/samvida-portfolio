@@ -409,89 +409,106 @@ footer {
   margin-bottom: 1.5rem;
   color: #808080;
 }
-/* About Page Styles */
+/* ABOUT PAGE LAYOUT */
+.about-wrapper {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .about-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   gap: 4rem;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  align-items: start;
 }
 
-.about-left {
-  flex: 2;
-}
-
-.about-right {
-  flex: 1;
+.about-bio h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #1A1A1A;
+  margin-bottom: 2rem;
   text-align: left;
 }
 
-.about-photo {
+.about-bio p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #1A1A1A;
+}
+
+.about-side {
+  text-align: left;
+}
+
+.profile-photo {
   width: 100%;
   border-radius: 12px;
   margin-bottom: 1rem;
 }
 
-.not-resume h2 {
+.about-side h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 24px;
+  font-size: 1.75rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-.not-resume ul {
+.fun-facts {
   list-style: none;
-  padding: 0;
+  padding-left: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #1A1A1A;
+}
+
+.fun-facts li {
+  margin-bottom: 0.5rem;
+}
+
+/* SKILLS SECTION */
+.skills-section {
+  background-color: #FAFAFA;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.skill-card {
+  background-color: white;
+  border: 1px solid #FAFAFA;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.skill-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.skill-card p {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   line-height: 1.6;
 }
-
-.skills {
-  text-align: center;
-  padding: 6rem 2rem;
-  background-color: #fff9f9;
-}
-
-.skills h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 48px;
-  margin-bottom: 3rem;
-}
-
-.skill-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.card {
-  flex: 1 1 300px;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-  text-align: left;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.card h3 {
-  font-size: 20px;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.green {
-  background-color: #e4f5e3;
-}
-
-.pink {
-  background-color: #fbe4e9;
-}
-
-.yellow {
-  background-color: #fff6db;
-}
-
 
 @media (max-width: 768px) {
   .about-content h1 {
