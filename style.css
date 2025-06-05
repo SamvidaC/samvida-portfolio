@@ -452,6 +452,7 @@ footer {
 .about-side h2 {
   font-family: 'Playfair Display', serif;
   font-size: 1.75rem;
+  font-weight: 900;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -477,6 +478,7 @@ footer {
 
 .skills-section h2 {
   font-family: 'Playfair Display', serif;
+  font-weight: 900;
   font-size: 2.5rem;
   margin-bottom: 2rem;
 }
