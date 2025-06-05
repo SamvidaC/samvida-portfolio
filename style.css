@@ -491,11 +491,24 @@ footer {
 }
 
 .skill-card {
-  background-color: #FAFAFA;
-  border: 1px solid #E0E0E0; /* Optional: subtle border for definition */
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  font-family: 'Montserrat', sans-serif;
+  background-color: #FAFAFA; /* fallback */
+}
+
+/* Subtle tints to match your Figma */
+.skill-card.pink {
+  background-color: #E27591;
+}
+
+.skill-card.green {
+  background-color: #A8D5BA;
+}
+
+.skill-card.yellow {
+  background-color: #FFCC66;
 }
 
 .skill-card h3 {
