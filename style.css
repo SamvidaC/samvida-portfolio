@@ -495,7 +495,7 @@ footer {
 }
 
 .skill-card {
-  padding: 2rem;
+  padding: 8px 8px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
   font-family: 'Montserrat', sans-serif;
@@ -504,14 +504,17 @@ footer {
 }
 
 .skill-card h3 {
+  white-space: nowrap;       /* keep text on one line */
+  overflow: visible !important;    /* prevent hiding */
+  text-overflow: clip !important;  /* remove ellipsis */
+  padding-left: 8px;         /* reduce padding to gain space */
+  padding-right: 8px;
   font-family: 'Playfair Display', serif;
   font-weight: 900;
-  font-size: 20px;
+  font-size: 20px;           /* slightly smaller font */
   margin-bottom: 0.5rem;
-  line-height: 1.3;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  width: auto;               /* natural width */
+  max-width: 100%;           /* don't overflow card */
 }
 
 .border-green {
