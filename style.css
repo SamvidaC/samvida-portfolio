@@ -478,7 +478,7 @@ footer {
   height: 549px; /* Further increased height to align box bottoms perfectly */
   object-fit: cover; /* Ensure photo maintains aspect ratio */
   border-radius: 12px;
-  margin-bottom: 1rem; /* Set to 1rem for consistent spacing */
+  margin-bottom: 1rem; /* Exactly 1rem spacing */
 }
 
 .about-side h2 {
@@ -486,18 +486,18 @@ footer {
   font-size: 2.25rem; /* Keeping current size as it fits well */
   font-weight: 900;
   text-align: center;
-  margin-top: 0; /* Removed margin-top to align with Beyond the Brief */
+  margin-top: 1rem; /* Exactly 1rem spacing from card above */
   margin-bottom: 1rem; /* Set to 1rem for consistent spacing */
 }
 
 .not-resume-card {
-  padding: 1.5rem;
+  padding: 1rem; /* Reduced from 1.5rem to 1rem for tighter spacing */
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
   font-family: 'Montserrat', sans-serif;
   background-color: #FAFAFA;
   border: 2px solid #A8D5BA;
-  margin-top: 0; /* Removed margin to align properly */
+  margin: 0; /* Remove all margins */
   height: fit-content; /* Allow natural height */
   align-self: start; /* Ensure boxes align at the top */
 }
@@ -551,7 +551,7 @@ footer {
 }
 
 .skill-card {
-  padding: 24px 24px;
+  padding: 1rem; /* Reduced from 24px to 1rem for consistent spacing */
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
   font-family: 'Montserrat', sans-serif;
