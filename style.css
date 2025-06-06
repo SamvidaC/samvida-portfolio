@@ -475,7 +475,7 @@ footer {
 
 .profile-photo {
   width: 100%;
-  height: 576px; /* Further increased height to align box bottoms perfectly */
+  height: 600px; /* Further increased height to align box bottoms perfectly */
   object-fit: cover; /* Ensure photo maintains aspect ratio */
   border-radius: 12px;
   margin: 0;
