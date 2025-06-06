@@ -439,6 +439,14 @@ footer {
   color: #1A1A1A;
 }
 
+.skill-card.beyond-brief-card {
+  text-align: left;
+}
+
+.skill-card.beyond-brief-card p {
+  text-align: left;
+}
+
 .about-side {
   text-align: left;
 }
