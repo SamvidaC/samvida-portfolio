@@ -411,13 +411,13 @@ footer {
 /* ABOUT PAGE LAYOUT */
 .about-wrapper {
   padding: 4rem 2rem;
-  max-width: 1160px;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: 0;
 }
 
 .about-grid {
   display: grid;
-  grid-template-columns: 2.1fr 1.125fr;
+  grid-template-columns: 2fr 1.125fr;
   gap: 1.8rem;
   align-items: start;
 }
