@@ -409,9 +409,10 @@ footer {
   margin-bottom: 1.5rem;
   color: #808080;
 }
+
 /* ABOUT PAGE LAYOUT */
 .about-wrapper {
-  padding: 4rem 2rem;
+  padding: 4rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -472,7 +473,7 @@ footer {
 /* SKILLS SECTION */
 .skills-section {
   background-color: #FAFAFA;
-  padding: 4rem 2rem;
+  padding: 4rem 1rem;
   text-align: center;
 }
 
