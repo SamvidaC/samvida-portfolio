@@ -486,13 +486,11 @@ footer {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+/* Fixed Fun Facts Card - Equal Left/Right Padding */
 .fun-facts-card {
-  padding: 8px !important;
+  padding: 1.5rem !important;  /* Override the 8px with proper padding */
 }
 
-/* Replace your existing .not-resume-card and .fun-facts rules with these: */
-
-/* Fixed Fun Facts Card - Equal Left/Right Padding */
 .not-resume-card {
   padding: 1.5rem 1.5rem;  /* Equal left and right padding */
   border-radius: 12px;
