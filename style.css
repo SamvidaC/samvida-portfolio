@@ -402,8 +402,8 @@ footer {
 }
 
 .footer-button {
-  background-color: #E27591;
-  color: white;
+  background-color: #FAFAFA;
+  /*color: white;*/
   padding: 10px 16px;
   border: none;
   border-radius: 6px;
