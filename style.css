@@ -419,7 +419,7 @@ footer {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1.8fr 1.2fr;
+  grid-template-columns: 1.9fr 1.1fr;
   gap: 4rem;
   align-items: start;
 }
