@@ -570,6 +570,7 @@ footer {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
   font-size: 20px;           /* slightly smaller font */
+  font-style: italic;
   margin-bottom: 0.5rem;
   width: auto;               /* natural width */
   max-width: 100%;           /* don't overflow card */
