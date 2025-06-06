@@ -410,9 +410,9 @@ footer {
 
 /* ABOUT PAGE LAYOUT */
 .about-wrapper {
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 1rem 2rem; /* Changed bottom padding from default to 1rem */
   max-width: 1200px;
-  margin: 0 auto 1rem auto; /* Added 1rem bottom margin to reduce gap to skills section */
+  margin: 0 auto; /* Removed bottom margin, using padding instead */
 }
 
 .about-grid {
@@ -475,7 +475,7 @@ footer {
 
 .profile-photo {
   width: 100%;
-  height: 420px; /* Increased height to make the boxes align at the bottom */
+  height: 520px; /* Further increased height to align box bottoms perfectly */
   object-fit: cover; /* Ensure photo maintains aspect ratio */
   border-radius: 12px;
   margin-bottom: 1rem; /* Set to 1rem for consistent spacing */
@@ -527,7 +527,7 @@ footer {
 /* SKILLS SECTION */
 .skills-section {
   background-color: #FAFAFA;
-  padding: 1rem 2rem 4rem 2rem; /* Reduced top padding from 2rem to 1rem for tight spacing */
+  padding: 0 2rem 4rem 2rem; /* Removed top padding completely for tight spacing */
   text-align: center;
 }
 
