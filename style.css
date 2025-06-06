@@ -485,6 +485,7 @@ footer {
   font-family: 'Playfair Display', serif;
   font-size: 2.25rem; /* Keeping current size as it fits well */
   font-weight: 900;
+  text-align: center;
   margin-top: 0; /* Removed margin-top to align with Beyond the Brief */
   margin-bottom: 1rem; /* Set to 1rem for consistent spacing */
 }
