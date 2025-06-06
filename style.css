@@ -447,6 +447,24 @@ footer {
   text-align: left;
 }
 
+.skill-card.beyond-brief-card {
+  text-align: left;
+  min-width: 320px;
+}
+
+.skill-card.beyond-brief-card h3 {
+  text-align: left;
+}
+
+.skill-card.beyond-brief-card p {
+  text-align: left;
+  line-height: 1.6;
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: none;
+  text-wrap: pretty;
+}
+
 .about-side {
   text-align: left;
 }
