@@ -492,20 +492,21 @@ footer {
 
 /* Replace your existing .not-resume-card and .fun-facts rules with these: */
 
+/* Fixed Fun Facts Card - Equal Left/Right Padding */
 .not-resume-card {
-  padding: 1.5rem;  /* Add proper padding to the card container */
+  padding: 1.5rem 1.5rem;  /* Equal left and right padding */
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
   font-family: 'Montserrat', sans-serif;
   background-color: #FAFAFA;
-  border: 2px solid #A8D5BA;  /* Make sure the green border is visible */
-  margin-top: 0.5rem;  /* Add some space from the heading */
+  border: 2px solid #A8D5BA;
+  margin-top: 0.5rem;
 }
 
 .fun-facts {
   list-style: none;     
   margin: 0;  
-  padding: 0;  /* Remove padding from the list since the card has padding */
+  padding: 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -513,12 +514,14 @@ footer {
 }
 
 .fun-facts li {
-  margin-bottom: 0.5rem;  /* Increase spacing between list items */
-  line-height: 1.4;  /* Add line height for better readability */
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  padding-left: 0;  /* Remove any extra left padding */
+  text-align: left;  /* Ensure consistent left alignment */
 }
 
 .fun-facts li:last-child {
-  margin-bottom: 0;  /* Remove bottom margin from last item */
+  margin-bottom: 0;
 }
 
 /* SKILLS SECTION */
