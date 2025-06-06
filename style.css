@@ -441,15 +441,8 @@ footer {
 
 .skill-card.beyond-brief-card {
   text-align: left;
-}
-
-.skill-card.beyond-brief-card p {
-  text-align: left;
-}
-
-.skill-card.beyond-brief-card {
-  text-align: left;
-  min-width: 360px; /* Increased from 320px */
+  min-width: 400px; /* Even wider */
+  max-width: 500px; /* Set a max width too */
 }
 
 .skill-card.beyond-brief-card h3 {
@@ -459,11 +452,10 @@ footer {
 .skill-card.beyond-brief-card p {
   text-align: left;
   line-height: 1.6;
-  word-break: keep-all; /* Prevents breaking within words */
-  overflow-wrap: normal; /* Changed from break-word */
+  word-break: keep-all;
+  overflow-wrap: normal;
   hyphens: none;
   white-space: normal;
-  text-wrap: pretty;
 }
 
 .about-side {
