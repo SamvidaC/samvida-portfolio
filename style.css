@@ -441,6 +441,7 @@ footer {
   overflow-wrap: break-word;
   hyphens: none;
   text-indent: 0;
+  margin-bottom: 1.5rem; /* Add space between paragraphs */
 }
 
 .skill-card.beyond-brief-card {
@@ -460,6 +461,7 @@ footer {
   word-break: normal;
   overflow-wrap: break-word;
   hyphens: none;
+  margin-bottom: 1.5rem; /* Add space between paragraphs */
 }
 
 .about-side {
