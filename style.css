@@ -339,8 +339,6 @@ html {
   }
 }
 
-
-
 /* Footer */
 footer {
   background-color: #FAFAFA;
@@ -435,7 +433,7 @@ footer {
 
 .about-bio p {
   font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.7;
   text-align: left;
   color: #1A1A1A;
@@ -461,9 +459,9 @@ footer {
 
 .fun-facts {
   list-style: none;
-  padding: 8px;
+  padding: 4px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   ont-weight: 400;
   color: #1A1A1A;
 }
