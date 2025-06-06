@@ -426,6 +426,7 @@ footer {
   font-family: 'Playfair Display', serif;
   font-size: 4rem; /* Increased to match box width better */
   font-weight: 900;
+  text-align: center;
   color: #1A1A1A;
   margin-bottom: 1rem; /* Set to 1rem for consistent spacing */
   text-align: left;
