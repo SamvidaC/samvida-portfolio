@@ -441,8 +441,7 @@ footer {
 
 .skill-card.beyond-brief-card {
   text-align: left;
-  min-width: 400px; /* Even wider */
-  max-width: 500px; /* Set a max width too */
+  min-width: 360px; /* Increased from 320px */
 }
 
 .skill-card.beyond-brief-card h3 {
@@ -452,10 +451,11 @@ footer {
 .skill-card.beyond-brief-card p {
   text-align: left;
   line-height: 1.6;
-  word-break: keep-all;
-  overflow-wrap: normal;
+  word-break: keep-all; /* Prevents breaking within words */
+  overflow-wrap: normal; /* Changed from break-word */
   hyphens: none;
   white-space: normal;
+  text-wrap: pretty;
 }
 
 .about-side {
