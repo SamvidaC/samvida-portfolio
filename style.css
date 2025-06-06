@@ -417,7 +417,7 @@ footer {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 2fr 1.125fr;
+  grid-template-columns: 2.1fr 1.125fr;
   gap: 1.8rem;
   align-items: start;
 }
