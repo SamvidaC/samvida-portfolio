@@ -455,8 +455,8 @@ footer {
 }
 
 .skill-card.beyond-brief-card p {
-  text-align: left;
-  line-height: 1.6;
+  text-align: justify;
+  line-height: 1.65;
   word-break: normal;
   overflow-wrap: break-word;
   hyphens: none;
