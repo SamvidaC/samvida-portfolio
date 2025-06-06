@@ -435,13 +435,14 @@ footer {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  text-align: justify;
+  text-align: left; /* Back to left align */
   color: #1A1A1A;
   word-break: normal;
   overflow-wrap: break-word;
   hyphens: none;
-  text-align-last: left;
-  text-wrap: balance; /* Distributes text more evenly across lines */
+  text-indent: 0;
+  orphans: 3; /* Prevent single words on lines */
+  widows: 3; /* Prevent single words on lines */
 }
 
 .skill-card.beyond-brief-card {
