@@ -443,12 +443,12 @@ footer {
 
 .about-side {
   text-align: left;
-  max-width: 600px;
+  max-width: 800px;
 }
 
 .profile-photo {
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   border-radius: 12px;
   margin-bottom: 1rem;
 }
