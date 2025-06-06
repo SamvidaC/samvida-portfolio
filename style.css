@@ -494,25 +494,12 @@ footer {
   padding: 1.5rem !important;  /* Change from 8px to 1.5rem */
 }
 
-/* Make sure this rule stays the same: */
-.not-resume-card {
-  padding: 1.5rem;  /* Remove the duplicate padding values */
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
-  font-family: 'Montserrat', sans-serif;
-  background-color: #FAFAFA;
-  border: 2px solid #A8D5BA;
-  margin-top: 0.5rem;
-}
-
 /* REPLACE the .fun-facts section in your CSS with this: */
 
 .fun-facts {
   list-style: none;     
   margin: 0;  
   padding: 0;
-  padding-left: 0 !important;  /* Force remove any left padding */
-  margin-left: 0 !important;   /* Force remove any left margin */
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -521,14 +508,25 @@ footer {
 
 .fun-facts li {
   margin-bottom: 0.5rem;
+  margin-left: 0;
+  padding-left: 0;
   line-height: 1.4;
-  padding-left: 0;      /* Ensure no left padding on list items */
-  margin-left: 0;       /* Ensure no left margin on list items */
-  text-align: left;     /* Align text to the left edge */
 }
 
 .fun-facts li:last-child {
   margin-bottom: 0;
+}
+
+/* Also update your .not-resume-card to ensure equal padding: */
+.not-resume-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  font-family: 'Montserrat', sans-serif;
+  background-color: #FAFAFA;
+  border: 2px solid #A8D5BA;
+  margin-top: 0.5rem;
+  box-sizing: border-box; /* Ensure padding is calculated properly */
 }
 
 /* SKILLS SECTION */
