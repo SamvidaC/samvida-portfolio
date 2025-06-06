@@ -496,6 +496,12 @@ footer {
 
 /* REPLACE the .fun-facts section in your CSS with this: */
 
+/* Replace your existing .fun-facts-card and .fun-facts sections with this: */
+
+.fun-facts-card {
+  padding: 1.5rem;
+}
+
 .fun-facts {
   list-style: none;     
   margin: 0;  
@@ -508,9 +514,11 @@ footer {
 
 .fun-facts li {
   margin-bottom: 0.5rem;
-  margin-left: 0;
-  padding-left: 0;
   line-height: 1.4;
+  padding: 0;
+  margin-left: 0;
+  text-indent: 0;          /* Remove any text indentation */
+  word-spacing: normal;    /* Normalize word spacing */
 }
 
 .fun-facts li:last-child {
