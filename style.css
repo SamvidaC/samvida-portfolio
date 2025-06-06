@@ -424,10 +424,10 @@ footer {
 
 .about-bio h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3.5rem;
+  font-size: 4rem; /* Increased to match box width better */
   font-weight: 900;
   color: #1A1A1A;
-  margin-bottom: 1.8rem; /* Reduced from 2rem to match grid gap */
+  margin-bottom: 1rem; /* Set to 1rem for consistent spacing */
   text-align: left;
 }
 
@@ -476,15 +476,15 @@ footer {
 .profile-photo {
   width: 100%;
   border-radius: 12px;
-  margin-bottom: 1.8rem; /* Reduced from 1rem to match grid gap */
+  margin-bottom: 1rem; /* Set to 1rem for consistent spacing */
 }
 
 .about-side h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.25rem; /* Increased from 1.75rem to make it closer to box width */
+  font-size: 2.25rem; /* Keeping current size as it fits well */
   font-weight: 900;
   margin-top: 0; /* Removed margin-top to align with Beyond the Brief */
-  margin-bottom: 1.8rem; /* Reduced from 1rem to match grid gap */
+  margin-bottom: 1rem; /* Set to 1rem for consistent spacing */
 }
 
 .not-resume-card {
@@ -496,6 +496,7 @@ footer {
   border: 2px solid #A8D5BA;
   margin-top: 0; /* Removed margin to align properly */
   height: fit-content; /* Allow natural height */
+  align-self: start; /* Ensure boxes align at the top */
 }
 
 .fun-facts {
@@ -531,8 +532,8 @@ footer {
 .skills-section h2 {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
-  font-size: 3rem; /* Increased from 2.5rem to make it closer to grid width */
-  margin-bottom: 1.8rem; /* Reduced from 2rem to match grid gap */
+  font-size: 4rem; /* Increased to 4rem to match other headings */
+  margin-bottom: 1rem; /* Set to 1rem for consistent spacing */
   text-transform: uppercase;
 }
 
