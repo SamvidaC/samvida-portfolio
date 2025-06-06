@@ -475,10 +475,10 @@ footer {
 
 .profile-photo {
   width: 100%;
-  height: 542px; /* Further increased height to align box bottoms perfectly */
+  height: 548px; /* Further increased height to align box bottoms perfectly */
   object-fit: cover; /* Ensure photo maintains aspect ratio */
   border-radius: 12px;
-  margin-bottom: 1rem; /* Exactly 1rem spacing */
+  margin: 0;
 }
 
 .about-side h2 {
@@ -486,6 +486,7 @@ footer {
   font-size: 2.25rem; /* Keeping current size as it fits well */
   font-weight: 900;
   text-align: center;
+  margin-top: 1rem;
   margin-bottom: 1rem; /* Set to 1rem for consistent spacing */
 }
 
