@@ -401,6 +401,19 @@ footer {
   color: #E27591;
 }
 
+.footer-button {
+  background-color: #E27591;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  display: inline-block;
+}
+
 .footer-copyright {
   font-size: 0.7rem;
   font-weight: 300;
