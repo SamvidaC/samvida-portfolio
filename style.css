@@ -659,6 +659,223 @@ footer {
   font-weight: 600;
 }
 
+/* REGRAB CASE STUDY STYLES */
+
+/* Main container for case study content */
+.case-study-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem 2rem 2rem;
+    line-height: 1.7;
+}
+
+/* Header section */
+.case-study-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.case-study-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #1A1A1A;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+/* Role and Focus section */
+.role-focus-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: #F8F8F8;
+    border-radius: 12px;
+    border-left: 4px solid #E27591;
+}
+
+.role-section h3,
+.focus-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #E27591;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.role-section p,
+.focus-section p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #1A1A1A;
+    margin: 0;
+}
+
+/* Section headings */
+.section-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 3rem 0 1.5rem 0;
+    line-height: 1.3;
+}
+
+/* Content paragraphs */
+.content-paragraph {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #1A1A1A;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* Highlighted quote */
+.highlight-quote {
+    font-style: italic;
+    font-weight: 600;
+    color: #E27591;
+    background-color: #FDF2F5;
+    padding: 1.5rem;
+    border-left: 4px solid #E27591;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+/* Challenges list */
+.challenges-list {
+    background-color: #F8F8F8;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+}
+
+.challenges-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.challenges-list li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #1A1A1A;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.challenges-list li::before {
+    content: "•";
+    color: #E27591;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.challenges-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Processes and Technologies section */
+.processes-section {
+    background-color: #F8F8F8;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 3rem 0;
+}
+
+.processes-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 1rem;
+}
+
+.process-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.process-tag {
+    background-color: #E27591;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Media containers */
+.media-container {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.case-study-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(26, 26, 26, 0.12);
+    margin-bottom: 1rem;
+}
+
+.case-study-video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(26, 26, 26, 0.12);
+    margin-bottom: 1rem;
+}
+
+.media-caption {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    color: #666;
+    text-align: center;
+    margin: 0;
+    padding: 0 1rem;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .case-study-container {
+        padding: 2rem 1rem;
+    }
+
+    .case-study-title {
+        font-size: 2.5rem;
+    }
+
+    .role-focus-section {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .section-heading {
+        font-size: 1.5rem;
+    }
+
+    .process-tags {
+        justify-content: center;
+    }
+
+    .media-caption {
+        font-size: 12px;
+        padding: 0 0.5rem;
+    }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .card-container {
