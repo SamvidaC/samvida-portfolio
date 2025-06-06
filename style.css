@@ -246,9 +246,9 @@ html {
 #projects-title {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
-  font-size: 56px;
+  font-size: 64px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .projects-gallery {
