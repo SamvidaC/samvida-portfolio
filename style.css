@@ -690,7 +690,7 @@ footer {
     grid-template-columns: 1fr; /* Changed from '1fr 2fr' to '1fr' */
     gap: 0.5rem;
     margin-bottom: 2rem;
-    padding: 2rem;
+    padding: 1rem;
     background-color: #FDF2F5;
     border-radius: 12px;
     border-left: 4px solid #E27591;
