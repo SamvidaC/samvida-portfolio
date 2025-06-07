@@ -836,6 +836,8 @@ footer {
 
 .nav-link:hover {
   color: #E27591;
+  stroke-width: 2;
+  font-weight: 500
 }
 
 .nav-link.disabled {
