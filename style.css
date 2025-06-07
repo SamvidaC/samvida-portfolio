@@ -945,10 +945,10 @@ footer {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-style: italic;
-    color: #666;
+    color: #808080;
     text-align: center;
     margin: 0;
-    padding: 0 0.5rem;
+    padding: 0 0.25rem;
 }
 
 /* Responsive design for mobile */
