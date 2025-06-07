@@ -824,6 +824,11 @@ footer {
     margin-bottom: 0;
 }
 
+.list-title {
+  font-weight: 600;
+}
+
+
 /* Processes and Technologies section */
 .processes-section {
     background-color: #FDF2F5;
