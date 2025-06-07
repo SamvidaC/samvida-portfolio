@@ -904,7 +904,7 @@ footer {
 
 /* Media containers */
 .media-container {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     text-align: center;
 }
 
@@ -933,7 +933,7 @@ footer {
 .video-grid {
   display: flex;
   gap: 1.5rem;
-  margin: 1rem 0;
+  /* margin: 1rem 0;*/
   flex-wrap: wrap;
 }
 
