@@ -671,13 +671,13 @@ footer {
 
 /* Header section */
 .case-study-header {
-    text-align: center;
+    text-align: left;
     margin-bottom: 2rem;
 }
 
 .case-study-title {
     font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 900;
     color: #1A1A1A;
     margin-bottom: 1rem;
