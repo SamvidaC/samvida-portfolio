@@ -930,6 +930,17 @@ footer {
     margin-bottom: 0.5rem;
 }
 
+.video-grid {
+  display: flex;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.video-grid .media-container {
+  flex: 1 1 45%;
+}
+
 .media-caption {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
