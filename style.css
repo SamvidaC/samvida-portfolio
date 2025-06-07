@@ -757,15 +757,18 @@ footer {
   padding: 1.5rem;
   border-radius: 12px;
   font-style: italic;
-  font-weight: 700;
+  font-weight: 400;
+  text-align: center;
   color: #1a1a1a;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   background-color: #FAFAFA;
 }
 
 .quote-box h4 {
+  font-family: 'Playfair Display', serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
+  text-align: center;
   margin-bottom: 0.5rem;
 }
 
