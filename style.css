@@ -933,7 +933,7 @@ footer {
 .video-grid {
   display: flex;
   gap: 1.5rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
   flex-wrap: wrap;
 }
 
