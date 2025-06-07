@@ -783,18 +783,18 @@ footer {
 
 /* Processes and Technologies section */
 .processes-section {
-    background-color: #FDF2F5;
+    background-color: #F1FBF5;
     padding: 2rem;
     border-radius: 12px;
     margin: 3rem 0;
-    border-left: 4px solid #E27591;
+    border-left: 4px solid #A8D5BA;
 }
 
 .processes-section h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
     font-weight: 700;
-    color: #E27591;
+    color: #A8D5BA;
     margin-bottom: 1rem;
 }
 
