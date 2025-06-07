@@ -814,13 +814,13 @@ footer {
     font-weight: 500;
 }
 
-.project-nav {
+.project-nav-centered {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 3rem;
   padding: 2rem 0;
   margin-top: 3rem;
-  border-top: 1px solid #E0E0E0;
   font-size: 1.1rem;
   font-weight: 500;
 }
@@ -848,8 +848,9 @@ footer {
   width: 20px;
   height: 20px;
   stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
-
 
 /* Media containers */
 .media-container {
