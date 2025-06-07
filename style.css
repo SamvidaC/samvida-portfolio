@@ -746,6 +746,46 @@ footer {
     margin: 2rem 0;
 }
 
+.quote-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.quote-box {
+  padding: 1.5rem;
+  border-radius: 12px;
+  font-style: italic;
+  font-weight: 700;
+  color: #1a1a1a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background-color: #FAFAFA;
+}
+
+.quote-box h4 {
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.quote-box.greenery {
+  background-color: #F1FBF5;
+  border-left: 4px solid #A8D5BA;
+}
+
+.quote-box.lighting {
+  background-color: #FFF7E0;
+  border-left: 4px solid #FFCC66;
+}
+
+.quote-box.community {
+  background-color: #FDF2F5;
+  border-left: 4px solid #E27591;
+  color: #1A1A1A;
+}
+
+
 /* Challenges list */
 .challenges-list {
     background-color: #FAFAFA;
