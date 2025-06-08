@@ -988,6 +988,61 @@ footer {
   border: 2px solid #1A1A1A;
 }
 
+.slideshow-container {
+  position: relative;
+  margin: 2rem 0;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(26, 26, 26, 0.12);
+}
+.slideshow-image {
+  width: 100%;
+  border-radius: 12px;
+}
+.slide-caption {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  color: #808080;
+  text-align: center;
+  margin: 0.5rem 0 1.5rem 0;
+}
+.slide {
+  display: none;
+}
+.slide.active {
+  display: block;
+}
+.slideshow-prev, .slideshow-next {
+  cursor: pointer;
+  position: absolute;
+  bottom: 1rem;
+  width: 32px;
+  height: 32px;
+}
+.slideshow-prev {
+  left: 1rem;
+}
+.slideshow-next {
+  right: 1rem;
+}
+.dots-container {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 4px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+.dot.active {
+  background-color: #1A1A1A;
+}
+
 /* Responsive design for mobile */
 @media (max-width: 768px) {
     .case-study-container {
