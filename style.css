@@ -988,13 +988,6 @@ footer {
   border: 2px solid #1A1A1A;
 }
 
-.slideshow-container {
-  position: relative;
-  margin: 2rem 0;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(26, 26, 26, 0.12);
-}
 .slideshow-image {
   width: 100%;
   border-radius: 12px;
@@ -1017,8 +1010,8 @@ footer {
   cursor: pointer;
   position: absolute;
   bottom: 1rem;
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
 }
 .slideshow-prev {
   left: 1rem;
