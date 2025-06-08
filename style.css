@@ -951,6 +951,29 @@ footer {
     /*padding: 0 0.25rem;*/
 }
 
+.responsive-video {
+  position: relative;
+  padding-top: 55.34%; /* maintains aspect ratio */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(26, 26, 26, 0.12);
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.responsive-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+}
+
+.video-caption {
+  margin-bottom: 1rem;
+}
+
 /* Responsive design for mobile */
 @media (max-width: 768px) {
     .case-study-container {
