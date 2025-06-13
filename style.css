@@ -1020,13 +1020,14 @@ footer {
   bottom: 1.75rem;    /* vertical alignment roughly with dots */
   width: 40px;       /* slightly bigger */
   height: 40px;
-  background-color: #FDF2F5;
+  background-color: transparent;
   border-radius: 50%;
   padding: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .slideshow-prev {
@@ -1041,8 +1042,17 @@ footer {
 .slideshow-next svg {
   width: 32px;
   height: 32px;
-  stroke: #E27591;
+  stroke: #ECB8C4;
+  transition: stroke 0.3s ease;
   stroke-width: 2;
+}
+
+.slideshow-prev:hover, .slideshow-next:hover {
+  transform: scale(1.2);
+}
+
+.slideshow-prev:hover svg, .slideshow-next:hover svg {
+  stroke: #E27591;
 }
 
 .dots-container {
