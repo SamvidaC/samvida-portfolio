@@ -136,14 +136,27 @@
     dots[slideIndex - 1].className += " active";
   }
 </script>
-    <script>
-function openModal(id) {
-  document.getElementById(id).style.display = 'block';
-}
+<script>
+  function openModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) modal.style.display = 'block';
+  }
 
-function closeModal(id) {
-  document.getElementById(id).style.display = 'none';
-}
+  function closeModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) modal.style.display = 'none';
+  }
+
+  // Optional: close when clicking outside the image
+  window.onclick = function(event) {
+    ['unileverModal','arcteryxModal'].forEach(id => {
+      const modal = document.getElementById(id);
+      if (modal && event.target === modal) {
+        closeModal(id);
+      }
+    });
+  }
 </script>
+
 </body>
 </html>
