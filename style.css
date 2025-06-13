@@ -1173,7 +1173,7 @@ footer {
   max-width: 90%;
   max-height: 85vh;
   cursor: zoom-in;
-  transform-origin: center center;
+  /*transform-origin: center center;*/
   transition: transform 0.3s ease;
 }
 
