@@ -1156,6 +1156,7 @@ footer {
 }
 
 .modal {
+  padding-top: 40px; /* space from top */
   display: none;
   position: fixed;
   z-index: 9999;
@@ -1166,10 +1167,15 @@ footer {
 }
 
 .modal-content {
-  max-width: 100%;
-  max-height: 95vh;
-  height: auto;
-  width: auto;
+  max-width: 90%;
+  max-height: 85vh;
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.modal-content.zoomed {
+  transform: scale(1.8);
+  cursor: zoom-out;
 }
 
 /*.close-modal {
@@ -1184,19 +1190,20 @@ footer {
   position: absolute;
   top: 20px;
   right: 30px;
-  font-size: 40px;
-  font-weight: bold;
+  font-size: 32px;
   color: #FAFAFA;
+  font-weight: 600;
   cursor: pointer;
-  z-index: 10000;
-  background: rgba(0,0,0,0.5);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
+  background: transparent; /* remove black background */
+  padding: 0 6px;
+  border-radius: 4px;
+  user-select: none;
+  transition: color 0.2s ease;
 }
 
+.modal-close:hover {
+  color: #E27591; /* subtle hover color */
+}
 
 /* Mobile responsive adjustments for modals */
 @media (max-width: 768px) {
