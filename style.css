@@ -1190,9 +1190,9 @@ footer {
   position: absolute;
   top: 20px;
   right: 30px;
-  font-size: 32px;
+  font-size: 48px;
   color: #FAFAFA;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   background: transparent; /* remove black background */
   padding: 0 6px;
