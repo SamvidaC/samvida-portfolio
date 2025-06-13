@@ -1015,28 +1015,28 @@ footer {
   margin-top: 1rem;
 }
 
-.slideshow-prev,
-.slideshow-next {
+.slideshow-prev, .slideshow-next {
   position: absolute;
- bottom: 1.6rem; /* roughly center with dots, adjust as needed */
-  width: 32px;  /* bigger size */
-  height: 28px;
+  bottom: 1.1rem;    /* vertical alignment roughly with dots */
+  width: 32px;       /* slightly bigger */
+  height: 32px;
   background-color: #FDF2F5;
   border-radius: 50%;
-  padding: 4px;
+  padding: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  cursor: pointer;
 }
 
 .slideshow-prev {
-  left: calc(50% - 70px); /* position left arrow left of center with some gap */
+  left: 1rem;        /* left corner with some margin */
 }
 
 .slideshow-next {
-  right: calc(50% - 70px); /* position right arrow right of center with some gap */
+  right: 1rem;       /* right corner with some margin */
 }
+
 .slideshow-prev svg,
 .slideshow-next svg {
   width: 32px;
