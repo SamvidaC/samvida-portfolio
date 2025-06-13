@@ -43,23 +43,37 @@
             <p class="content-paragraph">
                 Unilever presents ambitious goals in its sustainability reports, but how do they hold up in practice? This infographic contrasts stated targets with real-world progress and offers strategic recommendations for deeper impact.
             </p>
-            <div class="content-block">
-                <div class="block-image clickable-image" onclick="openModal('unileverModal')">
-                    <img src="https://via.placeholder.com/800x2000/E5E7EB/6B7280?text=Unilever+Analysis+Infographic" alt="Unilever sustainability analysis infographic">
-                    <p class="image-caption">Click to view detailed Unilever sustainability analysis</p>
-                </div>
-            </div>
+            <!-- Inline image -->
+<div class="content-block">
+  <div class="block-image clickable-image" onclick="openModal('unileverModal')">
+    <img src="assets/unileveranalysis.jpg" alt="Unilever sustainability analysis infographic">
+    <p class="image-caption">Click to view detailed Unilever sustainability analysis</p>
+  </div>
+</div>
+
+<!-- Modal image -->
+<div id="arcteryxModal" class="image-modal" onclick="closeModal('arcteryxModal')">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" src="assets/arcteryx-teardown.jpg" alt="Full-size Arc'teryx analysis">
+</div>
             <h2 class="section-heading">Visualizing Circularity in Outerwear</h2>
             <h3 class="italic-heading">Arc'teryx Andessa Down Jacket</h3>
             <p class="content-paragraph">
                 A teardown of Arc’teryx’s sustainability claims through a product lens. This infographic examines material choices, repair systems, end-of-life solutions, and the brand’s transparency around climate action.
             </p>
-            <div class="content-block">
-                <div class="block-image clickable-image" onclick="openModal('arcteryxModal')">
-                    <img src="https://via.placeholder.com/800x2000/E5E7EB/6B7280?text=Arc'teryx+Product+Teardown" alt="Arc'teryx jacket sustainability teardown">
-                    <p class="image-caption">Click to view detailed Arc'teryx product analysis</p>
-                </div>
-            </div>
+            <!-- Inline image -->
+<div class="content-block">
+  <div class="block-image clickable-image" onclick="openModal('arcteryxModal')">
+    <img src="assets/arcteryx-teardown.jpg" alt="Arc'teryx jacket sustainability teardown">
+    <p class="image-caption">Click to view detailed Arc'teryx product analysis</p>
+  </div>
+</div>
+
+<!-- Modal image -->
+<div id="arcteryxModal" class="image-modal" onclick="closeModal('arcteryxModal')">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" src="assets/arcteryx-teardown.jpg" alt="Full-size Arc'teryx analysis">
+</div>
           
         </section>
             
@@ -124,6 +138,14 @@
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
   }
+</script>
+    <script>
+function openModal(id) {
+  document.getElementById(id).style.display = "block";
+}
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
 </script>
 </body>
 </html>
