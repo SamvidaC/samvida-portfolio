@@ -107,6 +107,10 @@ body {
   line-height: 1.6;
 }
 
+.italic-heading {
+  font-style: italic;
+}
+
 
 /* Highlight */
 /*.highlight {
