@@ -1173,11 +1173,13 @@ footer {
   max-width: 90%;
   max-height: 85vh;
   cursor: zoom-in;
+  transform-origin: center center;
   transition: transform 0.3s ease;
 }
 
 .modal-content.zoomed {
   transform: scale(1.8);
+  transition: transform 0.3s ease-in-out;
   cursor: zoom-out;
 }
 
