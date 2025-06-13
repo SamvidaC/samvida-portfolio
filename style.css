@@ -1018,8 +1018,8 @@ footer {
 .slideshow-prev,
 .slideshow-next {
   position: absolute;
-  bottom: 2.5rem; /* adjust to sit just above dots */
-  width: 28px;
+ bottom: 1.6rem; /* roughly center with dots, adjust as needed */
+  width: 32px;  /* bigger size */
   height: 28px;
   background-color: #FDF2F5;
   border-radius: 50%;
@@ -1031,17 +1031,16 @@ footer {
 }
 
 .slideshow-prev {
-  left: 1rem;
+  left: calc(50% - 70px); /* position left arrow left of center with some gap */
 }
 
 .slideshow-next {
-  right: 1rem;
+  right: calc(50% - 70px); /* position right arrow right of center with some gap */
 }
-
 .slideshow-prev svg,
 .slideshow-next svg {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   stroke: #E27591;
   stroke-width: 2;
 }
