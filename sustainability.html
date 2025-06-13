@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futures Studio - Milwaukee becomes the haven | Samvida Chennuri</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="/samvida-portfolio/index.html">
+            <img class="logo" src="assets/logo.svg" alt="Logo" />
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="index.html#projects" class="active">WORK</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+        </ul>
+    </nav>
+
+    <main class="case-study-container">
+        <header class="case-study-header">
+            <h1 class="case-study-title">Milwaukee becomes the haven</h1>
+        </header>
+
+        <section class="role-focus-section">
+            <div class="role-section">
+                <h3>My Role:</h3>
+                <p>Design, Research, and Strategy</p>
+            </div>
+            <div class="focus-section">
+                <h3>Focus</h3>
+                <p>Speculative Design, Layout Design, Print Design, Interactive Exhibit Design</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-heading">Milwaukee’s future, told in many voices</h2>
+            <p class="content-paragraph">
+                As part of our master’s capstone project, our team, the Futures Studio, collaborated with pataphysician and writer Coe Douglas to imagine Milwaukee as a future climate refuge. Using design fiction as a method to democratize and diversify future thinking, we invited community members including artists, organizers, and professionals to submit imagined accounts of life in a climate-changed Milwaukee. The final outcome was a collaboratively created zine, laid out in InDesign, featuring a mix of community submissions and our own contributions. After presenting the zine, we organized a final showcase where visitors could interact with the stories, ideas, and provocations we had gathered and created. This project aimed to open up space for alternative narratives, collective imagination, and inclusive visions of what the future could look like.
+            </p>
+          <!-- Add your first image here -->
+            <div class="highlight-quote">
+  <div class="slide fade active">
+    <img src="assets/booklet1.jpg" class="slideshow-image" alt="Excerpts from the zine">
+    <p class="slide-caption">Future reflections: part welcome, part warning</p>
+  </div>
+  <div class="slide fade">
+    <img src="assets/booklet2.jpg" class="slideshow-image" alt="Excerpts from the zine">
+    <p class="slide-caption">Learning the words, accents, and tones needed to belong in a new place</p>
+  </div>
+  <div class="slide fade">
+    <img src="assets/futures-exhibit.jpg" class="slideshow-image" alt="Final exhibit showcase">
+    <p class="slide-caption">Interactive exhibit to engage with alternative futures</p>
+  </div>
+
+  <!-- Arrows -->
+<div class="slideshow-arrows">
+  <a class="slideshow-prev" onclick="plusSlides(-1)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#E27591" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="20" y1="12" x2="4" y2="12" />
+      <polyline points="10 6 4 12 10 18" />
+    </svg>
+  </a>
+  <a class="slideshow-next" onclick="plusSlides(1)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#E27591" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="4" y1="12" x2="20" y2="12" />
+      <polyline points="14 6 20 12 14 18" />
+    </svg>
+  </a>
+</div>
+
+
+  <!-- Dots -->
+  <div class="dots-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+</div>
+        </section>
+            
+      <div class="project-nav-centered">
+  <a class="nav-link" href="future-studios.html">
+    <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <line x1="20" y1="12" x2="4" y2="12" />
+      <polyline points="10 6 4 12 10 18" />
+    </svg>
+    Previous
+  </a>
+  <a class="nav-link" href="articles.html">
+    Next
+    <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <line x1="4" y1="12" x2="20" y2="12" />
+      <polyline points="14 6 20 12 14 18" />
+    </svg>
+  </a>
+</div>
+
+    </main>
+
+    <footer>
+        <p class="footer-banner" aria-hidden="true">
+            • • • footer unlocked, let's make design work for the planet • • •
+        </p>
+        <div class="footer-logo">
+            <img src="assets/logo.svg" alt="Logo" />
+            <span class="footer-name">Samvida Chennuri</span>
+        </div>
+        <p class="footer-tagline">LIFE-CENTERED | DESIGN-INSPIRED</p>
+        <div class="footer-links" aria-label="Social links">
+            <a href="mailto:samvidachennuri@gmail.com" target="_blank" rel="noopener">Email</a> |
+            <a href="https://www.linkedin.com/in/samvida-chennuri/" aria-label="LinkedIn profile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+        <p class="footer-copyright">©2025 Samvida Chennuri</p>
+    </footer>
+    
+    <script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    const slides = document.getElementsByClassName("slide");
+    const dots = document.getElementsByClassName("dot");
+    if (n > slides.length) slideIndex = 1;
+    if (n < 1) slideIndex = slides.length;
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
+</script>
+</body>
+</html>
