@@ -156,6 +156,11 @@
       }
     });
   }
+    document.querySelectorAll('.modal-content').forEach(img => {
+  img.addEventListener('click', () => {
+    img.classList.toggle('zoomed');
+  });
+});
 </script>
 
 </body>
