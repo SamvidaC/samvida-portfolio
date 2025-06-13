@@ -1073,6 +1073,146 @@ footer {
   background-color: #E27591;
 }
 
+/* Property Panel - Updated with requested styling */
+.property-panel {
+    background-color: #FDF2F5;
+    border-left: 4px solid #E27591;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.property-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.property-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6B7280;
+}
+
+.property-value {
+    font-size: 0.9rem;
+    color: #1A1A1A;
+    font-weight: 500;
+}
+
+.property-tag {
+    display: inline-block;
+    background-color: #E27591;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-right: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.property-tag.green {
+    background-color: #A8D5BA;
+}
+
+.property-tag.yellow {
+    background-color: #FFCC66;
+    color: #1A1A1A;
+}
+
+/* Ensure headings are not italicized */
+.block-heading-1,
+.block-heading-2,
+.block-heading-3 {
+    font-style: normal;
+}
+
+/* Clickable Images */
+.clickable-image {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.clickable-image:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.clickable-image:hover img {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+}
+
+.modal-content {
+    position: relative;
+    margin: 2% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.modal-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.close:hover,
+.close:focus {
+    color: #E27591;
+    text-decoration: none;
+}
+
+/* Mobile responsive adjustments for modals */
+@media (max-width: 768px) {
+    .property-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+        padding: 10px;
+    }
+
+    .close {
+        top: 5px;
+        right: 15px;
+        font-size: 30px;
+    }
+}
+
 /* Responsive design for mobile */
 @media (max-width: 768px) {
     .case-study-container {
