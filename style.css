@@ -736,6 +736,7 @@ footer {
 
 /* Highlighted quote */
 .highlight-quote {
+    position: relative;
     font-style: italic;
     font-weight: 600;
     color: #E27591;
@@ -1014,7 +1015,7 @@ footer {
   transform: translateY(-50%);
   width: 24px;
   height: 24px;
-  background-color: #E27591;
+  /*background-color: #E27591;*/
   border-radius: 50%;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   padding: 4px;
@@ -1034,6 +1035,7 @@ footer {
 .slideshow-prev svg, .slideshow-next svg {
   width: 20px;
   height: 20px;
+  color: #808080;
   stroke-width: 1;
 }
 
@@ -1046,7 +1048,7 @@ footer {
   height: 10px;
   width: 10px;
   margin: 0 4px;
-  background-color: #ECB8C4;
+  background-color: #E27591;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.3s;
