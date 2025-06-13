@@ -65,13 +65,13 @@
 
 <!-- 🔄 Move these to the end of <body> -->
 <div id="unileverModal" class="modal" onclick="closeModal('unileverModal')">
-  <span class="modal-close">&times;</span>
-  <img class="modal-content" src="assets/unileveranalysis.jpg" alt="Unilever sustainability analysis enlarged">
+  <span class="modal-close" onclick="closeModal('unileverModal')">&times;</span>
+  <img class="modal-content" src="assets/unileveranalysis.jpg" alt="Unilever sustainability analysis enlarged" onclick="event.stopPropagation(); toggleZoom(this)">
 </div>
 
 <div id="arcteryxModal" class="modal" onclick="closeModal('arcteryxModal')">
-  <span class="modal-close">&times;</span>
-  <img class="modal-content" src="assets/arcteryx-teardown.jpg" alt="Full-size Arc'teryx analysis">
+  <span class="modal-close" onclick="closeModal('arcteryxModal')">&times;</span>
+  <img class="modal-content" src="assets/arcteryx-teardown.jpg" alt="Full-size Arc'teryx analysis" onclick="event.stopPropagation(); toggleZoom(this)">
 </div>
             
       <div class="project-nav-centered">
@@ -167,5 +167,11 @@
     });
   });
 </script>
+    <script>
+  function toggleZoom(img) {
+    img.classList.toggle('zoomed');
+  }
+</script>
+
 </body>
 </html>
