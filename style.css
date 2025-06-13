@@ -1017,7 +1017,7 @@ footer {
 
 .slideshow-prev, .slideshow-next {
   position: absolute;
-  bottom: 1.5rem;    /* vertical alignment roughly with dots */
+  bottom: 1.75rem;    /* vertical alignment roughly with dots */
   width: 40px;       /* slightly bigger */
   height: 40px;
   background-color: #FDF2F5;
