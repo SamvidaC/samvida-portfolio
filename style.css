@@ -1014,7 +1014,7 @@ footer {
   transform: translateY(-50%);
   width: 24px;
   height: 24px;
-  background-color: #FAFAFA;
+  background-color: #E27591;
   border-radius: 50%;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   padding: 4px;
@@ -1046,7 +1046,7 @@ footer {
   height: 10px;
   width: 10px;
   margin: 0 4px;
-  background-color: #F49BB2;
+  background-color: #ECB8C4;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.3s;
