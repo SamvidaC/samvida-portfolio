@@ -139,7 +139,7 @@
 <script>
   function openModal(id) {
     const modal = document.getElementById(id);
-    if (modal) modal.style.display = 'block';
+    if (modal) modal.style.display = 'flex';
   }
 
   function closeModal(id) {
@@ -147,31 +147,29 @@
     if (modal) modal.style.display = 'none';
   }
 
-  // Optional: close when clicking outside the image
-  window.onclick = function(event) {
-    ['unileverModal','arcteryxModal'].forEach(id => {
+  function toggleZoom(img) {
+    img.classList.toggle('zoomed');
+  }
+
+  // Zoom toggle only if clicking the image (not background)
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.modal-content').forEach(img => {
+      img.addEventListener('click', (event) => {
+        event.stopPropagation(); // Prevent closing modal
+        toggleZoom(img);
+      });
+    });
+  });
+
+  // Close modal when clicking outside the image
+  window.onclick = function (event) {
+    ['unileverModal', 'arcteryxModal'].forEach(id => {
       const modal = document.getElementById(id);
       if (modal && event.target === modal) {
         closeModal(id);
       }
     });
-  }
+  };
 </script>
-<script>
-  // Wait for the DOM to load
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.modal-content').forEach(img => {
-      img.addEventListener('click', () => {
-        img.classList.toggle('zoomed');
-      });
-    });
-  });
-</script>
-    <script>
-  function toggleZoom(img) {
-    img.classList.toggle('zoomed');
-  }
-</script>
-
 </body>
 </html>
