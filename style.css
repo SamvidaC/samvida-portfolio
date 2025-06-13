@@ -1021,7 +1021,7 @@ footer {
   bottom: 2.5rem; /* adjust to sit just above dots */
   width: 28px;
   height: 28px;
-  background-color: #FAFAFA;
+  background-color: #FDF2F5;
   border-radius: 50%;
   padding: 4px;
   display: flex;
@@ -1040,10 +1040,10 @@ footer {
 
 .slideshow-prev svg,
 .slideshow-next svg {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   stroke: #E27591;
-  stroke-width: 1.5;
+  stroke-width: 2;
 }
 
 .dots-container {
