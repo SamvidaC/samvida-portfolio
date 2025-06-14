@@ -364,6 +364,14 @@ footer {
   overflow-x: hidden; /* prevent horizontal scrolling */
 }
 
+.footer-logo img {
+  height: 72px;
+  width: auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto 0.1rem auto;
+}
+
 /* Bottom full width box */
 .footer-bottom-box {
   background-color: #FDF2F5;
