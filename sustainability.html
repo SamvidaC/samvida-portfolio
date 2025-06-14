@@ -137,52 +137,46 @@
   }
 </script>
 <script>
-  function openModal(id) {
-    const modal = document.getElementById(id);
-    if (modal) modal.style.display = 'flex';
-  }
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.style.display = 'flex';
+    }
 
-  function closeModal(id) {
-    const modal = document.getElementById(id);
-    if (modal) modal.style.display = 'none';
-  }
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.style.display = 'none';
+    }
 
-  function toggleZoom(img) {
-    img.classList.toggle('zoomed');
-  }
+    function toggleZoom(img) {
+      img.classList.toggle('zoomed');
+      const modal = img.closest('.modal');
+      if (modal) {
+        if (img.classList.contains('zoomed')) {
+          modal.classList.add('zoomed-mode');
+        } else {
+          modal.classList.remove('zoomed-mode');
+        }
+      }
+    }
 
-  // Zoom toggle only if clicking the image (not background)
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.modal-content').forEach(img => {
-      img.addEventListener('click', (event) => {
-        event.stopPropagation(); // Prevent closing modal
-        toggleZoom(img);
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.modal .modal-content').forEach(img => {
+        img.addEventListener('click', (event) => {
+          event.stopPropagation();
+          toggleZoom(img);
+        });
       });
     });
-  });
 
-  // Close modal when clicking outside the image
-  window.onclick = function (event) {
-    ['unileverModal', 'arcteryxModal'].forEach(id => {
-      const modal = document.getElementById(id);
-      if (modal && event.target === modal) {
-        closeModal(id);
-      }
-    });
-  };
-</script>
-    <script>
-  function toggleZoom(img) {
-  img.classList.toggle('zoomed');
-  const modal = img.closest('.modal');
-  if (modal) {
-    if (img.classList.contains('zoomed')) {
-      modal.classList.add('zoomed-mode');
-    } else {
-      modal.classList.remove('zoomed-mode');
-    }
-  }
-}
-</script>
+    window.onclick = function (event) {
+      ['unileverModal', 'arcteryxModal'].forEach(id => {
+        const modal = document.getElementById(id);
+        if (modal && event.target === modal) {
+          closeModal(id);
+        }
+      });
+    };
+  </script>
+
 </body>
 </html>
