@@ -152,7 +152,6 @@
     if (img) {
       img.classList.remove('zoomed');
       img.style.transform = 'none';
-      img.style.cursor = 'zoom-in';
       img.style.marginTop = '0';
     }
 
@@ -160,9 +159,9 @@
   }
 
   function toggleZoom(img) {
-    const imageType = img.dataset.imageType; // "unilever" or "arcteryx"
+    const imageType = img.dataset.imageType;
     const modal = img.closest('.modal');
-    
+
     img.classList.toggle('zoomed');
 
     if (img.classList.contains('zoomed')) {
@@ -175,12 +174,9 @@
       } else if (imageType === 'arcteryx') {
         img.style.transform = 'scale(1.5)';
       }
-
-      img.style.cursor = 'zoom-out';
     } else {
       modal.classList.remove('zoomed-mode');
       img.style.transform = 'none';
-      img.style.cursor = 'zoom-in';
       img.style.marginTop = '0';
     }
   }
@@ -188,7 +184,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.modal .modal-content').forEach(img => {
       img.addEventListener('click', (event) => {
-        event.stopPropagation(); // prevent modal close on image click
+        event.stopPropagation();
         toggleZoom(img);
       });
     });
