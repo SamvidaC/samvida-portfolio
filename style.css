@@ -61,7 +61,7 @@ nav {
   margin-bottom: 1rem;
 }*/
 .hero-text {
-  padding: 1rem 0rem 1rem 0rem; /* top right bottom left */
+  padding: 12rem 0rem 1rem 0rem; /* top right bottom left */
   text-align: center;
   max-width: 1280px;
   margin: 0 auto;
@@ -85,9 +85,9 @@ nav {
   font-style: italic;
   font-weight: 500;
   color: #E27591;
-  display: block;
-  margin-bottom: 0;
-  white-space: nowrap; /* keep on single line */
+  display: inline-block;  /* inline-block keeps it on one line but avoids block spacing */
+  margin-bottom: 0.3rem;  /* small gap below */
+  white-space: nowrap;    /* keep on one line */
 }
 
 .down-arrow {
