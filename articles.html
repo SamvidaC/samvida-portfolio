@@ -1,1 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futures Studio - Milwaukee becomes the haven | Samvida Chennuri</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="/samvida-portfolio/index.html">
+            <img class="logo" src="assets/logo.svg" alt="Logo" />
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="index.html#projects" class="active">WORK</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+        </ul>
+    </nav>
 
+    <main class="case-study-container">
+        <header class="case-study-header">
+            <h1 class="case-study-title">Research papers and articles archive/h1>
+        </header>
+
+        <section>
+          <p class="content-paragraph">
+    A collection of academic papers and personal pieces exploring the intersection sustainability, design, and innovation.
+  </p>
+  <h2 class="section-heading">1. Fossil Fuel Divestment</h2>
+  <p class="content-paragraph">
+    This paper explores the concept of divestment, focusing on its historical roots, particularly fossil fuel divestment, and its implications for combating climate change. It examines whether divestment serves as a symbolic or substantive tool for change, evaluates its financial viability, and considers the ethical and moral dimensions of institutional actions in addressing global sustainability challenges.
+  </p>
+          <h2 class="section-heading">2. Circular Economy in the Fashion Industry</h2>
+  <p class="content-paragraph">
+    This paper examines the circular economy in fashion, focusing on strategies to reduce waste, reuse materials, and improve resource efficiency. It explores the industry's environmental challenges, including overproduction, pollution, and carbon emissions, through case studies of companies like H&M and Patagonia. These examples highlight successes and barriers in adopting circular practices, underscoring the need for collaboration and innovation to achieve sustainable transformation.
+  </p>
+          <h2 class="section-heading">3. Overproduction in the Fashion Industry</h2>
+  <p class="content-paragraph">
+    This paper explores the fashion industry's environmental impact, particularly overproduction, and its effects on waste and pollution. It discusses solutions like circular economy practices, sustainable production, and consumer education. Insights from experts highlight the potential of technology and government policies in driving sustainable change. The paper emphasizes that addressing this issue will require ongoing effort and collaboration.
+  </p>
+          <h2 class="section-heading">4. The Lululemon Controversy Explained</h2>
+  <p class="content-paragraph">
+    During the Olympics, Lululemon, as Team Canada’s official outfitter, faced heightened scrutiny for alleged greenwashing tied to its "Be Planet" campaign. While promoting sustainability, the brand's rising supply chain emissions and reliance on synthetic fabrics undermined its claims. To uphold its environmental promises, Lululemon must prioritize transparency, collaborate with suppliers on climate targets, and invest in sustainable innovation.
+  </p>
+  
+</section>
+            
+      <div class="project-nav-centered">
+  <a class="nav-link" href="sustainability.html">
+    <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <line x1="20" y1="12" x2="4" y2="12" />
+      <polyline points="10 6 4 12 10 18" />
+    </svg>
+    Previous
+  </a>
+  <a class="nav-link disabled" href="#" aria-disabled="true">
+    Next
+    <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <line x1="4" y1="12" x2="20" y2="12" />
+      <polyline points="14 6 20 12 14 18" />
+    </svg>
+  </a>
+</div>
+
+    </main>
+
+    <footer>
+        <p class="footer-banner" aria-hidden="true">
+            • • • footer unlocked, let's make design work for the planet • • •
+        </p>
+        <div class="footer-logo">
+            <img src="assets/logo.svg" alt="Logo" />
+            <span class="footer-name">Samvida Chennuri</span>
+        </div>
+        <p class="footer-tagline">LIFE-CENTERED | DESIGN-INSPIRED</p>
+        <div class="footer-links" aria-label="Social links">
+            <a href="mailto:samvidachennuri@gmail.com" target="_blank" rel="noopener">Email</a> |
+            <a href="https://www.linkedin.com/in/samvida-chennuri/" aria-label="LinkedIn profile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+        <p class="footer-copyright">©2025 Samvida Chennuri</p>
+    </footer>
+    
+    <script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    const slides = document.getElementsByClassName("slide");
+    const dots = document.getElementsByClassName("dot");
+    if (n > slides.length) slideIndex = 1;
+    if (n < 1) slideIndex = slides.length;
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
+</script>
+<script>
+  function openModal(id) {
+  const modal = document.getElementById(id);
+  if (modal) modal.style.display = 'flex';
+}
+
+function closeModal(id) {
+  const modal = document.getElementById(id);
+  if (!modal) return;
+
+  modal.style.display = 'none';
+
+  const img = modal.querySelector('.modal-content');
+  if (img) {
+    img.classList.remove('zoomed');
+    img.style.transform = 'none';
+    img.style.marginTop = '0';
+    img.style.cursor = 'zoom-in';
+  }
+
+  modal.classList.remove('zoomed-mode');
+
+  const spacer = modal.querySelector('.bottom-spacer');
+  if (spacer) spacer.style.height = '0';
+}
+
+function toggleZoom(img) {
+  const imageType = img.dataset.imageType;
+  const modal = img.closest('.modal');
+  const spacer = modal.querySelector('.bottom-spacer');
+
+  img.classList.toggle('zoomed');
+
+  if (img.classList.contains('zoomed')) {
+    modal.classList.add('zoomed-mode');
+    img.style.transformOrigin = 'top center';
+
+    if (imageType === 'unilever') {
+      img.style.transform = 'scale(2)';
+    } else if (imageType === 'arcteryx') {
+      img.style.transform = 'scale(1.5)';
+    } else {
+      img.style.transform = 'scale(1.5)';
+    }
+
+    img.style.cursor = 'zoom-out';
+
+    if (spacer) spacer.style.height = '120px'; // spacer BELOW image
+  } else {
+    modal.classList.remove('zoomed-mode');
+    img.style.transform = 'none';
+    img.style.cursor = 'zoom-in';
+
+    if (spacer) spacer.style.height = '0';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.modal .modal-content').forEach(img => {
+    img.addEventListener('click', (event) => {
+      event.stopPropagation();
+      toggleZoom(img);
+    });
+  });
+});
+
+window.onclick = function(event) {
+  ['unileverModal', 'arcteryxModal'].forEach(id => {
+    const modal = document.getElementById(id);
+    if (modal && event.target === modal) {
+      closeModal(id);
+    }
+  });
+};
+</script>
+</body>
+</html>
