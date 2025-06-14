@@ -137,55 +137,71 @@
   }
 </script>
 <script>
-    function openModal(id) {
-      const modal = document.getElementById(id);
-      if (modal) modal.style.display = 'flex';
-    }
-
-    function closeModal(id) {
-      const modal = document.getElementById(id);
-      if (modal) modal.style.display = 'none';
-    }
-
-    function toggleZoom(img) {
-  const imageType = img.dataset.imageType; // "unilever" or "arcteryx"
-  
-  img.classList.toggle('zoomed');
-  const modal = img.closest('.modal');
-
-  if (img.classList.contains('zoomed')) {
-    modal.classList.add('zoomed-mode');
-    if (imageType === 'unilever') {
-      img.style.transform = 'scale(1.8)';
-    } else if (imageType === 'arcteryx') {
-      img.style.transform = 'scale(0.5)';
-    }
-    img.style.cursor = 'zoom-out';
-  } else {
-    modal.classList.remove('zoomed-mode');
-    img.style.transform = 'none';
-    img.style.cursor = 'zoom-in';
+  function openModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) modal.style.display = 'flex';
   }
-}
+
+  function closeModal(id) {
+    const modal = document.getElementById(id);
+    if (!modal) return;
+
+    modal.style.display = 'none';
+
+    const img = modal.querySelector('.modal-content');
+    if (img) {
+      img.classList.remove('zoomed');
+      img.style.transform = 'none';
+      img.style.cursor = 'zoom-in';
+      img.style.marginTop = '0';
+    }
+
+    modal.classList.remove('zoomed-mode');
+  }
+
+  function toggleZoom(img) {
+    const imageType = img.dataset.imageType; // "unilever" or "arcteryx"
+    const modal = img.closest('.modal');
     
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.modal .modal-content').forEach(img => {
-        img.addEventListener('click', (event) => {
-          event.stopPropagation();
-          toggleZoom(img);
-        });
+    img.classList.toggle('zoomed');
+
+    if (img.classList.contains('zoomed')) {
+      modal.classList.add('zoomed-mode');
+      img.style.transformOrigin = 'top center';
+      img.style.marginTop = '40px';
+
+      if (imageType === 'unilever') {
+        img.style.transform = 'scale(1.8)';
+      } else if (imageType === 'arcteryx') {
+        img.style.transform = 'scale(1.5)';
+      }
+
+      img.style.cursor = 'zoom-out';
+    } else {
+      modal.classList.remove('zoomed-mode');
+      img.style.transform = 'none';
+      img.style.cursor = 'zoom-in';
+      img.style.marginTop = '0';
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.modal .modal-content').forEach(img => {
+      img.addEventListener('click', (event) => {
+        event.stopPropagation(); // prevent modal close on image click
+        toggleZoom(img);
       });
     });
+  });
 
-    window.onclick = function (event) {
-      ['unileverModal', 'arcteryxModal'].forEach(id => {
-        const modal = document.getElementById(id);
-        if (modal && event.target === modal) {
-          closeModal(id);
-        }
-      });
-    };
-  </script>
-
+  window.onclick = function (event) {
+    ['unileverModal', 'arcteryxModal'].forEach(id => {
+      const modal = document.getElementById(id);
+      if (modal && event.target === modal) {
+        closeModal(id);
+      }
+    });
+  };
+</script>
 </body>
 </html>
