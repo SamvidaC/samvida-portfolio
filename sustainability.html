@@ -67,11 +67,13 @@
 <div id="unileverModal" class="modal" onclick="closeModal('unileverModal')">
   <span class="modal-close" onclick="closeModal('unileverModal')">&times;</span>
   <img class="modal-content" data-image-type="unilever" src="assets/unileveranalysis.jpg" alt="Unilever sustainability analysis enlarged">
+  <div class="bottom-spacer"></div>
 </div>
 
 <div id="arcteryxModal" class="modal" onclick="closeModal('arcteryxModal')">
   <span class="modal-close" onclick="closeModal('arcteryxModal')">&times;</span>
   <img class="modal-content" data-image-type="arcteryx" src="assets/arcteryx-teardown.jpg" alt="Full-size Arc'teryx analysis">
+  <div class="bottom-spacer"></div>
 </div>
             
       <div class="project-nav-centered">
@@ -161,6 +163,7 @@
   function toggleZoom(img) {
   const imageType = img.dataset.imageType;
   const modal = img.closest('.modal');
+  const spacer = modal.querySelector('.bottom-spacer');
 
   img.classList.toggle('zoomed');
 
@@ -168,7 +171,6 @@
     modal.classList.add('zoomed-mode');
     img.style.transformOrigin = 'top center';
     img.style.marginTop = '40px';
-    img.style.marginBottom = '60px';       // ← added bottom margin
 
     if (imageType === 'unilever') {
       img.style.transform = 'scale(1.8)';
@@ -176,18 +178,21 @@
       img.style.transform = 'scale(1.5)';
     }
 
-    modal.style.paddingBottom = '80px';    // ← increased modal bottom padding
     img.style.cursor = 'zoom-out';
+
+    // Add extra space at bottom to allow scrolling fully
+    spacer.style.height = '120px';
   } else {
     modal.classList.remove('zoomed-mode');
     img.style.transform = 'none';
     img.style.cursor = 'zoom-in';
     img.style.marginTop = '0';
-    img.style.marginBottom = '0';           // ← reset bottom margin
-    modal.style.paddingBottom = '40px';    // ← reset modal padding
+
+    // Reset spacer height
+    spacer.style.height = '0';
   }
 }
-
+    
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.modal .modal-content').forEach(img => {
       img.addEventListener('click', (event) => {
