@@ -530,11 +530,11 @@ footer {
 
 .about-side h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 40px; /* Keeping current size as it fits well */
+  font-size: 32px; /* Keeping current size as it fits well */
   font-weight: 900;
   text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem; /* Set to 1rem for consistent spacing */
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem; /* Set to 1rem for consistent spacing */
 }
 
 .not-resume-card {
