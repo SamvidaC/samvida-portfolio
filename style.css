@@ -394,7 +394,8 @@ footer {
   min-width: 180px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center; /* <-- center aligns content */
+  text-align: center;   /* <-- center aligns text */
 }
 
 .footer-left img {
