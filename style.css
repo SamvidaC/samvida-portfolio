@@ -377,18 +377,27 @@ footer {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
   font-style: italic;
-  font-size: 1.85rem;
+  font-size: 1.5rem;
   letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+}
+
+.footer-tagline {
+  display: block;
+  font-family: 'Montserrat';
+  font-weight: 300;
+  font-size: 0.75rem;
+  letter-spacing: 0.01em;
   margin: 0.1rem 0;
 }
 
 /* Bottom full width box */
 .footer-bottom-box {
   background-color: #FDF2F5;
-  border-left: 4px solid #E27591;
+ /* border-left: 4px solid #E27591;
   border-right: 4px solid #E27591;
   border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+  border-top-right-radius: 12px; */
   width: 100vw; /* stretches to full screen */
   margin-left: calc(-1 * ((100vw - 100%) / 2)); /* aligns with viewport */
   padding: 0.75rem 2rem;
