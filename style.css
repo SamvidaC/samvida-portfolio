@@ -1175,7 +1175,19 @@ footer {
   overflow: auto !important;
 }
 
-.modal-content.zoomed {
+/* Default zoom for Unilever image */
+.unilever-img.zoomed {
+  transform: scale(1);
+  transform-origin: top center;
+}
+
+/* Different zoom for Arc'teryx image */
+.arcteryx-img.zoomed {
+  transform: scale(0.5);
+  transform-origin: top center;
+}
+
+/*.modal-content.zoomed {
   transform: scale(0.5);
   transform-origin: top center; /* ensure scaling starts from the top */
   cursor: zoom-out;
@@ -1184,7 +1196,7 @@ footer {
   display: block;
   margin: 0 auto;
   transition: transform 0.3s ease-in-out;
-}
+}*/
 
 .modal-content {
   max-width: 90%;
