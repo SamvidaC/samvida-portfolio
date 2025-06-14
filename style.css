@@ -75,7 +75,7 @@ nav {
   font-style: italic;
   font-weight: 700;
   color: #E27591;
-  margin: 0 0 0.3rem 0; /* bottom margin controls spacing */
+  margin: 0; /* bottom margin controls spacing */
   white-space: nowrap;
 }
 
@@ -84,6 +84,7 @@ nav {
   font-size: 56px;
   line-height: 1.4;
   margin-top: -0.2rem;              /* remove default margins */
+  margin-bottom: 1.2rem;
   font-weight: 900;
   text-align: center;
   word-break: normal;
