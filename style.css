@@ -354,31 +354,24 @@ html {
 }
 
 footer {
-  background-color: #FAFAFA;
+  background-color: #FAFAFA; /* pure white */
   color: #1A1A1A;
   text-align: center;
-  padding: 3rem 2rem;
+  padding: 3rem 2rem 0 2rem; /* no bottom padding to avoid white after box */
+  font-family: 'Montserrat', sans-serif;
 }
 
-.footer-banner {
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 0.1em;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  color: #E27591;
+/* Centered main footer content */
+.footer-main {
+  max-width: 600px;  /* optional max width to keep content neat */
+  margin: 0 auto 2rem auto;
 }
 
 .footer-logo {
-  display: block; /* Force block layout to stack elements */
-  text-align: center;
-  margin-bottom: 0.1rem;
-}
-
-.footer-logo img {
   height: 72px;
   width: auto;
   display: block;
-  margin: 0 auto 0.1rem auto; /* centers image and adds spacing below */
+  margin: 0 auto 0.25rem auto;
 }
 
 .footer-name {
@@ -387,39 +380,78 @@ footer {
   font-weight: 900;
   font-size: 1.85rem;
   letter-spacing: 0.04em;
-  margin: 0.1rem 0;
+  margin-bottom: 0.1rem;
+  color: #1A1A1A;
 }
-
 
 .footer-tagline {
   font-size: 0.75rem;
-  margin-bottom: 2rem;
-  margin-top: 0.1rem;
-}
-
-.footer-links a {
+  margin-top: 0;
+  margin-bottom: 0;
   color: #1A1A1A;
-  text-decoration: none;
-  /*margin: 0 0.5rem;*/
-  letter-spacing: 0.05em;
-  font-family: 'Playfair Display', serif;
-  font-size: 1rem;
   font-weight: 400;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  letter-spacing: 0.1em;
 }
 
-.footer-links a:hover {
-  color: #E27591;
-}
+/* Bottom full width box */
+.footer-bottom-box {
+  background-color: #FDF2F5;
+  border-left: 4px solid #E27591;
+  border-right: 4px solid #E27591;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  width: 100vw; /* full viewport width */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 0.75rem 2rem;
+  box-sizing: border-box;
 
-.footer-copyright {
-  font-size: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
   font-weight: 300;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  color: #808080;
+  color: #E27591;
+  font-family: 'Montserrat', sans-serif;
 }
+
+/* Left text styling */
+.footer-left {
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Right side links */
+.footer-right a {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #E27591;
+  text-decoration: none;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  transition: color 0.3s ease;
+  letter-spacing: 0.02em;
+}
+
+.footer-right a:hover {
+  color: #1A1A1A;
+}
+
+/* separator between links */
+.footer-right a:not(:last-child)::after {
+  content: " |";
+  color: #E27591;
+  margin-left: 0.5rem;
+}
+
+.footer-right a:last-child::after {
+  content: "";
+}
+
 
 /* ABOUT PAGE LAYOUT */
 .about-wrapper {
