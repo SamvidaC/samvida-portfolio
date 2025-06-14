@@ -71,10 +71,10 @@ nav {
   font-family: 'Playfair Display', serif;
   font-size: 40px;
   font-style: italic;
-  font-weight: 900;
+  font-weight: 700;
   color: #E27591;
   display: inline-block;  /* inline-block keeps it on one line but avoids block spacing */
-  margin-bottom: 0.1rem;  /* small gap below */
+  margin-bottom: 0;  /* small gap below */
   white-space: nowrap;    /* keep on one line */
 }
 
@@ -86,7 +86,7 @@ nav {
   font-weight: 900;
   text-align: center;
   word-break: normal;
-  margin-top: 0;
+  margin-top: 0.1;
   margin-bottom: 1rem;
   white-space: normal;    /* allow wrapping here */
 }
