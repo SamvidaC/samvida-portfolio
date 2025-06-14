@@ -1170,6 +1170,10 @@ footer {
   overflow: auto; /* 💡 Allow scrolling */
 }
 
+.modal.zoomed-mode {
+  align-items: flex-start !important; /* 👈 Add this */
+}
+
 .modal-content.zoomed {
   transform: scale(1.8);
   cursor: zoom-out;
