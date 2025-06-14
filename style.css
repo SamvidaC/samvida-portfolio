@@ -1192,12 +1192,16 @@ footer {
   transform-origin: top center;
 }
 
+.modal-content {
+  display: block;      /* make image block level */
+  margin: 0 auto;      /* center horizontally */
+}
+
 /* Bottom spacer starts with zero height, background red to debug */
 .bottom-spacer {
   height: 0;
   width: 100%;
   transition: height 0.3s ease;
-  background-color: rgba(255, 0, 0, 0.25); /* visible red for debugging */
 }
 
 .modal-close {
