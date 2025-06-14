@@ -173,12 +173,16 @@
 </script>
     <script>
   function toggleZoom(img) {
-    img.classList.toggle('zoomed');
-    const modal = img.closest('.modal');
-    if (modal) {
-      modal.classList.toggle('zoomed-mode', img.classList.contains('zoomed'));
+  img.classList.toggle('zoomed');
+  const modal = img.closest('.modal');
+  if (modal) {
+    if (img.classList.contains('zoomed')) {
+      modal.classList.add('zoomed-mode');
+    } else {
+      modal.classList.remove('zoomed-mode');
     }
   }
+}
 </script>
 </body>
 </html>
