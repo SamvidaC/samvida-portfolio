@@ -1167,7 +1167,8 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 40px;
-  overflow: auto; /* allow scrolling when zoomed */
+  overflow: auto;
+  flex-direction: column; /* ensures vertical layout */
 }
 
 .modal.zoomed-mode {
@@ -1178,8 +1179,7 @@ footer {
 
 .modal-content {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   max-width: 90%;
   max-height: 85vh;
   cursor: zoom-in !important;
@@ -1192,12 +1192,7 @@ footer {
   transform-origin: top center;
 }
 
-.modal-content {
-  display: block;      /* make image block level */
-  margin: 0 auto;      /* center horizontally */
-}
-
-/* Bottom spacer starts with zero height, background red to debug */
+/* 🔻 Removed background color and kept logic clean */
 .bottom-spacer {
   height: 0;
   width: 100%;
