@@ -161,29 +161,35 @@
   </main>
 
  <footer>
-   <div class="footer-accent-lines">
-    <span class="line line1"></span>
-    <span class="line line2"></span>
-    <span class="line line3"></span>
+  <!-- Accent lines -->
+  <div class="footer-accent-lines" aria-hidden="true">
+    <span class="line" style="background-color:#E27591;"></span>
+    <span class="line" style="background-color:#FFCC66;"></span>
+    <span class="line" style="background-color:#A8D5BA;"></span>
   </div>
-</footer>
+
+  <!-- Main footer container -->
   <div class="footer-container">
+    <!-- Left column: Logo, Name, Tagline -->
     <div class="footer-left">
       <img src="assets/logo.svg" alt="Logo" />
       <span class="footer-name">Samvida Chennuri</span>
       <p class="footer-tagline">LIFE-CENTERED | DESIGN-INSPIRED</p>
     </div>
 
+    <!-- Center column: Drafting version & copyright -->
     <div class="footer-center">
       <p class="footer-drafting">Drafting version ∞</p>
       <p class="footer-copyright">©2025 Samvida Chennuri</p>
     </div>
 
+    <!-- Right column: Social links -->
     <div class="footer-right" aria-label="Social links">
-      <a href="mailto:samvidachennuri@gmail.com" target="_blank" rel="noopener">Email</a>
-      <a href="https://www.linkedin.com/in/samvida-chennuri/" aria-label="LinkedIn profile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:samvidachennuri@gmail.com" target="_blank" rel="noopener">Email</a> |
+      <a href="https://www.linkedin.com/in/samvida-chennuri/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </div>
   </div>
+</footer>
 
   <script>
     document.getElementById('scrollBtn').addEventListener('click', function(event) {
