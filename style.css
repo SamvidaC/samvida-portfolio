@@ -74,14 +74,14 @@ nav {
   font-weight: 900;
   color: #E27591;
   display: inline-block;  /* inline-block keeps it on one line but avoids block spacing */
-  margin-bottom: 0.2rem;  /* small gap below */
+  margin-bottom: 0.1rem;  /* small gap below */
   white-space: nowrap;    /* keep on one line */
 }
 
 .hero-text h1 {
   font-family: 'Playfair Display', serif;
   font-size: 56px;
-  line-height: 1.2;
+  line-height: 1.4;
   margin: 0;              /* Remove margin to avoid extra gap */
   font-weight: 900;
   text-align: center;
