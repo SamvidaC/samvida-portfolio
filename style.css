@@ -431,12 +431,12 @@ footer {
 }
 
 /* Add separator as ::after only with margin on the right */
-/* .footer-right a:not(:last-child)::after {
+.footer-right a:not(:last-child)::after {
   content: " |";
   color: #E27591;
-  margin-left: 0.3rem;
+  margin-left: 0.5rem;
   margin-right: 0;
-} */
+} 
 
 .footer-right a:last-child::after {
   content: "";
