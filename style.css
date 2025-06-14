@@ -1172,19 +1172,19 @@ footer {
 
 .modal.zoomed-mode {
   align-items: flex-start !important;
-  padding-top: 20px; /* ✅ optional breathing room */
+  overflow: auto !important;
 }
 
 .modal-content.zoomed {
   transform: scale(1.8);
+  transform-origin: top center; /* ensure scaling starts from the top */
   cursor: zoom-out;
   max-width: none;
   max-height: none;
-  transition: transform 0.3s ease-in-out;
   display: block;
-  margin: 0 auto 40px auto; /* ✅ Keeps horizontal centering but no top margin */
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out;
 }
-
 
 .modal-content {
   max-width: 90%;
