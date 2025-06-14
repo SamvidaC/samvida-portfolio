@@ -45,7 +45,7 @@
   </p>
   <div class="content-block">
     <div class="block-image clickable-image" onclick="openModal('unileverModal')">
-      <img class="modal-content unilever-img" src="assets/unileveranalysis.jpg" alt="Unilever sustainability analysis infographic">
+      <img class="modal-content" data-image-type="unilever" src="assets/unileveranalysis.jpg" alt="Unilever sustainability analysis enlarged">
       <p class="image-caption">Click to view detailed Unilever sustainability analysis</p>
     </div>
   </div>
@@ -57,7 +57,7 @@
   </p>
   <div class="content-block">
     <div class="block-image clickable-image" onclick="openModal('arcteryxModal')">
-      <img class="modal-content arcteryx-img" src="assets/arcteryx-teardown.jpg" alt="Arc'teryx jacket sustainability teardown">
+      <img class="modal-content" data-image-type="arcteryx" src="assets/arcteryx-teardown.jpg" alt="Full-size Arc'teryx analysis">
       <p class="image-caption">Click to view detailed Arc'teryx product analysis</p>
     </div>
   </div>
@@ -66,12 +66,12 @@
 <!-- 🔄 Move these to the end of <body> -->
 <div id="unileverModal" class="modal" onclick="closeModal('unileverModal')">
   <span class="modal-close" onclick="closeModal('unileverModal')">&times;</span>
-  <img class="modal-content unilever-img" src="assets/unileveranalysis.jpg" alt="Unilever sustainability analysis enlarged">
+  <img class="modal-content" data-image-type="unilever" src="assets/unileveranalysis.jpg" alt="Unilever sustainability analysis enlarged">
 </div>
 
 <div id="arcteryxModal" class="modal" onclick="closeModal('arcteryxModal')">
   <span class="modal-close" onclick="closeModal('arcteryxModal')">&times;</span>
-  <img class="modal-content arcteryx-img" src="assets/arcteryx-teardown.jpg" alt="Full-size Arc'teryx analysis">
+  <img class="modal-content" data-image-type="arcteryx" src="assets/arcteryx-teardown.jpg" alt="Full-size Arc'teryx analysis">
 </div>
             
       <div class="project-nav-centered">
