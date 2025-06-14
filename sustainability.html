@@ -148,17 +148,26 @@
     }
 
     function toggleZoom(img) {
-      img.classList.toggle('zoomed');
-      const modal = img.closest('.modal');
-      if (modal) {
-        if (img.classList.contains('zoomed')) {
-          modal.classList.add('zoomed-mode');
-        } else {
-          modal.classList.remove('zoomed-mode');
-        }
-      }
-    }
+  const imageType = img.dataset.imageType; // "unilever" or "arcteryx"
+  
+  img.classList.toggle('zoomed');
+  const modal = img.closest('.modal');
 
+  if (img.classList.contains('zoomed')) {
+    modal.classList.add('zoomed-mode');
+    if (imageType === 'unilever') {
+      img.style.transform = 'scale(1.8)';
+    } else if (imageType === 'arcteryx') {
+      img.style.transform = 'scale(0.5)';
+    }
+    img.style.cursor = 'zoom-out';
+  } else {
+    modal.classList.remove('zoomed-mode');
+    img.style.transform = 'none';
+    img.style.cursor = 'zoom-in';
+  }
+}
+    
     document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.modal .modal-content').forEach(img => {
         img.addEventListener('click', (event) => {
