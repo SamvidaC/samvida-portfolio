@@ -1179,12 +1179,24 @@ footer {
 .unilever-img.zoomed {
   transform: scale(1);
   transform-origin: top center;
+  cursor: zoom-out;
+  max-width: none;
+  max-height: none;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out;
 }
 
 /* Different zoom for Arc'teryx image */
 .arcteryx-img.zoomed {
   transform: scale(0.5);
   transform-origin: top center;
+  cursor: zoom-out;
+  max-width: none;
+  max-height: none;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out;
 }
 
 /*.modal-content.zoomed {
