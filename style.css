@@ -533,8 +533,8 @@ footer {
   font-size: 32px; /* Keeping current size as it fits well */
   font-weight: 900;
   text-align: center;
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem; /* Set to 1rem for consistent spacing */
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem; /* Set to 1rem for consistent spacing */
 }
 
 .not-resume-card {
