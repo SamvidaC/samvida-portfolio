@@ -1167,7 +1167,7 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 40px;
-  overflow: auto; /* 💡 Allow scrolling */
+  overflow: auto; /* allow scrolling when zoomed */
 }
 
 .modal.zoomed-mode {
@@ -1176,54 +1176,27 @@ footer {
   padding-bottom: 80px;
 }
 
-.unilever-img.zoomed {
-  transform: scale(1.2);
-  transform-origin: top center;
-  cursor: zoom-out;
-  max-width: none;
-  max-height: none;
-  display: block;
-  margin: 0 auto;
-  transition: transform 0.3s ease-in-out;
-}
-
-.arcteryx-img.zoomed {
-  transform: scale(0.75);
-  transform-origin: top center;
-  cursor: zoom-out;
-  max-width: none;
-  max-height: none;
-  display: block;
-  margin: 0 auto;
-  transition: transform 0.3s ease-in-out;
-}
-
 .modal-content {
   max-width: 90%;
   max-height: 85vh;
   cursor: zoom-in !important;
-  /*transform-origin: center center;*/
   transition: transform 0.3s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .modal-content.zoomed {
   cursor: zoom-out !important;
+  transform-origin: top center;
 }
-/*.close-modal {
-  position: absolute;
-  top: 20px; right: 40px;
-  font-size: 30px;
-  color: #FAFAFA;
-  cursor: pointer;
-}*/
-/* .bottom-spacer {
-  height: 0;
-  transition: height 0.3s ease;
-} */
+
+/* Bottom spacer starts with zero height, background red to debug */
 .bottom-spacer {
   height: 0;
+  width: 100%;
   transition: height 0.3s ease;
-  background-color: rgba(255, 0, 0, 0.3); /* semi-transparent red to see it */
+  background-color: rgba(255, 0, 0, 0.25); /* visible red for debugging */
 }
 
 .modal-close {
@@ -1234,7 +1207,7 @@ footer {
   color: #FAFAFA;
   font-weight: 500;
   cursor: pointer;
-  background: transparent; /* remove black background */
+  background: transparent;
   padding: 0 6px;
   border-radius: 4px;
   user-select: none;
@@ -1242,7 +1215,21 @@ footer {
 }
 
 .modal-close:hover {
-  color: #E27591; /* subtle hover color */
+  color: #E27591;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    margin: 5% auto;
+    padding: 10px;
+  }
+
+  .modal-close {
+    top: 5px;
+    right: 15px;
+    font-size: 30px;
+  }
 }
 
 /* Mobile responsive adjustments for modals */
