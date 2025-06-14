@@ -366,7 +366,7 @@ footer {
   margin: 0 auto 2.5rem;
   display: flex;
   justify-content: center; /* changed from space-between */
-  gap: 5rem; /* was 3rem */
+  gap: 8rem; /* was 3rem */
   padding: 0 2.5rem;
 }
 
@@ -391,7 +391,7 @@ footer {
 .footer-left,
 .footer-center,
 .footer-right {
-  width: 180px;   /* adjust to whatever visually aligns */
+  width: 240px;   /* adjust to whatever visually aligns */
   display: flex;
   flex-direction: column;
   align-items: center;
