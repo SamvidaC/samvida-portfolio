@@ -1216,6 +1216,10 @@ footer {
   color: #FAFAFA;
   cursor: pointer;
 }*/
+.bottom-spacer {
+  height: 0;
+  transition: height 0.3s ease;
+}
 
 .modal-close {
   position: absolute;
