@@ -86,122 +86,19 @@
         <p class="footer-copyright">©2025 Samvida Chennuri</p>
     </footer>
     
-    <script>
-  let slideIndex = 1;
-  showSlides(slideIndex);
-
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-
-  function showSlides(n) {
-    const slides = document.getElementsByClassName("slide");
-    const dots = document.getElementsByClassName("dot");
-    if (n > slides.length) slideIndex = 1;
-    if (n < 1) slideIndex = slides.length;
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (let i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-  }
-</script>
-<script>
-  function openModal(id) {
-  const modal = document.getElementById(id);
-  if (modal) modal.style.display = 'flex';
-}
-
-function closeModal(id) {
-  const modal = document.getElementById(id);
-  if (!modal) return;
-
-  modal.style.display = 'none';
-
-  const img = modal.querySelector('.modal-content');
-  if (img) {
-    img.classList.remove('zoomed');
-    img.style.transform = 'none';
-    img.style.marginTop = '0';
-    img.style.cursor = 'zoom-in';
-  }
-
-  modal.classList.remove('zoomed-mode');
-
-  const spacer = modal.querySelector('.bottom-spacer');
-  if (spacer) spacer.style.height = '0';
-}
-
-function toggleZoom(img) {
-  const imageType = img.dataset.imageType;
-  const modal = img.closest('.modal');
-  const spacer = modal.querySelector('.bottom-spacer');
-
-  img.classList.toggle('zoomed');
-
-  if (img.classList.contains('zoomed')) {
-    modal.classList.add('zoomed-mode');
-    img.style.transformOrigin = 'top center';
-
-    if (imageType === 'unilever') {
-      img.style.transform = 'scale(2)';
-    } else if (imageType === 'arcteryx') {
-      img.style.transform = 'scale(1.5)';
-    } else {
-      img.style.transform = 'scale(1.5)';
-    }
-
-    img.style.cursor = 'zoom-out';
-
-    if (spacer) spacer.style.height = '120px'; // spacer BELOW image
-  } else {
-    modal.classList.remove('zoomed-mode');
-    img.style.transform = 'none';
-    img.style.cursor = 'zoom-in';
-
-    if (spacer) spacer.style.height = '0';
-  }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.modal .modal-content').forEach(img => {
-    img.addEventListener('click', (event) => {
-      event.stopPropagation();
-      toggleZoom(img);
-    });
-  });
-});
-
-window.onclick = function(event) {
-  ['unileverModal', 'arcteryxModal'].forEach(id => {
-    const modal = document.getElementById(id);
-    if (modal && event.target === modal) {
-      closeModal(id);
+   <script>
+  document.querySelectorAll('.content-paragraph').forEach(p => {
+    const pdf = p.dataset.pdf;
+    if (pdf) {
+      const link = document.createElement('a');
+      link.href = pdf;
+      link.className = 'pdf-link';
+      link.target = '_blank';
+      link.textContent = '[View PDF]';
+      p.appendChild(document.createElement('br'));
+      p.appendChild(link);
     }
   });
-};
 </script>
-.pdf-link {
-  display: inline-block;
-  margin-top: 0.75rem;
-  font-size: 0.95rem;
-  font-style: italic;
-  color: #444;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.pdf-link:hover {
-  color: #E27591;
-  text-decoration: none;
-}
-
 </body>
 </html>
