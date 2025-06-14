@@ -1176,7 +1176,7 @@ footer {
 }
 
 .modal-content.zoomed {
-  transform: scale(1.8);
+  transform: scale(1);
   transform-origin: top center; /* ensure scaling starts from the top */
   cursor: zoom-out;
   max-width: none;
