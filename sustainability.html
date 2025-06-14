@@ -173,7 +173,6 @@ function toggleZoom(img) {
 
   if (img.classList.contains('zoomed')) {
     modal.classList.add('zoomed-mode');
-    img.style.marginTop = '40px';
     img.style.transformOrigin = 'top center';
 
     if (imageType === 'unilever') {
@@ -186,14 +185,13 @@ function toggleZoom(img) {
 
     img.style.cursor = 'zoom-out';
 
-    if (spacer) spacer.style.height = '120px'; // Add bottom spacing for scroll
+    if (spacer) spacer.style.height = '120px'; // spacer BELOW image
   } else {
     modal.classList.remove('zoomed-mode');
     img.style.transform = 'none';
-    img.style.marginTop = '0';
     img.style.cursor = 'zoom-in';
 
-    if (spacer) spacer.style.height = '0'; // Reset spacer
+    if (spacer) spacer.style.height = '0';
   }
 }
 
