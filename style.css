@@ -1176,7 +1176,7 @@ footer {
 }
 
 .unilever-img.zoomed {
-  transform: scale(1.6);
+  transform: scale(1);
   transform-origin: top center;
   cursor: zoom-out;
   max-width: none;
@@ -1187,7 +1187,7 @@ footer {
 }
 
 .arcteryx-img.zoomed {
-  transform: scale(1.3);
+  transform: scale(0.5);
   transform-origin: top center;
   cursor: zoom-out;
   max-width: none;
