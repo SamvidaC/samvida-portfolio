@@ -1187,7 +1187,7 @@ footer {
 }
 
 .arcteryx-img.zoomed {
-  transform: scale(0.5);
+  transform: scale(0.75);
   transform-origin: top center;
   cursor: zoom-out;
   max-width: none;
