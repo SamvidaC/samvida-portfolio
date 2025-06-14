@@ -71,11 +71,12 @@ nav {
 .intro-hello {
   font-family: 'Playfair Display', serif;
   font-size: 40px;
-  line-height: 1;
+  line-height: 0.9;
   font-style: italic;
   font-weight: 700;
   color: #E27591;
-  margin: 0; /* bottom margin controls spacing */
+  padding-bottom: 0.1rem;
+  margin-bottom: 0;
   white-space: nowrap;
 }
 
@@ -83,7 +84,7 @@ nav {
   font-family: 'Playfair Display', serif;
   font-size: 56px;
   line-height: 1.4;
-  margin-top: -0.2rem;              /* remove default margins */
+  /*margin-top: -0.2rem; */             /* remove default margins */
   margin-bottom: 1.2rem;
   font-weight: 900;
   text-align: center;
