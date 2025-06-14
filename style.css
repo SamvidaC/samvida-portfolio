@@ -1181,7 +1181,7 @@ footer {
   max-height: none;
   transition: transform 0.3s ease-in-out;
   display: block;
-  margin: 40px auto;
+  margin: auto;
 }
 
 .modal-content {
