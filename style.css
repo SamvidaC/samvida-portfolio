@@ -434,8 +434,8 @@ footer {
 .footer-right a:not(:last-child)::after {
   content: " |";
   color: #E27591;
-  margin-left: 0.02rem;
-  margin-right: 0.02rem;
+  margin-left: 0.04rem;
+  margin-right: 0.04rem;
 } 
 
 .footer-right a:last-child::after {
