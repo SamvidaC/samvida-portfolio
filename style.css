@@ -1216,9 +1216,14 @@ footer {
   color: #FAFAFA;
   cursor: pointer;
 }*/
+/* .bottom-spacer {
+  height: 0;
+  transition: height 0.3s ease;
+} */
 .bottom-spacer {
   height: 0;
   transition: height 0.3s ease;
+  background-color: rgba(255, 0, 0, 0.3); /* semi-transparent red to see it */
 }
 
 .modal-close {
