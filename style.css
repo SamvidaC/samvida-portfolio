@@ -471,7 +471,7 @@ footer {
 
 .about-bio h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 56px; /* Increased to match box width better */
+  font-size: 40px; /* Increased to match box width better */
   font-weight: 900;
   text-align: center;
   color: #1A1A1A;
@@ -530,7 +530,7 @@ footer {
 
 .about-side h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.25rem; /* Keeping current size as it fits well */
+  font-size: 40px; /* Keeping current size as it fits well */
   font-weight: 900;
   text-align: center;
   margin-top: 1rem;
@@ -582,7 +582,7 @@ footer {
 .skills-section h2 {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
-  font-size: 56px; /* Increased to 4rem to match other headings */
+  font-size: 40px; /* Increased to 4rem to match other headings */
   margin-bottom: 1rem; /* Set to 1rem for consistent spacing */
   /*text-transform: uppercase;*/
 }
