@@ -372,6 +372,16 @@ footer {
   margin: 0 auto 0.1rem auto;
 }
 
+.footer-name {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 1.85rem;
+  letter-spacing: 0.04em;
+  margin: 0.1rem 0;
+}
+
 /* Bottom full width box */
 .footer-bottom-box {
   background-color: #FDF2F5;
@@ -379,9 +389,8 @@ footer {
   border-right: 4px solid #E27591;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  border-bottom-left-radius: 0; /* ensure bottom corners are NOT rounded */
-  border-bottom-right-radius: 0;
-  width: 100%; /* full width of parent, no vw */
+  width: 100vw; /* stretches to full screen */
+  margin-left: calc(-1 * ((100vw - 100%) / 2)); /* aligns with viewport */
   padding: 0.75rem 2rem;
   box-sizing: border-box;
 
