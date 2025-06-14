@@ -261,7 +261,7 @@ html {
 #projects-title {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
-  font-size: 64px;
+  font-size: 56px;
   text-align: center;
   margin-bottom: 32px;
 }
@@ -471,7 +471,7 @@ footer {
 
 .about-bio h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 4rem; /* Increased to match box width better */
+  font-size: 56px; /* Increased to match box width better */
   font-weight: 900;
   text-align: center;
   color: #1A1A1A;
@@ -582,9 +582,9 @@ footer {
 .skills-section h2 {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
-  font-size: 4rem; /* Increased to 4rem to match other headings */
+  font-size: 56px; /* Increased to 4rem to match other headings */
   margin-bottom: 1rem; /* Set to 1rem for consistent spacing */
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 
 .skills-grid {
@@ -665,11 +665,11 @@ footer {
 .skill-card.border-pink {  /* Pink border */ }
 .skill-card.border-yellow { /* Yellow border */ }
 
-.about-bio h1,
+/*.about-bio h1,
 .about-side h2,
 .skills-section h2 {
   text-transform: uppercase;
-}
+}*/
 
 @media (max-width: 768px) {
   .about-content h1 {
