@@ -1171,7 +1171,8 @@ footer {
 }
 
 .modal.zoomed-mode {
-  align-items: flex-start !important; /* 👈 Add this */
+  align-items: flex-start !important;
+  padding-top: 20px; /* ✅ optional breathing room */
 }
 
 .modal-content.zoomed {
@@ -1181,8 +1182,9 @@ footer {
   max-height: none;
   transition: transform 0.3s ease-in-out;
   display: block;
-  margin: auto;
+  margin: 0 auto 40px auto; /* ✅ Keeps horizontal centering but no top margin */
 }
+
 
 .modal-content {
   max-width: 90%;
