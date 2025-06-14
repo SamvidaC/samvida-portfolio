@@ -171,5 +171,14 @@
     });
   };
 </script>
+    <script>
+  function toggleZoom(img) {
+    img.classList.toggle('zoomed');
+    const modal = img.closest('.modal');
+    if (modal) {
+      modal.classList.toggle('zoomed-mode', img.classList.contains('zoomed'));
+    }
+  }
+</script>
 </body>
 </html>
