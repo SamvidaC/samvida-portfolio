@@ -159,29 +159,34 @@
   }
 
   function toggleZoom(img) {
-    const imageType = img.dataset.imageType;
-    const modal = img.closest('.modal');
+  const imageType = img.dataset.imageType;
+  const modal = img.closest('.modal');
 
-    img.classList.toggle('zoomed');
+  img.classList.toggle('zoomed');
 
-    if (img.classList.contains('zoomed')) {
-      modal.classList.add('zoomed-mode');
-      img.style.transformOrigin = 'top center';
-      img.style.marginTop = '40px';
-      img.style.marginBottom = '40px';
+  if (img.classList.contains('zoomed')) {
+    modal.classList.add('zoomed-mode');
+    img.style.transformOrigin = 'top center';
+    img.style.marginTop = '40px';
+    img.style.marginBottom = '60px';       // ← added bottom margin
 
-      if (imageType === 'unilever') {
-        img.style.transform = 'scale(1.8)';
-      } else if (imageType === 'arcteryx') {
-        img.style.transform = 'scale(1.5)';
-      }
-    } else {
-      modal.classList.remove('zoomed-mode');
-      img.style.transform = 'none';
-      img.style.marginTop = '0';
-      img.style.marginBottom = '0';
+    if (imageType === 'unilever') {
+      img.style.transform = 'scale(1.8)';
+    } else if (imageType === 'arcteryx') {
+      img.style.transform = 'scale(1.5)';
     }
+
+    modal.style.paddingBottom = '80px';    // ← increased modal bottom padding
+    img.style.cursor = 'zoom-out';
+  } else {
+    modal.classList.remove('zoomed-mode');
+    img.style.transform = 'none';
+    img.style.cursor = 'zoom-in';
+    img.style.marginTop = '0';
+    img.style.marginBottom = '0';           // ← reset bottom margin
+    modal.style.paddingBottom = '40px';    // ← reset modal padding
   }
+}
 
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.modal .modal-content').forEach(img => {
