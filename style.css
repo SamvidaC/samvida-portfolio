@@ -377,15 +377,15 @@ footer {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
   font-style: italic;
-  font-size: 1.5rem;
-  letter-spacing: 0.03em;
+  font-size: 1.75rem;
+  letter-spacing: 0.02em;
   margin: 0.1rem 0;
 }
 
 .footer-tagline {
   display: block;
   font-family: 'Montserrat';
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.75rem;
   letter-spacing: 0.01em;
   margin-bottom: 1rem;
@@ -421,7 +421,7 @@ footer {
 /* Right links container */
 .footer-right a {
   font-family: 'Playfair Display', serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1rem;
   color: #E27591;
   text-decoration: none;
