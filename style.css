@@ -71,6 +71,7 @@ nav {
   font-family: 'Playfair Display', serif;
   font-size: 48px;  /* slightly smaller for balance */
   line-height: 1.2;
+  margin-top: 8px;
   margin-bottom: 8px;
   font-weight: 900;
   text-align: center;
@@ -85,7 +86,7 @@ nav {
   font-weight: 500;
   color: #E27591;
   display: block;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0;
   white-space: nowrap; /* keep on single line */
 }
 
