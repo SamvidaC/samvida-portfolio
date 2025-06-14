@@ -63,7 +63,7 @@
   </div>
 </section>
 
-<!-- 🔄 Move these to the end of <body> -->
+<!-- Modals at end of body -->
 <div id="unileverModal" class="modal" onclick="closeModal('unileverModal')">
   <span class="modal-close" onclick="closeModal('unileverModal')">&times;</span>
   <img class="modal-content" data-image-type="unilever" src="assets/unileveranalysis.jpg" alt="Unilever sustainability analysis enlarged">
@@ -140,33 +140,31 @@
 </script>
 <script>
   function openModal(id) {
-    const modal = document.getElementById(id);
-    if (modal) modal.style.display = 'flex';
+  const modal = document.getElementById(id);
+  if (modal) modal.style.display = 'flex';
+}
+
+function closeModal(id) {
+  const modal = document.getElementById(id);
+  if (!modal) return;
+
+  modal.style.display = 'none';
+
+  const img = modal.querySelector('.modal-content');
+  if (img) {
+    img.classList.remove('zoomed');
+    img.style.transform = 'none';
+    img.style.marginTop = '0';
+    img.style.cursor = 'zoom-in';
   }
 
-  function closeModal(id) {
-    const modal = document.getElementById(id);
-    if (!modal) return;
+  modal.classList.remove('zoomed-mode');
 
-    modal.style.display = 'none';
+  const spacer = modal.querySelector('.bottom-spacer');
+  if (spacer) spacer.style.height = '0';
+}
 
-    const img = modal.querySelector('.modal-content');
-    if (img) {
-      img.classList.remove('zoomed');
-      img.style.transform = 'none';
-      img.style.marginTop = '0';
-    }
-
-    modal.classList.remove('zoomed-mode');
-  }
-
-  function toggleZoom(img) {
-  console.log('toggleZoom triggered');
-  const imageType = img.dataset.imageType;
-  const modal = img.closest('.modal');
-  console.log('modal:', modal);
-  const spacer = modal ? modal.querySelector('.bottom-spacer') : null;
-  console.log('spacer:', spacer);
+function toggleZoom(img) {
   const imageType = img.dataset.imageType;
   const modal = img.closest('.modal');
   const spacer = modal.querySelector('.bottom-spacer');
@@ -175,49 +173,47 @@
 
   if (img.classList.contains('zoomed')) {
     modal.classList.add('zoomed-mode');
-    img.style.transformOrigin = 'top center';
     img.style.marginTop = '40px';
+    img.style.transformOrigin = 'top center';
 
     if (imageType === 'unilever') {
       img.style.transform = 'scale(1.8)';
     } else if (imageType === 'arcteryx') {
       img.style.transform = 'scale(1.5)';
+    } else {
+      img.style.transform = 'scale(1.5)';
     }
 
     img.style.cursor = 'zoom-out';
 
-    // Add extra space at bottom to allow scrolling fully
-    spacer.style.height = '120px';
+    if (spacer) spacer.style.height = '120px'; // Add bottom spacing for scroll
   } else {
     modal.classList.remove('zoomed-mode');
     img.style.transform = 'none';
-    img.style.cursor = 'zoom-in';
     img.style.marginTop = '0';
+    img.style.cursor = 'zoom-in';
 
-    // Reset spacer height
-    spacer.style.height = '0';
-
-      spacer.style.height = '0';
+    if (spacer) spacer.style.height = '0'; // Reset spacer
   }
 }
-    
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.modal .modal-content').forEach(img => {
-      img.addEventListener('click', (event) => {
-        event.stopPropagation();
-        toggleZoom(img);
-      });
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.modal .modal-content').forEach(img => {
+    img.addEventListener('click', (event) => {
+      event.stopPropagation();
+      toggleZoom(img);
     });
   });
+});
 
-  window.onclick = function (event) {
-    ['unileverModal', 'arcteryxModal'].forEach(id => {
-      const modal = document.getElementById(id);
-      if (modal && event.target === modal) {
-        closeModal(id);
-      }
-    });
-  };
+window.onclick = function(event) {
+  ['unileverModal', 'arcteryxModal'].forEach(id => {
+    const modal = document.getElementById(id);
+    if (modal && event.target === modal) {
+      closeModal(id);
+    }
+  });
+};
 </script>
 </body>
 </html>
