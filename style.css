@@ -1176,7 +1176,7 @@ footer {
 }
 
 .unilever-img.zoomed {
-  transform: scale(1);
+  transform: scale(1.2);
   transform-origin: top center;
   cursor: zoom-out;
   max-width: none;
@@ -1196,17 +1196,6 @@ footer {
   margin: 0 auto;
   transition: transform 0.3s ease-in-out;
 }
-
-/*.modal-content.zoomed {
-  transform: scale(0.5);
-  transform-origin: top center; /* ensure scaling starts from the top */
-  cursor: zoom-out;
-  max-width: none;
-  max-height: none;
-  display: block;
-  margin: 0 auto;
-  transition: transform 0.3s ease-in-out;
-}*/
 
 .modal-content {
   max-width: 90%;
