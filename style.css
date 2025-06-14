@@ -79,12 +79,13 @@ nav {
 }
 
 .intro-hello {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.6rem;
   font-style: italic;
+  font-weight: 500;
   color: #E27591;
   display: block;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.1rem;
   white-space: nowrap; /* keep on single line */
 }
 
