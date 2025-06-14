@@ -60,6 +60,7 @@ nav {
   color: #1A1A1A;
   margin-bottom: 1rem;
 }*/
+
 .hero-text {
   padding: 12rem 0 1rem 0;
   text-align: center;
@@ -73,22 +74,19 @@ nav {
   font-style: italic;
   font-weight: 700;
   color: #E27591;
-  display: inline-block;  /* inline-block keeps it on one line but avoids block spacing */
-  margin-bottom: 0;  /* small gap below */
-  white-space: nowrap;    /* keep on one line */
+  margin: 0 0 0.3rem 0; /* bottom margin controls spacing */
+  white-space: nowrap;
 }
 
 .hero-text h1 {
   font-family: 'Playfair Display', serif;
   font-size: 56px;
   line-height: 1.4;
-  margin: 0;              /* Remove margin to avoid extra gap */
+  margin: 0;              /* remove default margins */
   font-weight: 900;
   text-align: center;
   word-break: normal;
-  margin-top: 0.1;
-  margin-bottom: 1rem;
-  white-space: normal;    /* allow wrapping here */
+  white-space: normal;
 }
 
 .down-arrow {
