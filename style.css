@@ -379,7 +379,7 @@ footer {
   font-style: italic;
   font-size: 1.5rem;
   letter-spacing: 0.03em;
-  margin-bottom: 1rem;
+  margin: 0.1rem 0;
 }
 
 .footer-tagline {
@@ -388,7 +388,7 @@ footer {
   font-weight: 300;
   font-size: 0.75rem;
   letter-spacing: 0.01em;
-  margin: 0.1rem 0;
+  margin-bottom: 1rem;
 }
 
 /* Bottom full width box */
