@@ -353,44 +353,15 @@ html {
   }
 }
 
+/* Prevent horizontal scroll on footer */
 footer {
   background-color: #FAFAFA; /* pure white */
   color: #1A1A1A;
   text-align: center;
-  padding: 3rem 2rem 0 2rem; /* no bottom padding to avoid white after box */
+  padding: 3rem 2rem 0 2rem;
   font-family: 'Montserrat', sans-serif;
-}
-
-/* Centered main footer content */
-.footer-main {
-  max-width: 600px;  /* optional max width to keep content neat */
-  margin: 0 auto 2rem auto;
-}
-
-.footer-logo {
-  height: 72px;
-  width: auto;
-  display: block;
-  margin: 0 auto 0.25rem auto;
-}
-
-.footer-name {
-  display: block;
-  font-family: 'Playfair Display', serif;
-  font-weight: 900;
-  font-size: 1.85rem;
-  letter-spacing: 0.04em;
-  margin-bottom: 0.1rem;
-  color: #1A1A1A;
-}
-
-.footer-tagline {
-  font-size: 0.75rem;
-  margin-top: 0;
-  margin-bottom: 0;
-  color: #1A1A1A;
-  font-weight: 400;
-  letter-spacing: 0.1em;
+  position: relative;
+  overflow-x: hidden; /* prevent horizontal scrolling */
 }
 
 /* Bottom full width box */
@@ -400,12 +371,9 @@ footer {
   border-right: 4px solid #E27591;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  width: 100vw; /* full viewport width */
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  border-bottom-left-radius: 0; /* ensure bottom corners are NOT rounded */
+  border-bottom-right-radius: 0;
+  width: 100%; /* full width of parent, no vw */
   padding: 0.75rem 2rem;
   box-sizing: border-box;
 
@@ -418,40 +386,40 @@ footer {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Left text styling */
+/* Left text */
 .footer-left {
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Right side links */
+/* Right links container */
 .footer-right a {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-size: 1rem;
   color: #E27591;
   text-decoration: none;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  transition: color 0.3s ease;
+  /* Remove margin here */
   letter-spacing: 0.02em;
+  transition: color 0.3s ease;
 }
 
-.footer-right a:hover {
-  color: #1A1A1A;
-}
-
-/* separator between links */
+/* Add separator as ::after only with margin on the right */
 .footer-right a:not(:last-child)::after {
   content: " |";
   color: #E27591;
-  margin-left: 0.5rem;
+  margin-left: 0.3rem;
+  margin-right: 0;
 }
 
 .footer-right a:last-child::after {
   content: "";
 }
 
+/* Hover color */
+.footer-right a:hover {
+  color: #1A1A1A;
+}
 
 /* ABOUT PAGE LAYOUT */
 .about-wrapper {
