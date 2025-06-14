@@ -1177,9 +1177,11 @@ footer {
 .modal-content.zoomed {
   transform: scale(1.8);
   cursor: zoom-out;
+  max-width: none;
+  max-height: none;
   transition: transform 0.3s ease-in-out;
   display: block;
-  margin: auto;
+  margin: 40px auto;
 }
 
 .modal-content {
