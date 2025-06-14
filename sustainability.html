@@ -161,6 +161,12 @@
   }
 
   function toggleZoom(img) {
+  console.log('toggleZoom triggered');
+  const imageType = img.dataset.imageType;
+  const modal = img.closest('.modal');
+  console.log('modal:', modal);
+  const spacer = modal ? modal.querySelector('.bottom-spacer') : null;
+  console.log('spacer:', spacer);
   const imageType = img.dataset.imageType;
   const modal = img.closest('.modal');
   const spacer = modal.querySelector('.bottom-spacer');
@@ -192,7 +198,6 @@
     spacer.style.height = '0';
 
       spacer.style.height = '0';
-    console.log('Zoomed out — spacer height reset to 0');
   }
 }
     
