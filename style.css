@@ -660,6 +660,17 @@ footer {
   border: 2px solid #FFCC66;
 }
 
+.cta-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  color: #1A1A1A;
+}
+
+.cta-link {
+  color: #E27591;
+  text-decoration: none;
+}
+
 /* Apply to skill cards or other elements */
 .skill-card.border-green { /* Green border */ }
 .skill-card.border-pink {  /* Pink border */ }
