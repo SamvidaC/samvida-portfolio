@@ -522,10 +522,10 @@ footer {
 
 .profile-photo {
   width: 100%;
-  height: 648px; /* Further increased height to align box bottoms perfectly */
+  height: 664px; /* Further increased height to align box bottoms perfectly */
   object-fit: cover; /* Ensure photo maintains aspect ratio */
   border-radius: 12px;
-  margin: 0.25rem;
+  margin: 0;
 }
 
 .about-side h2 {
