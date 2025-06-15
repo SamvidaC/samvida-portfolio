@@ -673,6 +673,10 @@ footer {
   text-decoration: none;
 }
 
+.cta-link:hover {
+  text-decoration: underline;
+}
+
 /* Apply to skill cards or other elements */
 .skill-card.border-green { /* Green border */ }
 .skill-card.border-pink {  /* Pink border */ }
