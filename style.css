@@ -1520,26 +1520,15 @@ footer {
 
   /* Mobile navbar hamburger */
   nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  position: relative;
-}
-
-  nav .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: #FAFAFA;
-    width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    position: relative;
   }
 
-  nav .nav-links.open {
-    display: flex;
+  nav .logo {
+    height: 48px;
   }
 
   .hamburger {
@@ -1552,7 +1541,29 @@ footer {
     display: block;
     height: 2px;
     width: 24px;
-    margin: 5px auto;
+    margin: 5px 0;
     background: #1A1A1A;
   }
+
+  nav .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #FAFAFA;
+    width: 100%;
+    text-align: center;
+    z-index: 999;
+    padding: 1rem 0;
+  }
+
+  nav .nav-links.open {
+    display: flex;
+  }
+
+  nav .nav-links li {
+    margin: 0.5rem 0;
+  }
 }
+
