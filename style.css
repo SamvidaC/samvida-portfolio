@@ -1462,8 +1462,9 @@ footer {
 
 /* =================== MOBILE STYLES =================== */
 @media (max-width: 767px) {
-  .hero-text h1 {
-    font-size: 32px;
+  .hero-text h1 .mobile-line {
+    display: block;
+    /*font-size: 32px;*/
   }
   .intro-hello {
     font-size: 24px;
