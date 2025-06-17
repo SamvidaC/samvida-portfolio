@@ -1519,6 +1519,13 @@ footer {
   }
 
   /* Mobile navbar hamburger */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+  }
+
   nav .nav-links {
     display: none;
     flex-direction: column;
@@ -1529,14 +1536,17 @@ footer {
     width: 100%;
     text-align: center;
   }
+
   nav .nav-links.open {
     display: flex;
   }
+
   .hamburger {
     display: block;
     cursor: pointer;
     padding: 1rem;
   }
+
   .hamburger span {
     display: block;
     height: 2px;
