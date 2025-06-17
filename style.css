@@ -1519,6 +1519,7 @@ footer {
   }
 
   /* Mobile navbar hamburger */
+/* Mobile nav layout fix */
   nav {
     display: flex;
     justify-content: space-between;
@@ -1527,8 +1528,25 @@ footer {
     position: relative;
   }
 
-  nav .logo {
+  .logo {
     height: 48px;
+    width: auto;
+  }
+
+  nav .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #FAFAFA;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  nav .nav-links.open {
+    display: flex;
   }
 
   .hamburger {
@@ -1543,27 +1561,6 @@ footer {
     width: 24px;
     margin: 5px 0;
     background: #1A1A1A;
-  }
-
-  nav .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: #FAFAFA;
-    width: 100%;
-    text-align: center;
-    z-index: 999;
-    padding: 1rem 0;
-  }
-
-  nav .nav-links.open {
-    display: flex;
-  }
-
-  nav .nav-links li {
-    margin: 0.5rem 0;
   }
 }
 
