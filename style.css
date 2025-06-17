@@ -1522,7 +1522,8 @@ footer {
  nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: initial;
+  text-align: initial;
   padding: 1rem 1.5rem;
   position: relative;
   flex-direction: row;
@@ -1539,6 +1540,8 @@ footer {
   display: block;
   cursor: pointer;
   padding: 1rem;
+  position: relative;
+  z-index: 1100; /* make sure it appears above everything */
 }
 
 .hamburger span {
