@@ -1519,7 +1519,6 @@ footer {
   }
 
   /* Mobile navbar hamburger */
- /* Fix mobile nav layout */
   nav {
     display: flex;
     justify-content: space-between;
@@ -1531,6 +1530,20 @@ footer {
   .logo {
     height: 48px;
     width: auto;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    padding: 1rem;
+  }
+
+  .hamburger span {
+    display: block;
+    height: 2px;
+    width: 24px;
+    margin: 5px 0;
+    background: #1A1A1A;
   }
 
   nav .nav-links {
@@ -1547,20 +1560,6 @@ footer {
 
   nav .nav-links.open {
     display: flex;
-  }
-
-  .hamburger {
-    display: block;
-    cursor: pointer;
-    padding: 1rem;
-  }
-
-  .hamburger span {
-    display: block;
-    height: 2px;
-    width: 24px;
-    margin: 5px 0;
-    background: #1A1A1A;
   }
 }
 
