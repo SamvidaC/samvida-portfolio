@@ -663,7 +663,7 @@ footer {
 .cta-text {
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 500;
   color: #1A1A1A;
   padding-top: 40px;
 }
@@ -674,7 +674,7 @@ footer {
 }
 
 .cta-link:hover {
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: underline;
 }
 
