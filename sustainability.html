@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Futures Studio - Milwaukee becomes the haven | Samvida Chennuri</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,15 +11,19 @@
 </head>
 <body>
     <nav>
-        <a href="/samvida-portfolio/index.html">
-            <img class="logo" src="assets/logo.svg" alt="Logo" />
-        </a>
-        <ul class="nav-links">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="index.html#projects" class="active">WORK</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-        </ul>
-    </nav>
+  <a href="index.html"><img class="logo" src="assets/logo.svg" alt="Logo" /></a>
+  <div class="hamburger" onclick="toggleNav()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="index.html#projects" class="active">WORK</a></li>
+    <li><a href="about.html">ABOUT</a></li>
+  </ul>
+</nav>
 
     <main class="case-study-container">
         <header class="case-study-header">
@@ -216,6 +220,12 @@ window.onclick = function(event) {
     }
   });
 };
+</script>
+    <script>
+  function toggleNav() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('open');
+  }
 </script>
 </body>
 </html>
