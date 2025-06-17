@@ -1519,7 +1519,7 @@ footer {
   }
 
   /* Mobile navbar hamburger */
-/* Mobile nav layout fix */
+ /* Fix mobile nav layout */
   nav {
     display: flex;
     justify-content: space-between;
