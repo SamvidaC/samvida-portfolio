@@ -1520,11 +1520,12 @@ footer {
 
   /* Mobile navbar hamburger */
   nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1.5rem;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  position: relative;
+}
 
   nav .nav-links {
     display: none;
