@@ -40,6 +40,9 @@ nav {
   color: #E27591;
 }
 
+.hamburger {
+  display: none; /* hide on desktop */
+}
 
  /*.intro-container {
   background-color: #FAFAFA;
