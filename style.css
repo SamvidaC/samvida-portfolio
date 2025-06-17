@@ -667,7 +667,7 @@ footer {
 .cta-text {
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 500;
   color: #1A1A1A;
   line-height: 1.6;
 }
@@ -675,6 +675,7 @@ footer {
 .cta-link {
   position: relative;
   text-decoration: none;
+  font-weight: 500;
   color: #E27591;
   cursor: pointer;
 }
