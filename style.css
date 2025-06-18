@@ -95,6 +95,10 @@ nav {
   display: block;
 }
 
+.desktop-break {
+  display: none;
+}
+
 .down-arrow {
   margin-top: 8rem;
   padding-bottom: 4rem;
@@ -1480,6 +1484,10 @@ footer {
     overflow-x: hidden;
   }
 
+  .desktop-break {
+    display: inline;
+  }
+  
   .hero-text {
     padding: 4rem 1rem 1rem 1rem;
     overflow-x: hidden;
