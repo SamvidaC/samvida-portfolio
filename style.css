@@ -1467,23 +1467,28 @@ footer {
 
 /* =================== MOBILE STYLES =================== */
 @media (max-width: 767px) {
-.hero-text {
-  padding: 6rem 1rem 1rem 1rem;
-}
 
-.hero-text h1 {
-  font-size: 32px;
-  line-height: 1.35;
-}
+  .hero-text {
+    padding: 4rem 1rem 1rem 1rem;
+  }
 
-.hero-text h1 br {
-  margin-bottom: 0.25rem; /* tighter between lines */
-}
+  .hero-text h1 {
+    font-size: 28px !important;
+    line-height: 1.4 !important;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
 
-.intro-hello {
-  font-size: 20px;
-  padding-bottom: 0.5rem;
-}
+  .hero-text h1 br {
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  .intro-hello {
+    font-size: 20px !important;
+    padding-bottom: 0.5rem;
+  }
+  
   #projects-title {
     font-size: 28px;
   }
