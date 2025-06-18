@@ -1505,7 +1505,6 @@ footer {
   }
 
   .hero-text h1 {
-    /*font-size: unset; /* Let span handle it */*/
     text-align: center;
     margin-bottom: 0.5rem;
   }
@@ -1525,7 +1524,6 @@ footer {
   .marquee-content {
     font-size: 10px !important;
   }
-}
 
   #projects-title {
     font-size: 28px;
@@ -1578,24 +1576,24 @@ footer {
   }
 
   /* Mobile navbar hamburger */
- nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: initial;
-  text-align: initial;
-  padding: 1rem 1.5rem;
-  position: relative;
-  flex-direction: row;
-  width: 100%; /* Ensure nav takes full width */
-  box-sizing: border-box; /* Make padding count within width */
-}
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: initial;
+    text-align: initial;
+    padding: 1rem 1.5rem;
+    position: relative;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+  }
 
-.logo {
-  height: 48px;
-  width: auto;
-}
+  .logo {
+    height: 48px;
+    width: auto;
+  }
 
-.hamburger {
+  .hamburger {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1615,7 +1613,7 @@ footer {
     flex-direction: column;
     background-color: #FAFAFA;
     position: absolute;
-    top: 64px; /* adjust based on nav height */
+    top: 64px;
     right: 0;
     width: 100%;
     padding: 1rem;
@@ -1625,5 +1623,5 @@ footer {
   .nav-links.active {
     display: flex;
   }
-}
 
+} /* <== This closing brace should be at the very end */
