@@ -84,34 +84,15 @@ nav {
   white-space: nowrap;
 }
 
-.hero-text h1 {
+.hero-heading {
   font-family: 'Playfair Display', serif;
   font-size: 56px;
   line-height: 1.3;
-  margin-bottom: 1.2rem;
   font-weight: 900;
   text-align: center;
   word-break: normal;
   white-space: normal;
   display: block;
-}
-
-.hero-heading span {
-  display: block;
-  white-space: nowrap;
-  overflow-wrap: normal;
-  font-size: clamp(20px, 4vw, 56px); /* scales from 20px to 56px */
-  line-height: 1.4;
-  text-align: center;
-}
-
-.hero-text h1 span {
-  display: block;
-  white-space: nowrap;
-  overflow-wrap: normal;
-  font-size: clamp(20px, 4vw, 56px);
-  line-height: 1.4;
-  text-align: center;
 }
 
 .down-arrow {
@@ -1511,13 +1492,13 @@ footer {
     padding-bottom: 0.5rem !important;
   }
 
-  .hero-heading {
-  font-size: 20px !important;
-  line-height: 1.3;
-  margin-bottom: 0.5rem;
-  text-align: center;
-}
-
+    .hero-heading {
+    font-size: 20px !important;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
   .marquee-content {
     font-size: 12px !important;
   }
