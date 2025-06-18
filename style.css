@@ -1505,9 +1505,9 @@ footer {
   }
 
   .hero-text h1 {
-    font-size: unset; /* Let span handle it */
+    /*font-size: unset; /* Let span handle it */*/
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   .hero-text h1 span {
