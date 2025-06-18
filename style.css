@@ -1467,13 +1467,23 @@ footer {
 
 /* =================== MOBILE STYLES =================== */
 @media (max-width: 767px) {
-  .hero-text h1 .mobile-line {
-    display: block;
-    /*font-size: 32px;*/
-  }
-  .intro-hello {
-    font-size: 24px;
-  }
+.hero-text {
+  padding: 6rem 1rem 1rem 1rem;
+}
+
+.hero-text h1 {
+  font-size: 32px;
+  line-height: 1.35;
+}
+
+.hero-text h1 br {
+  margin-bottom: 0.25rem; /* tighter between lines */
+}
+
+.intro-hello {
+  font-size: 20px;
+  padding-bottom: 0.5rem;
+}
   #projects-title {
     font-size: 28px;
   }
