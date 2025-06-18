@@ -1579,7 +1579,7 @@ footer {
   nav {
     display: flex;
     justify-content: space-between;
-    align-items: initial;
+    align-items: center;
     text-align: initial;
     padding: 1rem 1.5rem;
     position: relative;
