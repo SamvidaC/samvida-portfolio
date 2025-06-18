@@ -95,9 +95,19 @@ nav {
   display: block;
 }
 
-/* Hide <br> on mobile */
-.desktop-break {
+/* Default: hide all line breaks */
+.desktop-break,
+.mobile-break-1,
+.mobile-break-2,
+.mobile-break-3 {
   display: none;
+}
+
+/* Desktop only: show desktop break */
+@media (min-width: 1025px) {
+  .desktop-break {
+    display: inline;
+  }
 }
 
 .down-arrow {
@@ -1485,9 +1495,10 @@ footer {
     overflow-x: hidden;
   }
 
-  .desktop-break {
-    display: block;
-    height: 0; /* ensures no extra space is added */
+  .mobile-break-1,
+  .mobile-break-2,
+  .mobile-break-3 {
+    display: inline;
   }
   
   .hero-text {
