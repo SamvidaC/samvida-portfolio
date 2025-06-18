@@ -1417,12 +1417,18 @@ footer {
 
   .intro-hello {
     font-size: 20px !important;
+    padding-top: 4rem;
     padding-bottom: 0.5rem;
   }
 
   .hero-heading span {
     font-size: 20px !important; /* fixed size on mobile */
+    padding-bottom: 0.5rem;
     line-height: 1.4;
+  }
+
+   .marquee-content {
+    font-size: 14px;
   }
   
   #projects-title {
