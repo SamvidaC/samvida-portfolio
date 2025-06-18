@@ -95,6 +95,7 @@ nav {
   display: block;
 }
 
+/* Hide <br> on mobile */
 .desktop-break {
   display: none;
 }
@@ -1486,6 +1487,7 @@ footer {
 
   .desktop-break {
     display: block;
+    height: 0; /* ensures no extra space is added */
   }
   
   .hero-text {
