@@ -1512,17 +1512,18 @@ footer {
 
   .hero-text h1 span {
     font-size: 20px !important;
-    padding: 0 0.5rem;
+    padding-bottom: 0.5rem;
     overflow-x: hidden;
   }
 
   .intro-hello {
     font-size: 16px !important;
+    padding-top: 4rem;
     padding-bottom: 0.5rem;
   }
 
   .marquee-content {
-    font-size: 14px !important;
+    font-size: 12px !important;
   }
 
   #projects-title {
