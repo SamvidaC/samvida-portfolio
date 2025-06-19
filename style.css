@@ -97,9 +97,7 @@ nav {
 
 /* Hide all by default */
 .desktop-break,
-.mobile-break-1,
-.mobile-break-2,
-.mobile-break-3{
+.mobile-break {
   display: none;
 }
 
@@ -1499,15 +1497,14 @@ footer {
     overflow-x: hidden;
   }
 
-  .mobile-break-1,
-  .mobile-break-2, 
-  .mobile-break-3{
+    .mobile-break {
     display: block;
+    height: 0;
   }
 
   .desktop-break {
-  display: none !important;
-}
+    display: none;
+  }
   
   .hero-text {
     padding: 4rem 1rem 1rem 1rem;
