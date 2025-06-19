@@ -1746,6 +1746,7 @@ footer {
   cursor: pointer;
   position: relative;        /* keep stacking context */
   z-index: 1100;             /* above nav-links */
+  margin-right: 8px;
 }
 
 
