@@ -12,11 +12,13 @@ nav {
   align-items: center;
   padding: 8px 32px;
   background-color: #FAFAFA;
-  width: 100vw;
-  /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);*/
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%; /* safer than 100vw */
   z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* optional */
 }
 
 .logo {
