@@ -1737,7 +1737,7 @@ nav.expanded {
 
 .hamburger span {
   height: 3px;
-  width: 24px;
+  width: 32px;
   background-color: #1A1A1A;
   border-radius: 2px;
   transition: all 0.3s ease;
@@ -1748,7 +1748,7 @@ nav.expanded {
 .hamburger.active {
   background-color: #FAFAFA;
   position: fixed;
-  top: 2rem;             /* Same as nav padding */
+  top: 2.25rem;             /* Same as nav padding */
   right: 1.5rem;         /* Matches nav right padding */
   width: 24px;
   height: 24px;
