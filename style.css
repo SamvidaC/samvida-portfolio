@@ -1504,6 +1504,10 @@ footer {
   .mobile-break-3{
     display: inline;
   }
+
+  .desktop-break {
+  display: none !important;
+}
   
   .hero-text {
     padding: 4rem 1rem 1rem 1rem;
