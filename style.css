@@ -1523,6 +1523,11 @@ footer {
     font-size: 14px !important;
   }
 
+  .arrow-icon {
+    width: 32px;
+    height: 32px;
+  }
+
   #projects-title {
     font-size: 28px;
   }
