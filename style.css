@@ -1730,6 +1730,11 @@ footer {
   display: flex;
 }
 
+nav.expanded {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 /* Hamburger spans base styles */
 /* Add this to your CSS */
 
