@@ -1739,28 +1739,22 @@ nav.expanded {
 /* Add this to your CSS */
 
 .hamburger.active {
-  background-color: #FAFAFA; /* white background behind X */
-  width: 20px;               /* slightly bigger than 24px to fit X */
-  height: 20px;              /* square area */
-  padding: 4px;              /* space inside */
+  background-color: #FAFAFA;
+  position: fixed;
+  top: 1.25rem;
+  right: 1.5rem;
+  padding: 6px;
   border-radius: 4px;
-  box-sizing: content-box;   /* so padding doesn’t shrink content */
-  display: flex;             /* keep flex for the spans */
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  position: relative;        /* keep stacking context */
-  z-index: 1100;             /* above nav-links */
-  margin-right: 8px;
+  z-index: 1101;
 }
 
-
-/* Keep your existing span styles */
-.hamburger span {
+  .hamburger span {
   height: 3px;
+  width: 20px;
   background-color: #1A1A1A;
   border-radius: 2px;
   transition: all 0.3s ease;
+  display: block;
 }
 
 /* Cross animation - keep these exactly */
