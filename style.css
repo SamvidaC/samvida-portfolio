@@ -1540,6 +1540,10 @@ footer {
     height: 40px !important;
   }
 
+#design-trifecta {
+  padding: 0.5rem;
+}
+
   #trifecta-title {
   font-size: 18px;
 }
