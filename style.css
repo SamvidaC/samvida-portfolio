@@ -1574,7 +1574,7 @@ footer {
 
 /* Move the profile-wrapper (headshot) to the top */
 .profile-wrapper {
-  order: -1;
+  order: -1 !important;
 }
 
 /* Resize and center the profile image */
@@ -1582,7 +1582,7 @@ footer {
   width: 100%;
   max-width: 500px;
   height: auto;
-  max-height: 280px;
+  max-height: 300px;
   margin: 0 auto 2rem auto;
   display: block;
   object-fit: cover;
