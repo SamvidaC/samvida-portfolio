@@ -1734,10 +1734,20 @@ footer {
 /* Add this to your CSS */
 
 .hamburger.active {
-  background-color: #FAFAFA;   /* Background behind the X */
-  padding: 4px;                /* Small padding to create space */
-  border-radius: 4px;          /* Rounded corners for nicer shape */
+  background-color: #FAFAFA; /* white background behind X */
+  width: 32px;               /* slightly bigger than 24px to fit X */
+  height: 32px;              /* square area */
+  padding: 4px;              /* space inside */
+  border-radius: 4px;
+  box-sizing: content-box;   /* so padding doesn’t shrink content */
+  display: flex;             /* keep flex for the spans */
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;        /* keep stacking context */
+  z-index: 1100;             /* above nav-links */
 }
+
 
 /* Keep your existing span styles */
 .hamburger span {
