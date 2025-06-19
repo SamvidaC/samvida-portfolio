@@ -1731,6 +1731,15 @@ footer {
 }
 
 /* Hamburger spans base styles */
+/* Add this to your CSS */
+
+.hamburger.active {
+  background-color: #FAFAFA;   /* Background behind the X */
+  padding: 4px;                /* Small padding to create space */
+  border-radius: 4px;          /* Rounded corners for nicer shape */
+}
+
+/* Keep your existing span styles */
 .hamburger span {
   height: 3px;
   background-color: #1A1A1A;
@@ -1738,7 +1747,7 @@ footer {
   transition: all 0.3s ease;
 }
 
-/* Hamburger animation for cross when active */
+/* Cross animation - keep these exactly */
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
