@@ -1650,9 +1650,16 @@ footer {
   .footer-tagline {
     font-size: 10px;
   }
-  .footer-bottom-box {
+ /* .footer-bottom-box {
     font-size: 13px;
     flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  } */
+    .footer-bottom-box {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column-reverse;
     text-align: center;
     gap: 0.5rem;
   }
