@@ -1748,7 +1748,7 @@ nav.expanded {
 .hamburger.active {
   background-color: #FAFAFA;
   position: fixed;
-  top: 1rem;             /* Same as nav padding */
+  top: 2rem;             /* Same as nav padding */
   right: 1.5rem;         /* Matches nav right padding */
   width: 24px;
   height: 24px;
