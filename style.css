@@ -755,6 +755,11 @@ footer {
 
 /* REGRAB CASE STUDY STYLES */
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 /* Main container for case study content */
 .case-study-container {
     max-width: 800px;
