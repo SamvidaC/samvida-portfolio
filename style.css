@@ -1652,9 +1652,12 @@ footer {
     text-align: center;
     gap: 0.5rem;
   }
+  
   .down-arrow {
-  margin-top: 3rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   }
+  
   .arrow-svg {
     width: 20px;
     height: 20px;
