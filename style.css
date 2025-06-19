@@ -1625,7 +1625,7 @@ footer {
   }
 
   .fun-facts {
-    padding: 0; /* Add 2px left padding to balance the alignment */
+    padding: 0.125rem; /* Add 2px left padding to balance the alignment */
   }
 
   .footer-logo img {
