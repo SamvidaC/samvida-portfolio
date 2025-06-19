@@ -12,6 +12,7 @@ nav {
   align-items: center;
   padding: 8px 32px;
   background-color: #FAFAFA;
+  width: 100vw;
   /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);*/
   position: fixed;
   top: 0;
