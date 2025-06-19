@@ -484,7 +484,7 @@ footer {
 
 .about-title {
   font-family: 'Playfair Display', serif;
-  font-size: 40px;
+  font-size: 48px;
   font-weight: 900;
   text-align: center;
   color: #1A1A1A;
@@ -596,7 +596,7 @@ footer {
 .skills-section h2 {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
-  font-size: 40px; /* Increased to 4rem to match other headings */
+  font-size: 48px; /* Increased to 4rem to match other headings */
   margin-bottom: 1rem; /* Set to 1rem for consistent spacing */
   /*text-transform: uppercase;*/
 }
