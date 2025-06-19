@@ -192,11 +192,15 @@
 </footer>
 
   <script>
-    document.getElementById('scrollBtn').addEventListener('click', function(event) {
-      event.preventDefault();
-      document.querySelector('#design-trifecta').scrollIntoView({ behavior: 'smooth' });
-    });
-  </script>
+  document.getElementById('scrollBtn').addEventListener('click', function(event) {
+    event.preventDefault();
+    const target = document.querySelector('#design-trifecta');
+    const navHeight = document.querySelector('nav').offsetHeight;
+    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20; // 20px padding
+
+    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+  });
+</script>
 <script>
   window.addEventListener("load", function () {
     gsap.registerPlugin(ModifiersPlugin);
