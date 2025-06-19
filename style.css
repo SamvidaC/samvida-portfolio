@@ -1782,6 +1782,10 @@ nav.expanded {
   position: absolute;
 }
 
+.quote-grid {
+  grid-template-columns: 1fr;
+}
+  
 html {
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
