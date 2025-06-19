@@ -1559,6 +1559,9 @@ footer {
   .about-bio p {
     font-size: 14px;
   }
+  .about-title h1{
+    font-size: 24px;
+  }
   .about-side h2 {
     font-size: 22px;
   }
@@ -1600,7 +1603,7 @@ footer {
   }
 
   .footer-logo img {
-  height: 32px;
+  height: 56px;
   width: auto;
   }
   .footer-name {
