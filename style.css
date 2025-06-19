@@ -1536,7 +1536,7 @@ footer {
     font-size: 28px;
   }
   .case-study-title {
-    font-size: 26px;
+    font-size: 24px;
   }
   .section-heading {
     font-size: 22px;
@@ -1560,7 +1560,11 @@ footer {
     font-size: 14px;
   }
   .about-side h2 {
-    font-size: 20px;
+    font-size: 22px;
+  }
+
+  .skills-section h2{
+    font-size: 22px;
   }
 
   /* Stack layout */
@@ -1584,7 +1588,7 @@ footer {
 
   .mobile-headshot img {
     width: 100%;
-    max-height: 320px;
+    max-height: 360px;
     object-fit: cover;
     display: block;
     border-radius: 12px;
@@ -1595,6 +1599,10 @@ footer {
     display: none;
   }
 
+  .footer-logo img {
+  height: 32px;
+  width: auto;
+  }
   .footer-name {
     font-size: 18px;
   }
@@ -1629,7 +1637,7 @@ footer {
   }
 
   .logo {
-    height: 24px;
+    height: 48px;
     width: auto;
   }
 
