@@ -221,12 +221,23 @@
   });
 </script>
 <script>
- function toggleNav() {
+function toggleNav() {
   const navLinks = document.querySelector('.nav-links');
   const hamburger = document.querySelector('.hamburger');
   navLinks.classList.toggle('active');
   hamburger.classList.toggle('active');
-} 
+}
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    const navLinks = document.querySelector('.nav-links');
+    const hamburger = document.querySelector('.hamburger');
+    if (navLinks.classList.contains('active')) {
+      navLinks.classList.remove('active');
+      hamburger.classList.remove('active');
+    }
+  });
+});
 </script>
 </body>
 </html>
