@@ -207,7 +207,6 @@ html {
 
 
 /* Card base styling */
-
 .card {
   position: relative; /* Add this line */
   background-color: #FAFAFA;
@@ -1532,8 +1531,15 @@ footer {
     height: 40px !important;
   }
 
+  #trifecta-title {
+  font-size: 18px;
+}
+.highlight-keyword {
+  font-size: 18px;
+}
+
   #projects-title {
-    font-size: 28px;
+    font-size: 32px;
   }
   .case-study-title {
     font-size: 24px;
@@ -1545,10 +1551,19 @@ footer {
     font-size: 14px;
   }
   .card-title {
-    font-size: 16px;
+    font-size: 18px;
   }
+
+.project h3 {
+  font-size: 20px;
+}
+
+.project-type {
+  font-size: 10px;
+}
+  
   .skill-card h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
   .skill-card p {
     font-size: 14px;
@@ -1560,7 +1575,7 @@ footer {
     font-size: 14px;
   }
   .about-title {
-    font-size: 28px;
+    font-size: 32px;
   }
   .about-side h2 {
     font-size: 24px;
@@ -1600,6 +1615,10 @@ footer {
   /* Hide the original image inside .about-side */
   .about-side .profile-wrapper {
     display: none;
+  }
+
+  .fun-facts {
+    padding: 0 0 0 6px; /* Add 8px left padding to balance the alignment */
   }
 
   .footer-logo img {
