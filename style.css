@@ -1559,6 +1559,24 @@ footer {
   .about-side h2 {
     font-size: 22px;
   }
+  .about-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  /* Move .about-side (with headshot) above .about-bio */
+  .about-side {
+    order: -1;
+  }
+
+  /* Reduce profile image size */
+  .profile-photo {
+    width: 80%;
+    height: auto;
+    max-height: 280px;
+    margin: 0 auto 1rem auto;
+    display: block;
+    object-fit: cover;
+  }
   .footer-name {
     font-size: 20px;
   }
