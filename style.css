@@ -1747,9 +1747,9 @@ nav.expanded {
 /* Active (X) State */
 .hamburger.active {
   background-color: #FAFAFA;
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
+  position: absolute; /* instead of fixed */
+  top: auto;
+  right: auto;
   width: 20px;
   height: 20px;
   padding: 0;
