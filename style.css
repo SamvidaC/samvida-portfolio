@@ -95,13 +95,13 @@ nav {
   display: block;
 }
 
-/* Default: desktop view */
 .mobile-break {
   display: none;
 }
 
-.no-break {
-  white-space: nowrap;
+.desktop-break {
+  display: block;
+  height: 0; /* ensures it breaks without extra space */
 }
 
 .down-arrow {
@@ -1496,9 +1496,13 @@ footer {
     overflow-x: hidden;
   }
 
- .mobile-break {
+  .mobile-break {
     display: block;
     height: 0;
+  }
+
+  .desktop-break {
+    display: none;
   }
   
   .hero-text {
