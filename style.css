@@ -1563,19 +1563,31 @@ footer {
     display: flex;
     flex-direction: column;
   }
-  /* Move .about-side (with headshot) above .about-bio */
-  .about-side {
+    .profile-photo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    max-height: 280px;
+    margin: 0 auto 2rem auto;
+    display: block;
+    object-fit: cover;
     order: -1;
   }
 
-  /* Reduce profile image size */
-  .profile-photo {
-    width: 80%;
-    height: auto;
-    max-height: 280px;
-    margin: 0 auto 1rem auto;
-    display: block;
-    object-fit: cover;
+  .about-side {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Only move the image up, keep "Not on the Résumé" in place */
+  .profile-wrapper {
+    order: -1;
+  }
+
+  /* Stack layout still applies */
+  .about-grid {
+    display: flex;
+    flex-direction: column;
   }
   .footer-name {
     font-size: 20px;
