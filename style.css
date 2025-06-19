@@ -1621,6 +1621,7 @@ footer {
 
   .not-resume-card {
     padding: 0.125rem; /* Reduced from 1.5rem to 1rem for tighter spacing */
+    width: 100%;
     max-width: 500px;
   }
 
