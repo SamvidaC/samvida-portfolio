@@ -1559,36 +1559,35 @@ footer {
   .about-side h2 {
     font-size: 22px;
   }
-  .about-grid {
-    display: flex;
-    flex-direction: column;
-  }
-    .profile-photo {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    max-height: 280px;
-    margin: 0 auto 2rem auto;
-    display: block;
-    object-fit: cover;
-    order: -1;
-  }
 
-  .about-side {
-    display: flex;
-    flex-direction: column;
-  }
+  /* Stack layout */
+.about-grid {
+  display: flex;
+  flex-direction: column;
+}
 
-  /* Only move the image up, keep "Not on the Résumé" in place */
-  .profile-wrapper {
-    order: -1;
-  }
+/* Only move the profile image, not the whole about-side */
+.about-side {
+  display: flex;
+  flex-direction: column;
+}
 
-  /* Stack layout still applies */
-  .about-grid {
-    display: flex;
-    flex-direction: column;
-  }
+/* Move the profile-wrapper (headshot) to the top */
+.profile-wrapper {
+  order: -1;
+}
+
+/* Resize and center the profile image */
+.profile-photo {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  max-height: 280px;
+  margin: 0 auto 2rem auto;
+  display: block;
+  object-fit: cover;
+}
+
   .footer-name {
     font-size: 20px;
   }
