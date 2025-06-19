@@ -1747,17 +1747,18 @@ nav.expanded {
 /* Active (X) State */
 .hamburger.active {
   background-color: #FAFAFA;
-  position: absolute; /* instead of fixed */
-  top: auto;
-  right: auto;
-  width: 20px;
-  height: 20px;
-  padding: 0;
+  position: fixed;
+  top: 1rem;             /* Same as nav padding */
+  right: 1.5rem;         /* Matches nav right padding */
+  width: 24px;
+  height: 24px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  padding: 4px 0;        /* slight padding for centering the X */
   border-radius: 4px;
-  box-sizing: content-box;
+  box-sizing: border-box;
   z-index: 1101;
 }
 
