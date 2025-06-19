@@ -1704,27 +1704,53 @@ footer {
     cursor: pointer;
   }
 
-  .hamburger span {
-    height: 3px;
-    background-color: #1A1A1A;
-    border-radius: 2px;
-  }
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #FAFAFA;
-    position: absolute;
-    top: 64px;
-    right: 0;
-    width: 100%;
-    padding: 1rem;
-    gap: 1rem;
-  }
 
-  .nav-links.active {
-    display: flex;
-  }
+  /* Full screen nav menu when active */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background-color: #FAFAFA;
+  position: fixed;      /* Changed from absolute */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;             /* Cover entire viewport */
+  width: 100vw;
+  height: 100vh;
+  padding: 4rem 2rem;  /* More padding */
+  gap: 2rem;
+  justify-content: center;  /* Center links vertically */
+  align-items: center;      /* Center links horizontally */
+  z-index: 1000;        /* Above everything */
+}
+
+/* Show nav when active */
+.nav-links.active {
+  display: flex;
+}
+
+/* Hamburger spans base styles */
+.hamburger span {
+  height: 3px;
+  background-color: #1A1A1A;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger animation for cross when active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
 html {
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
