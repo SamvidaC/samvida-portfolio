@@ -1470,6 +1470,10 @@ footer {
   .footer-bottom-box {
     font-size: 14px;
   }
+
+  .down-arrow {
+  margin-top: 3rem;
+  }
   .arrow-svg {
     width: 24px;
     height: 24px;
