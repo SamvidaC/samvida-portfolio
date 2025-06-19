@@ -1735,8 +1735,8 @@ footer {
 
 .hamburger.active {
   background-color: #FAFAFA; /* white background behind X */
-  width: 32px;               /* slightly bigger than 24px to fit X */
-  height: 32px;              /* square area */
+  width: 20px;               /* slightly bigger than 24px to fit X */
+  height: 20px;              /* square area */
   padding: 4px;              /* space inside */
   border-radius: 4px;
   box-sizing: content-box;   /* so padding doesn’t shrink content */
