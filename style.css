@@ -18,7 +18,7 @@ nav {
   right: 0;
   width: 100%; /* safer than 100vw */
   z-index: 10;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* optional */
+  /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);*/ /* optional */
 }
 
 .logo {
