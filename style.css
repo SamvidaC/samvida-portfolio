@@ -482,14 +482,15 @@ footer {
   align-items: start;
 }
 
-.about-bio h1 {
+.about-title {
   font-family: 'Playfair Display', serif;
-  font-size: 40px; /* Increased to match box width better */
+  font-size: 40px;
   font-weight: 900;
   text-align: center;
   color: #1A1A1A;
-  margin-bottom: 0.5rem; /* Set to 1rem for consistent spacing */
+  margin-bottom: 1rem;
 }
+
 
 .about-bio p {
   font-family: 'Montserrat', sans-serif;
@@ -535,7 +536,7 @@ footer {
 
 .profile-photo {
   width: 100%;
-  height: 668px; /* Further increased height to align box bottoms perfectly */
+  height: 600px; /* Further increased height to align box bottoms perfectly */
   object-fit: cover; /* Ensure photo maintains aspect ratio */
   border-radius: 12px;
   margin: 0;
