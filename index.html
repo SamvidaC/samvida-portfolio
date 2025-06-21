@@ -232,7 +232,22 @@
 }
 
   });
-
+// Fix repeated anchor clicks (like #projects clicked twice)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (href.length > 1) {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        const navHeight = document.querySelector('nav').offsetHeight;
+        const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+        history.pushState(null, null, href); // Update URL manually
+        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+      }
+    }
+  });
+});
   // Toggle hamburger menu
   function toggleNav() {
     const navLinks = document.querySelector('.nav-links');
