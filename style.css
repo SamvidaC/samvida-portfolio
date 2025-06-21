@@ -1406,9 +1406,11 @@ body {
   }
 }
 
-/* =================== BASE STYLES (WEB) =================== */
+html {
+  scroll-padding-top: calc(var(--nav-height, 60px) + 20px);
+}
 
-/* --- Existing web styles remain untouched --- */
+/* Adjust this if your nav height or desired offset changes */
 
 /* =================== TABLET STYLES =================== */
 @media (max-width: 1024px) and (min-width: 768px) {
