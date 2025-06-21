@@ -193,22 +193,22 @@
   </div>
 </footer>
 <script>
-  // Scroll down button (arrow)
-  document.getElementById('scrollBtn').addEventListener('click', function(event) {
-    event.preventDefault();
-    const target = document.querySelector('#design-trifecta');
+  function scrollToTargetWithOffset(targetId) {
+    const target = document.querySelector(targetId);
+    if (!target) return;
     const navHeight = document.querySelector('nav').offsetHeight;
-    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
-    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-  });
+    const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+    window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+  }
 
-  // GSAP marquee
-  window.addEventListener("load", function () {
+  // Scroll on page load with anchor (e.g. #projects)
+  window.addEventListener("load", () => {
     gsap.registerPlugin(ModifiersPlugin);
+
+    // Marquee
     const marqueeTrack = document.querySelector(".marquee-track");
     const content = marqueeTrack.querySelector(".marquee-content");
     const contentWidth = content.offsetWidth;
-
     gsap.to(marqueeTrack, {
       x: `-=${contentWidth}`,
       duration: 30,
@@ -219,20 +219,31 @@
       }
     });
 
-    // Fix anchor scroll on page load
+    // Handle initial hash scroll
     if (window.location.hash) {
-      setTimeout(() => {
-        const target = document.querySelector(window.location.hash);
-        if (target) {
-          const navHeight = document.querySelector('nav').offsetHeight;
-          const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
-          window.scrollTo({ top: offsetTop, behavior: 'smooth' });
-        }
-      }, 100);
+      setTimeout(() => scrollToTargetWithOffset(window.location.hash), 100);
     }
   });
 
-  // Toggle hamburger menu
+  // Custom smooth scroll for internal links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      const href = this.getAttribute("href");
+      if (href.length > 1 && document.querySelector(href)) {
+        e.preventDefault();
+        history.pushState(null, null, href); // Update URL without jumping
+        scrollToTargetWithOffset(href);
+      }
+    });
+  });
+
+  // Scroll down arrow
+  document.getElementById('scrollBtn')?.addEventListener('click', function(event) {
+    event.preventDefault();
+    scrollToTargetWithOffset('#design-trifecta');
+  });
+
+  // Hamburger menu
   function toggleNav() {
     const navLinks = document.querySelector('.nav-links');
     const hamburger = document.querySelector('.hamburger');
@@ -242,28 +253,14 @@
     nav.classList.toggle('expanded');
   }
 
-  // Handle all in-page anchor links with nav offset (includes repeated clicks)
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
-      const target = document.querySelector(href);
-
-      if (target) {
-        e.preventDefault();
-
-        // If mobile nav is open, close it
-        const navLinks = document.querySelector('.nav-links');
-        const hamburger = document.querySelector('.hamburger');
-        if (navLinks.classList.contains('active')) {
-          navLinks.classList.remove('active');
-          hamburger.classList.remove('active');
-        }
-
-        // Scroll with offset
-        const navHeight = document.querySelector('nav').offsetHeight;
-        const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
-        history.pushState(null, null, href); // update URL manually
-        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+  // Close menu on nav link click
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      const navLinks = document.querySelector('.nav-links');
+      const hamburger = document.querySelector('.hamburger');
+      if (navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
       }
     });
   });
