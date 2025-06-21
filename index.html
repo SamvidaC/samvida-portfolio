@@ -24,7 +24,7 @@
   </div>
 
   <ul class="nav-links">
-    <li><a href="index.html" class="active">HOME</a></li>
+   <li><a href="/" class="active">HOME</a></li>
     <li><a href="index.html#projects">WORK</a></li>
     <li><a href="about.html">ABOUT</a></li>
   </ul>
@@ -264,7 +264,7 @@
       }
     });
   });
-  function setActiveNavLink() {
+function setActiveNavLink() {
   const navLinks = document.querySelectorAll('.nav-links a');
   const hash = window.location.hash;
   const path = window.location.pathname;
@@ -279,13 +279,11 @@
       return;
     }
 
-    // Activate HOME link for these cases:
-    // 1. path ends with / or /index.html or /home (handle trailing slashes)
-    // 2. no hash or hash is #home or empty
+    // Activate HOME link for homepage URLs
     if (
-      (path === '/' || path.endsWith('/index.html') || path.endsWith('/home') || path.endsWith('/home/')) &&
+      (path === '/' || path.endsWith('/index.html')) &&
       (!hash || hash === '' || hash === '#home') &&
-      (href.includes('/home') || href === '/' || href === '/index.html')
+      (href === '/' || href === '/index.html' || href === '#home')
     ) {
       link.classList.add('active');
       return;
