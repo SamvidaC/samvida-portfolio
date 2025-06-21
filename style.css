@@ -753,7 +753,7 @@ footer {
   font-weight: 600;
 }
 
-/* REGRAB CASE STUDY STYLES */
+/* PROJECT CASE STUDY STYLES */
 
 body {
   margin: 0;
@@ -763,7 +763,7 @@ body {
 /* Main container for case study content */
 .case-study-container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 2rem auto 2rem auto; /* adds 2rem margin top and bottom */
     padding: 4rem 2rem 2rem 2rem;
     line-height: 1.7;
 }
