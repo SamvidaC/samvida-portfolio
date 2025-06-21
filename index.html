@@ -192,57 +192,81 @@
     </div>
   </div>
 </footer>
-
-  <script>
+<script>
+  // Scroll down button (arrow)
   document.getElementById('scrollBtn').addEventListener('click', function(event) {
     event.preventDefault();
     const target = document.querySelector('#design-trifecta');
     const navHeight = document.querySelector('nav').offsetHeight;
-    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20; // 20px padding
-
+    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
     window.scrollTo({ top: targetPosition, behavior: 'smooth' });
   });
-</script>
-<script>
+
+  // GSAP marquee
   window.addEventListener("load", function () {
     gsap.registerPlugin(ModifiersPlugin);
-
     const marqueeTrack = document.querySelector(".marquee-track");
     const content = marqueeTrack.querySelector(".marquee-content");
     const contentWidth = content.offsetWidth;
 
     gsap.to(marqueeTrack, {
       x: `-=${contentWidth}`,
-      duration: 30, // Adjust speed as desired
+      duration: 30,
       ease: "none",
       repeat: -1,
       modifiers: {
         x: gsap.utils.unitize(x => parseFloat(x) % contentWidth)
       }
     });
-  });
-</script>
-<script>
-  function toggleNav() {
-  const navLinks = document.querySelector('.nav-links');
-  const hamburger = document.querySelector('.hamburger');
-  const nav = document.querySelector('nav');
 
-  navLinks.classList.toggle('active');
-  hamburger.classList.toggle('active');
-  nav.classList.toggle('expanded'); // 👈 add this
-}
-
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    const navLinks = document.querySelector('.nav-links');
-    const hamburger = document.querySelector('.hamburger');
-    if (navLinks.classList.contains('active')) {
-      navLinks.classList.remove('active');
-      hamburger.classList.remove('active');
+    // Fix anchor scroll on page load (e.g. #projects)
+    if (window.location.hash) {
+      const target = document.querySelector(window.location.hash);
+      if (target) {
+        const navHeight = document.querySelector('nav').offsetHeight;
+        const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+        setTimeout(() => {
+          window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+        }, 10); // Wait briefly for layout
+      }
     }
   });
-});
+
+  // Toggle hamburger menu
+  function toggleNav() {
+    const navLinks = document.querySelector('.nav-links');
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+    nav.classList.toggle('expanded');
+  }
+
+  // Handle nav link clicks with custom scroll behavior
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const navLinks = document.querySelector('.nav-links');
+      const hamburger = document.querySelector('.hamburger');
+      const nav = document.querySelector('nav');
+
+      // Close mobile menu if open
+      if (navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+      }
+
+      const href = link.getAttribute('href');
+      if (href.startsWith('#')) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          const navHeight = nav.offsetHeight;
+          const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+          window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+        }
+      }
+    });
+  });
 </script>
 </body>
 </html>
