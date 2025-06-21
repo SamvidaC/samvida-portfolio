@@ -221,15 +221,16 @@
 
     // Fix anchor scroll on page load (e.g. #projects)
     if (window.location.hash) {
-      const target = document.querySelector(window.location.hash);
-      if (target) {
-        const navHeight = document.querySelector('nav').offsetHeight;
-        const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
-        setTimeout(() => {
-          window.scrollTo({ top: offsetTop, behavior: 'smooth' });
-        }, 10); // Wait briefly for layout
-      }
+  setTimeout(() => {
+    const target = document.querySelector(window.location.hash);
+    if (target) {
+      const navHeight = document.querySelector('nav').offsetHeight;
+      const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
     }
+  }, 100); // Slightly longer delay to ensure layout is ready
+}
+
   });
 
   // Toggle hamburger menu
