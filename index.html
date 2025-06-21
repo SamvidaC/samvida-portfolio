@@ -219,35 +219,19 @@
       }
     });
 
-    // Fix anchor scroll on page load (e.g. #projects)
+    // Fix anchor scroll on page load
     if (window.location.hash) {
-  setTimeout(() => {
-    const target = document.querySelector(window.location.hash);
-    if (target) {
-      const navHeight = document.querySelector('nav').offsetHeight;
-      const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
-      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+      setTimeout(() => {
+        const target = document.querySelector(window.location.hash);
+        if (target) {
+          const navHeight = document.querySelector('nav').offsetHeight;
+          const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+          window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+        }
+      }, 100);
     }
-  }, 100); // Slightly longer delay to ensure layout is ready
-}
+  });
 
-  });
-// Fix repeated anchor clicks (like #projects clicked twice)
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    const href = this.getAttribute('href');
-    if (href.length > 1) {
-      e.preventDefault();
-      const target = document.querySelector(href);
-      if (target) {
-        const navHeight = document.querySelector('nav').offsetHeight;
-        const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
-        history.pushState(null, null, href); // Update URL manually
-        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
-      }
-    }
-  });
-});
   // Toggle hamburger menu
   function toggleNav() {
     const navLinks = document.querySelector('.nav-links');
@@ -258,28 +242,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     nav.classList.toggle('expanded');
   }
 
-  // Handle nav link clicks with custom scroll behavior
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', (e) => {
-      const navLinks = document.querySelector('.nav-links');
-      const hamburger = document.querySelector('.hamburger');
-      const nav = document.querySelector('nav');
+  // Handle all in-page anchor links with nav offset (includes repeated clicks)
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      const target = document.querySelector(href);
 
-      // Close mobile menu if open
-      if (navLinks.classList.contains('active')) {
-        navLinks.classList.remove('active');
-        hamburger.classList.remove('active');
-      }
-
-      const href = link.getAttribute('href');
-      if (href.startsWith('#')) {
+      if (target) {
         e.preventDefault();
-        const target = document.querySelector(href);
-        if (target) {
-          const navHeight = nav.offsetHeight;
-          const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
-          window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+
+        // If mobile nav is open, close it
+        const navLinks = document.querySelector('.nav-links');
+        const hamburger = document.querySelector('.hamburger');
+        if (navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
+          hamburger.classList.remove('active');
         }
+
+        // Scroll with offset
+        const navHeight = document.querySelector('nav').offsetHeight;
+        const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+        history.pushState(null, null, href); // update URL manually
+        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
       }
     });
   });
