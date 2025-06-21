@@ -264,6 +264,36 @@
       }
     });
   });
+  function setActiveNavLink() {
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const hash = window.location.hash || '#home'; // fallback if no hash
+
+  navLinks.forEach(link => {
+    // Remove active class first
+    link.classList.remove('active');
+    // Check if link href matches current hash or path
+    if (
+      (hash === '#projects' && link.getAttribute('href').includes('#projects')) ||
+      (hash === '#home' && link.getAttribute('href').includes('/home')) ||
+      (hash === '' && link.getAttribute('href').includes('/home'))
+    ) {
+      link.classList.add('active');
+    }
+  });
+}
+
+// Run on page load
+window.addEventListener('load', setActiveNavLink);
+
+// Run on hash change (when clicking nav anchors)
+window.addEventListener('hashchange', setActiveNavLink);
+
+// Also update active link on click for smooth scroll nav links
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    setTimeout(setActiveNavLink, 100); // delay to allow hash to update
+  });
+});
 </script>
 </body>
 </html>
