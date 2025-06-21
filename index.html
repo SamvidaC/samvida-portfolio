@@ -266,32 +266,39 @@
   });
   function setActiveNavLink() {
   const navLinks = document.querySelectorAll('.nav-links a');
-  const hash = window.location.hash || '#home'; // fallback if no hash
+  const hash = window.location.hash;
+  const path = window.location.pathname;
 
   navLinks.forEach(link => {
-    // Remove active class first
     link.classList.remove('active');
-    // Check if link href matches current hash or path
+    const href = link.getAttribute('href');
+
+    // Activate WORK link when hash is #projects
+    if (hash === '#projects' && href.includes('#projects')) {
+      link.classList.add('active');
+      return;
+    }
+
+    // Activate HOME link for these cases:
+    // 1. path ends with / or /index.html or /home (handle trailing slashes)
+    // 2. no hash or hash is #home or empty
     if (
-      (hash === '#projects' && link.getAttribute('href').includes('#projects')) ||
-      (hash === '#home' && link.getAttribute('href').includes('/home')) ||
-      (hash === '' && link.getAttribute('href').includes('/home'))
+      (path === '/' || path.endsWith('/index.html') || path.endsWith('/home') || path.endsWith('/home/')) &&
+      (!hash || hash === '' || hash === '#home') &&
+      (href.includes('/home') || href === '/' || href === '/index.html')
     ) {
       link.classList.add('active');
+      return;
     }
   });
 }
 
-// Run on page load
 window.addEventListener('load', setActiveNavLink);
-
-// Run on hash change (when clicking nav anchors)
 window.addEventListener('hashchange', setActiveNavLink);
 
-// Also update active link on click for smooth scroll nav links
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
-    setTimeout(setActiveNavLink, 100); // delay to allow hash to update
+    setTimeout(setActiveNavLink, 100);
   });
 });
 </script>
