@@ -324,74 +324,103 @@ const observer = new IntersectionObserver((entries) => {
 // Observe each section
 sections.forEach(sec => observer.observe(sec));
 </script>
-  <script>
+<script>
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector('nav');
-  const navLinks = document.querySelectorAll('.nav-links a');
-  const sections = [
-    { id: 'hero', link: nav.querySelector('a[href="/"]') },
-    { id: 'projects', link: nav.querySelector('a[href="/#projects"]') },
-  ];
+  const navLinks = Array.from(document.querySelectorAll('.nav-links a'));
+  const sections = Array.from(document.querySelectorAll('main section[id]'));
   const scrollBtn = document.getElementById('scrollBtn');
 
-  // Smooth scroll helper
-  function smoothScroll(selector) {
-    const t = document.querySelector(selector);
-    if (!t) return;
-    const top = t.getBoundingClientRect().top + window.pageYOffset - nav.offsetHeight - 20;
+  function scrollToOffset(targetId) {
+    const target = document.querySelector(targetId);
+    if (!target) return;
+    const top = target.getBoundingClientRect().top + window.pageYOffset - nav.offsetHeight - 20;
     window.scrollTo({ top, behavior: 'smooth' });
   }
 
-  // Handle deep links on page load
-  if (window.location.hash === '#projects') {
-    setTimeout(() => smoothScroll('#projects'), 100);
+  // Scroll on page load with hash (e.g. #projects)
+  if (window.location.hash === "#projects") {
+    setTimeout(() => scrollToOffset("#projects"), 100);
   }
 
-  // Scroll down arrow
-  scrollBtn?.addEventListener('click', e => {
-    e.preventDefault();
-    smoothScroll('#design-trifecta');
-  });
-
-  // Navbar link clicks
+  // Smooth scroll for internal links
   navLinks.forEach(link => {
-    const href = link.getAttribute('href');
-    link.addEventListener('click', e => {
-      if (href === '/#projects' || href === '/') {
+    link.addEventListener("click", e => {
+      const href = link.getAttribute("href");
+      if (href.startsWith("#")) {
         e.preventDefault();
-        const target = href === '/#projects' ? '#projects' : '#hero';
-        history.pushState(null, '', href);
-        smoothScroll(target);
+        history.pushState(null, "", href);
+        scrollToOffset(href);
       }
     });
   });
 
-  // IntersectionObserver to toggle active nav link
+  // Scroll down arrow
+  if (scrollBtn) {
+    scrollBtn.addEventListener("click", e => {
+      e.preventDefault();
+      scrollToOffset("#design-trifecta");
+    });
+  }
+
+  // Marquee setup
+  gsap.registerPlugin(ModifiersPlugin);
+  const marqueeTrack = document.querySelector(".marquee-track");
+  const content = marqueeTrack.querySelector(".marquee-content");
+  const contentWidth = content.offsetWidth;
+  gsap.to(marqueeTrack, {
+    x: `-=${contentWidth}`,
+    duration: 30,
+    ease: "none",
+    repeat: -1,
+    modifiers: { x: gsap.utils.unitize(x => parseFloat(x) % contentWidth) }
+  });
+
+  // Toggle mobile nav
+  window.toggleNav = () => {
+    nav.querySelector('.nav-links').classList.toggle('active');
+    nav.querySelector('.hamburger').classList.toggle('active');
+    nav.classList.toggle('expanded');
+  };
+
+  // Close mobile menu on click
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      nav.querySelector('.nav-links').classList.remove('active');
+      nav.querySelector('.hamburger').classList.remove('active');
+      nav.classList.remove('expanded');
+    });
+  });
+
+  // IntersectionObserver for scroll spy
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      const sec = sections.find(s => s.id === entry.target.id);
-      if (sec && entry.isIntersecting) {
-        navLinks.forEach(a => a.classList.remove('active'));
-        sec.link?.classList.add('active');
+      const id = entry.target.id;
+      const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove("active"));
+        link?.classList.add("active");
       }
     });
   }, {
     root: null,
-    rootMargin: `-${nav.offsetHeight + 20}px 0px -50% 0px`,
-    threshold: 0
+    rootMargin: `-${nav.offsetHeight}px 0px -60% 0px`,
+    threshold: 0.1
   });
 
-  sections.forEach(s => {
-    const el = document.getElementById(s.id);
-    if (el) observer.observe(el);
-  });
+  sections.forEach(sec => observer.observe(sec));
 
-  // Hamburger toggle
-  window.toggleNav = () => {
-    document.querySelector('.nav-links').classList.toggle('active');
-    document.querySelector('.hamburger').classList.toggle('active');
-    nav.classList.toggle('expanded');
-  };
+  // Ensure HOME link is active when out of section
+  window.addEventListener('scroll', () => {
+    const fromTop = window.scrollY + nav.offsetHeight + 30;
+    const topSection = sections.find(sec => sec.offsetTop <= fromTop && (sec.offsetTop + sec.offsetHeight) > fromTop);
+    if (!topSection) {
+      navLinks.forEach(a => a.classList.remove('active'));
+      document.querySelector('.nav-links a[href="/"], .nav-links a[href="index.html"], .nav-links a[href="#home"]')
+        ?.classList.add('active');
+    }
+  });
+  
 });
 </script>
 </body>
