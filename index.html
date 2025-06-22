@@ -201,100 +201,27 @@
     window.scrollTo({ top: offsetTop, behavior: 'smooth' });
   }
 
-  function setActiveNavLink() {
-    const navLinks = document.querySelectorAll('.nav-links a');
-    const hash = window.location.hash;
-    const path = window.location.pathname;
-
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      const href = link.getAttribute('href');
-
-      // Activate link when hash matches
-      if (hash && href === hash) {
-        link.classList.add('active');
-        return;
-      }
-
-      // Activate HOME link for homepage URLs without hash
-      if (
-        (path === '/' || path.endsWith('/index.html')) &&
-        (!hash || hash === '' || hash === '#home') &&
-        (href === '/' || href === '/index.html' || href === '#home')
-      ) {
-        link.classList.add('active');
-        return;
-      }
-    });
-  }
-
-  // Scrollspy using Intersection Observer
-  let observer;
-  
-  function initScrollSpy() {
-    const sections = document.querySelectorAll('main section[id]');
-    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-
-    const observerOptions = {
-      root: null,
-      rootMargin: `-80px 0px 0px 0px`, // adjust -nav height
-      threshold: 0.3, // 30% of section visible
-    };
-
-    observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        const id = entry.target.getAttribute('id');
-        const link = document.querySelector(`.nav-links a[href="#${id}"]`);
-        if (entry.isIntersecting) {
-          navLinks.forEach(a => a.classList.remove('active'));
-          link?.classList.add('active');
-          // Update URL hash without triggering scroll
-          if (window.location.hash !== `#${id}`) {
-            history.replaceState(null, null, `#${id}`);
-          }
-        }
-      });
-    }, observerOptions);
-
-    // Observe each section
-    sections.forEach(sec => observer.observe(sec));
-  }
-
   // Scroll on page load with anchor (e.g. #projects)
   window.addEventListener("load", () => {
     gsap.registerPlugin(ModifiersPlugin);
 
     // Marquee
     const marqueeTrack = document.querySelector(".marquee-track");
-    if (marqueeTrack) {
-      const content = marqueeTrack.querySelector(".marquee-content");
-      const contentWidth = content.offsetWidth;
-      gsap.to(marqueeTrack, {
-        x: `-=${contentWidth}`,
-        duration: 30,
-        ease: "none",
-        repeat: -1,
-        modifiers: {
-          x: gsap.utils.unitize(x => parseFloat(x) % contentWidth)
-        }
-      });
-    }
-
-    // Set initial active state
-    setActiveNavLink();
+    const content = marqueeTrack.querySelector(".marquee-content");
+    const contentWidth = content.offsetWidth;
+    gsap.to(marqueeTrack, {
+      x: `-=${contentWidth}`,
+      duration: 30,
+      ease: "none",
+      repeat: -1,
+      modifiers: {
+        x: gsap.utils.unitize(x => parseFloat(x) % contentWidth)
+      }
+    });
 
     // Handle initial hash scroll
     if (window.location.hash) {
-      setTimeout(() => {
-        scrollToTargetWithOffset(window.location.hash);
-        // Initialize scroll spy after initial navigation
-        setTimeout(() => {
-          initScrollSpy();
-        }, 1500);
-      }, 100);
-    } else {
-      // Initialize scroll spy immediately if no hash
-      initScrollSpy();
+      setTimeout(() => scrollToTargetWithOffset(window.location.hash), 100);
     }
   });
 
@@ -304,26 +231,8 @@
       const href = this.getAttribute("href");
       if (href.length > 1 && document.querySelector(href)) {
         e.preventDefault();
-        
-        // Disconnect observer during navigation
-        if (observer) {
-          observer.disconnect();
-        }
-        
-        // Update active state immediately
-        document.querySelectorAll('.nav-links a').forEach(link => {
-          link.classList.remove('active');
-        });
-        this.classList.add('active');
-        
-        // Update URL and scroll
-        history.pushState(null, null, href);
+        history.pushState(null, null, href); // Update URL without jumping
         scrollToTargetWithOffset(href);
-        
-        // Reinitialize observer after scroll completes
-        setTimeout(() => {
-          initScrollSpy();
-        }, 1500);
       }
     });
   });
@@ -349,14 +258,72 @@
     link.addEventListener('click', () => {
       const navLinks = document.querySelector('.nav-links');
       const hamburger = document.querySelector('.hamburger');
-      const nav = document.querySelector('nav');
       if (navLinks.classList.contains('active')) {
         navLinks.classList.remove('active');
         hamburger.classList.remove('active');
-        nav.classList.remove('expanded');
       }
     });
   });
+function setActiveNavLink() {
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const hash = window.location.hash;
+  const path = window.location.pathname;
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    const href = link.getAttribute('href');
+
+    // Activate  link when hash is #projects
+    if (hash === '#projects' && href.includes('#projects')) {
+      link.classList.add('active');
+      return;
+    }
+
+    // Activate HOME link for homepage URLs
+    if (
+      (path === '/' || path.endsWith('/index.html')) &&
+      (!hash || hash === '' || hash === '#home') &&
+      (href === '/' || href === '/index.html' || href === '#home')
+    ) {
+      link.classList.add('active');
+      return;
+    }
+  });
+}
+
+window.addEventListener('load', setActiveNavLink);
+window.addEventListener('hashchange', setActiveNavLink);
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    setTimeout(setActiveNavLink, 100);
+  });
+});
+
+  // Scrollspy using Intersection Observer
+const sections = document.querySelectorAll('main section[id]');
+const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+const observerOptions = {
+  root: null,
+  rootMargin: `-80px 0px 0px 0px`, // adjust -nav height
+  threshold: 0.3, // 30% of section visible
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const id = entry.target.getAttribute('id');
+    const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+    if (entry.isIntersecting) {
+      navLinks.forEach(a => a.classList.remove('active'));
+      link?.classList.add('active');
+    }
+  });
+}, observerOptions);
+
+// Observe each section
+sections.forEach(sec => observer.observe(sec));
+
 </script>
 </body>
 </html>
