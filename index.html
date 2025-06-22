@@ -323,7 +323,76 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe each section
 sections.forEach(sec => observer.observe(sec));
+</script>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const nav = document.querySelector('nav');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const sections = [
+    { id: 'hero', link: nav.querySelector('a[href="/"]') },
+    { id: 'projects', link: nav.querySelector('a[href="/#projects"]') },
+  ];
+  const scrollBtn = document.getElementById('scrollBtn');
 
+  // Smooth scroll helper
+  function smoothScroll(selector) {
+    const t = document.querySelector(selector);
+    if (!t) return;
+    const top = t.getBoundingClientRect().top + window.pageYOffset - nav.offsetHeight - 20;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }
+
+  // Handle deep links on page load
+  if (window.location.hash === '#projects') {
+    setTimeout(() => smoothScroll('#projects'), 100);
+  }
+
+  // Scroll down arrow
+  scrollBtn?.addEventListener('click', e => {
+    e.preventDefault();
+    smoothScroll('#design-trifecta');
+  });
+
+  // Navbar link clicks
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    link.addEventListener('click', e => {
+      if (href === '/#projects' || href === '/') {
+        e.preventDefault();
+        const target = href === '/#projects' ? '#projects' : '#hero';
+        history.pushState(null, '', href);
+        smoothScroll(target);
+      }
+    });
+  });
+
+  // IntersectionObserver to toggle active nav link
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const sec = sections.find(s => s.id === entry.target.id);
+      if (sec && entry.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove('active'));
+        sec.link?.classList.add('active');
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: `-${nav.offsetHeight + 20}px 0px -50% 0px`,
+    threshold: 0
+  });
+
+  sections.forEach(s => {
+    const el = document.getElementById(s.id);
+    if (el) observer.observe(el);
+  });
+
+  // Hamburger toggle
+  window.toggleNav = () => {
+    document.querySelector('.nav-links').classList.toggle('active');
+    document.querySelector('.hamburger').classList.toggle('active');
+    nav.classList.toggle('expanded');
+  };
+});
 </script>
 </body>
 </html>
