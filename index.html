@@ -221,7 +221,15 @@
 
     // Handle initial hash scroll
     if (window.location.hash) {
-      setTimeout(() => scrollToTargetWithOffset(window.location.hash), 100);
+      setTimeout(() => {
+        scrollToTargetWithOffset(window.location.hash);
+        // Temporarily disable observer to prevent it from overriding the hash-based active state
+        observer.disconnect();
+        setTimeout(() => {
+          // Re-enable observer after scroll completes
+          sections.forEach(sec => observer.observe(sec));
+        }, 1000);
+      }, 100);
     }
   });
 
@@ -233,6 +241,13 @@
         e.preventDefault();
         history.pushState(null, null, href); // Update URL without jumping
         scrollToTargetWithOffset(href);
+        
+        // Temporarily disable observer to prevent conflicts during smooth scroll
+        observer.disconnect();
+        setTimeout(() => {
+          // Re-enable observer after scroll completes
+          sections.forEach(sec => observer.observe(sec));
+        }, 1000);
       }
     });
   });
@@ -306,7 +321,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 });
 
-  // Scrollspy using Intersection Observer
+// Scrollspy using Intersection Observer
 const sections = document.querySelectorAll('main section[id]');
 const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 
@@ -327,7 +342,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// Observe each section
+// Observe each section initially
 sections.forEach(sec => observer.observe(sec));
 </script>
 </body>
