@@ -264,39 +264,45 @@
       }
     });
   });
+
 function setActiveNavLink() {
   const navLinks = document.querySelectorAll('.nav-links a');
   const hash = window.location.hash;
   const path = window.location.pathname;
 
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    const href = link.getAttribute('href');
+  // Only set active state on initial load, not on hash changes during scrolling
+  if (!window.navigationInitialized) {
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      const href = link.getAttribute('href');
 
-    // Activate  link when hash is #projects
-    if (hash === '#projects' && href.includes('#projects')) {
-      link.classList.add('active');
-      return;
-    }
+      // Activate link when hash is #projects on initial load
+      if (hash === '#projects' && href.includes('#projects')) {
+        link.classList.add('active');
+        return;
+      }
 
-    // Activate HOME link for homepage URLs
-    if (
-      (path === '/' || path.endsWith('/index.html')) &&
-      (!hash || hash === '' || hash === '#home') &&
-      (href === '/' || href === '/index.html' || href === '#home')
-    ) {
-      link.classList.add('active');
-      return;
-    }
-  });
+      // Activate HOME link for homepage URLs on initial load
+      if (
+        (path === '/' || path.endsWith('/index.html')) &&
+        (!hash || hash === '' || hash === '#home') &&
+        (href === '/' || href === '/index.html' || href === '#home')
+      ) {
+        link.classList.add('active');
+        return;
+      }
+    });
+    
+    // Mark navigation as initialized
+    window.navigationInitialized = true;
+  }
 }
 
 window.addEventListener('load', setActiveNavLink);
-window.addEventListener('hashchange', setActiveNavLink);
 
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
-    setTimeout(setActiveNavLink, 100);
+    // Just let the Intersection Observer handle the active state
   });
 });
 
