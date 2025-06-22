@@ -322,45 +322,39 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector('nav');
-  const navLinks = document.querySelectorAll('.nav-links a[href^="/#"], .nav-links a[href="/"]');
-  const sections = [
-    { id: "hero", link: document.querySelector('.nav-links a[href="/"]') },
-    { id: "projects", link: document.querySelector('.nav-links a[href="/#projects"]') }
-  ];
+  const homeLink = document.querySelector('.nav-links a[href="/"]');
+  const projectsLink = document.querySelector('.nav-links a[href="/#projects"]');
+  const scrollBtn = document.getElementById('scrollBtn');
+  const sections = {
+    hero: document.getElementById('hero'),
+    projects: document.getElementById('projects')
+  };
 
-  function scrollToOffset(targetId) {
-    const t = document.querySelector(targetId);
-    if (!t) return;
-    const top = t.getBoundingClientRect().top + window.pageYOffset - nav.offsetHeight - 20;
+  // Smooth scroll helper
+  function scrollToOffset(targetEl) {
+    if (!targetEl) return;
+    const top = targetEl.getBoundingClientRect().top + window.pageYOffset - nav.offsetHeight - 20;
     window.scrollTo({ top, behavior: 'smooth' });
   }
 
-  // Initial hash scroll
-  if (window.location.hash === "#projects") {
-    setTimeout(() => scrollToOffset("#projects"), 100);
-  }
-
   // Click scroll behavior
-  navLinks.forEach(link => {
-    link.addEventListener("click", e => {
-      const href = link.getAttribute("href");
-      if (href === "/#projects" || href === "/") {
-        e.preventDefault();
-        const target = href === "/" ? "#hero" : "#projects";
-        history.pushState(null, "", href);
-        scrollToOffset(target);
-      }
-    });
-  });
-
-  // Scroll sticky arrow
-  document.getElementById('scrollBtn')?.addEventListener('click', e => {
+  homeLink.addEventListener('click', e => {
     e.preventDefault();
-    scrollToOffset("#design-trifecta");
+    history.pushState(null, "", "/");
+    scrollToOffset(sections.hero);
+  });
+  projectsLink.addEventListener('click', e => {
+    e.preventDefault();
+    history.pushState(null, "", "/#projects");
+    scrollToOffset(sections.projects);
+  });
+  scrollBtn?.addEventListener('click', e => {
+    e.preventDefault();
+    scrollToOffset(document.getElementById('design-trifecta'));
   });
 
-  // Hamburger toggle
-  window.toggleNav = function() {
+  // Hamburger toggle & nav close
+  window.toggleNav = () => {
     document.querySelector('.nav-links').classList.toggle('active');
     document.querySelector('.hamburger').classList.toggle('active');
     nav.classList.toggle('expanded');
@@ -373,25 +367,46 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Scrollspy using IntersectionObserver
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(a => a.classList.remove('active'));
-        const match = sections.find(s => s.id === entry.target.id);
-        if (match && match.link) match.link.classList.add('active');
+  // Handle hash on page load
+  if (window.location.hash === "#projects") {
+    setTimeout(() => scrollToOffset(sections.projects), 100);
+  }
+
+  // Intersection Observer for scroll‑activated nav
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(ent => {
+      if (ent.isIntersecting) {
+        homeLink.classList.remove('active');
+        projectsLink.classList.remove('active');
+        if (ent.target.id === 'hero') homeLink.classList.add('active');
+        if (ent.target.id === 'projects') projectsLink.classList.add('active');
       }
     });
   }, {
     root: null,
     rootMargin: `-${nav.offsetHeight + 20}px 0px -50% 0px`,
-    threshold: 0.5
+    threshold: 0.25
   });
 
-  sections.forEach(s => {
-    const sec = document.getElementById(s.id);
+  // Observe sections
+  Object.values(sections).forEach(sec => {
     if (sec) observer.observe(sec);
   });
+
+  // GSAP marquee
+  gsap.registerPlugin(ModifiersPlugin);
+  const marqueeTrack = document.querySelector(".marquee-track");
+  const content = marqueeTrack?.querySelector(".marquee-content");
+  if (content) {
+    const contentWidth = content.offsetWidth;
+    gsap.to(marqueeTrack, {
+      x: `-=${contentWidth}`,
+      duration: 30,
+      ease: "none",
+      repeat: -1,
+      modifiers: { x: gsap.utils.unitize(x => parseFloat(x) % contentWidth) }
+    });
+  }
 });
 </script>
 </body>
