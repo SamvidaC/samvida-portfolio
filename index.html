@@ -323,5 +323,63 @@
 
   sections.forEach(sec => observer.observe(sec));
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const nav = document.querySelector('nav');
+  const navHeight = nav.offsetHeight;
+  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  const sections = document.querySelectorAll('main section[id]');
+  const scrollBtn = document.getElementById('scrollBtn');
+
+  // Smooth scroll function
+  function scrollToOffset(targetId) {
+    const el = document.querySelector(targetId);
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }
+
+  // Handle nav click
+  navLinks.forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const hash = link.getAttribute("href");
+      history.pushState(null, "", hash);
+      scrollToOffset(hash);
+    });
+  });
+
+  // Scroll-down arrow
+  scrollBtn?.addEventListener("click", e => {
+    e.preventDefault();
+    scrollToOffset("#design-trifecta");
+  });
+
+  // IntersectionObserver for scroll‑spy & URL updates
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+
+        navLinks.forEach(a => a.classList.remove("active"));
+        link?.classList.add("active");
+
+        // Update URL without scroll jump
+        const newHash = `#${id}`;
+        if (window.location.hash !== newHash) {
+          history.replaceState(null, "", newHash);
+        }
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: `-${navHeight + 20}px 0px -50% 0px`,
+    threshold: 0
+  });
+
+  sections.forEach(sec => observer.observe(sec));
+});
+</script>
 </body>
 </html>
