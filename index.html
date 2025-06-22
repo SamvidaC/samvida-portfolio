@@ -201,44 +201,49 @@
     window.scrollTo({ top: offsetTop, behavior: 'smooth' });
   }
 
+  // Initialize scroll behaviors & GSAP marquee
   window.addEventListener("load", () => {
     gsap.registerPlugin(ModifiersPlugin);
 
-    // Marquee
     const marqueeTrack = document.querySelector(".marquee-track");
-    const content = marqueeTrack.querySelector(".marquee-content");
-    const contentWidth = content.offsetWidth;
-    gsap.to(marqueeTrack, {
-      x: `-=${contentWidth}`,
-      duration: 30,
-      ease: "none",
-      repeat: -1,
-      modifiers: {
-        x: gsap.utils.unitize(x => parseFloat(x) % contentWidth)
-      }
-    });
+    const content = marqueeTrack?.querySelector(".marquee-content");
+    if (content) {
+      const contentWidth = content.offsetWidth;
+      gsap.to(marqueeTrack, {
+        x: `-=${contentWidth}`,
+        duration: 30,
+        ease: "none",
+        repeat: -1,
+        modifiers: {
+          x: gsap.utils.unitize(x => parseFloat(x) % contentWidth)
+        }
+      });
+    }
 
     if (window.location.hash) {
       setTimeout(() => scrollToTargetWithOffset(window.location.hash), 100);
     }
   });
 
+  // Smooth scroll & URL update for hash links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
       const href = this.getAttribute("href");
       if (href.length > 1 && document.querySelector(href)) {
         e.preventDefault();
-        history.pushState(null, null, href); // Update URL without jumping
+        history.pushState(null, null, href);
         scrollToTargetWithOffset(href);
       }
     });
   });
 
+  // Scroll-down arrow behavior
   document.getElementById('scrollBtn')?.addEventListener('click', function(event) {
     event.preventDefault();
     scrollToTargetWithOffset('#design-trifecta');
   });
 
+  // Hamburger menu toggle
   function toggleNav() {
     const navLinks = document.querySelector('.nav-links');
     const hamburger = document.querySelector('.hamburger');
@@ -248,6 +253,7 @@
     nav.classList.toggle('expanded');
   }
 
+  // Close nav on link click (mobile)
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
       const navLinks = document.querySelector('.nav-links');
@@ -259,6 +265,7 @@
     });
   });
 
+  // Set Home vs Projects active state based on hash/path
   function setActiveNavLink() {
     const navLinks = document.querySelectorAll('.nav-links a');
     const hash = window.location.hash;
@@ -286,42 +293,121 @@
 
   window.addEventListener('load', setActiveNavLink);
   window.addEventListener('hashchange', setActiveNavLink);
-
   document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      setTimeout(setActiveNavLink, 100);
-    });
+    link.addEventListener('click', () => setTimeout(setActiveNavLink, 100));
   });
 
-  // Intersection Observer Scrollspy + URL update
+  // Scrollspy using Intersection Observer
+  const nav = document.querySelector('nav');
   const sections = document.querySelectorAll('main section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-
-  const observerOptions = {
-    root: null,
-    rootMargin: `-80px 0px -50% 0px`,
-    threshold: 0.3,
-  };
+  const navLinksHash = [...document.querySelectorAll('.nav-links a[href^="#"]')];
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
+      const id = entry.target.id;
+      const link = document.querySelector(`.nav-links a[href="#${id}"]`);
       if (entry.isIntersecting) {
-        const id = entry.target.getAttribute('id');
-        const link = document.querySelector(`.nav-links a[href="#${id}"]`);
-        navLinks.forEach(a => a.classList.remove('active'));
+        navLinksHash.forEach(a => a.classList.remove('active'));
         link?.classList.add('active');
-
-        // Change URL
-        if (id === "projects") {
-          history.replaceState(null, null, "#projects");
-        } else {
-          history.replaceState(null, null, "/");
-        }
       }
     });
-  }, observerOptions);
+  }, {
+    root: null,
+    rootMargin: `-${nav.offsetHeight + 10}px 0px -50% 0px`,
+    threshold: 0
+  });
 
   sections.forEach(sec => observer.observe(sec));
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const nav = document.querySelector('nav');
+  const homeLink = document.querySelector('.nav-links a[href="/"]');
+  const projectsLink = document.querySelector('.nav-links a[href="/#projects"]');
+  const scrollBtn = document.getElementById('scrollBtn');
+  const sections = {
+    hero: document.getElementById('hero'),
+    projects: document.getElementById('projects')
+  };
+
+  // Smooth scroll helper
+  function scrollToOffset(targetEl) {
+    if (!targetEl) return;
+    const top = targetEl.getBoundingClientRect().top + window.pageYOffset - nav.offsetHeight - 20;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }
+
+  // Click scroll behavior
+  homeLink.addEventListener('click', e => {
+    e.preventDefault();
+    history.pushState(null, "", "/");
+    scrollToOffset(sections.hero);
+  });
+  projectsLink.addEventListener('click', e => {
+    e.preventDefault();
+    history.pushState(null, "", "/#projects");
+    scrollToOffset(sections.projects);
+  });
+  scrollBtn?.addEventListener('click', e => {
+    e.preventDefault();
+    scrollToOffset(document.getElementById('design-trifecta'));
+  });
+
+  // Hamburger toggle & nav close
+  window.toggleNav = () => {
+    document.querySelector('.nav-links').classList.toggle('active');
+    document.querySelector('.hamburger').classList.toggle('active');
+    nav.classList.toggle('expanded');
+  };
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.remove('active');
+      document.querySelector('.hamburger').classList.remove('active');
+      nav.classList.remove('expanded');
+    });
+  });
+
+  // Handle hash on page load
+  if (window.location.hash === "#projects") {
+    setTimeout(() => scrollToOffset(sections.projects), 100);
+  }
+
+  // Intersection Observer for scroll‑activated nav
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(ent => {
+      if (ent.isIntersecting) {
+        homeLink.classList.remove('active');
+        projectsLink.classList.remove('active');
+        if (ent.target.id === 'hero') homeLink.classList.add('active');
+        if (ent.target.id === 'projects') projectsLink.classList.add('active');
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: `-${nav.offsetHeight + 20}px 0px -50% 0px`,
+    threshold: 0.25
+  });
+
+  // Observe sections
+  Object.values(sections).forEach(sec => {
+    if (sec) observer.observe(sec);
+  });
+
+  // GSAP marquee
+  gsap.registerPlugin(ModifiersPlugin);
+  const marqueeTrack = document.querySelector(".marquee-track");
+  const content = marqueeTrack?.querySelector(".marquee-content");
+  if (content) {
+    const contentWidth = content.offsetWidth;
+    gsap.to(marqueeTrack, {
+      x: `-=${contentWidth}`,
+      duration: 30,
+      ease: "none",
+      repeat: -1,
+      modifiers: { x: gsap.utils.unitize(x => parseFloat(x) % contentWidth) }
+    });
+  }
+});
 </script>
 </body>
 </html>
