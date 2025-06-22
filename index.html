@@ -201,49 +201,49 @@
     window.scrollTo({ top: offsetTop, behavior: 'smooth' });
   }
 
-  // Scroll on page load with anchor (e.g. #projects)
+  // Initialize scroll behaviors & GSAP marquee
   window.addEventListener("load", () => {
     gsap.registerPlugin(ModifiersPlugin);
 
-    // Marquee
     const marqueeTrack = document.querySelector(".marquee-track");
-    const content = marqueeTrack.querySelector(".marquee-content");
-    const contentWidth = content.offsetWidth;
-    gsap.to(marqueeTrack, {
-      x: `-=${contentWidth}`,
-      duration: 30,
-      ease: "none",
-      repeat: -1,
-      modifiers: {
-        x: gsap.utils.unitize(x => parseFloat(x) % contentWidth)
-      }
-    });
+    const content = marqueeTrack?.querySelector(".marquee-content");
+    if (content) {
+      const contentWidth = content.offsetWidth;
+      gsap.to(marqueeTrack, {
+        x: `-=${contentWidth}`,
+        duration: 30,
+        ease: "none",
+        repeat: -1,
+        modifiers: {
+          x: gsap.utils.unitize(x => parseFloat(x) % contentWidth)
+        }
+      });
+    }
 
-    // Handle initial hash scroll
     if (window.location.hash) {
       setTimeout(() => scrollToTargetWithOffset(window.location.hash), 100);
     }
   });
 
-  // Custom smooth scroll for internal links
+  // Smooth scroll & URL update for hash links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
       const href = this.getAttribute("href");
       if (href.length > 1 && document.querySelector(href)) {
         e.preventDefault();
-        history.pushState(null, null, href); // Update URL without jumping
+        history.pushState(null, null, href);
         scrollToTargetWithOffset(href);
       }
     });
   });
 
-  // Scroll down arrow
+  // Scroll-down arrow behavior
   document.getElementById('scrollBtn')?.addEventListener('click', function(event) {
     event.preventDefault();
     scrollToTargetWithOffset('#design-trifecta');
   });
 
-  // Hamburger menu
+  // Hamburger menu toggle
   function toggleNav() {
     const navLinks = document.querySelector('.nav-links');
     const hamburger = document.querySelector('.hamburger');
@@ -253,7 +253,7 @@
     nav.classList.toggle('expanded');
   }
 
-  // Close menu on nav link click
+  // Close nav on link click (mobile)
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
       const navLinks = document.querySelector('.nav-links');
@@ -264,66 +264,60 @@
       }
     });
   });
-function setActiveNavLink() {
-  const navLinks = document.querySelectorAll('.nav-links a');
-  const hash = window.location.hash;
-  const path = window.location.pathname;
 
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    const href = link.getAttribute('href');
+  // Set Home vs Projects active state based on hash/path
+  function setActiveNavLink() {
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const hash = window.location.hash;
+    const path = window.location.pathname;
 
-    // Activate  link when hash is #projects
-    if (hash === '#projects' && href.includes('#projects')) {
-      link.classList.add('active');
-      return;
-    }
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      const href = link.getAttribute('href');
 
-    // Activate HOME link for homepage URLs
-    if (
-      (path === '/' || path.endsWith('/index.html')) &&
-      (!hash || hash === '' || hash === '#home') &&
-      (href === '/' || href === '/index.html' || href === '#home')
-    ) {
-      link.classList.add('active');
-      return;
-    }
+      if (hash === '#projects' && href.includes('#projects')) {
+        link.classList.add('active');
+        return;
+      }
+
+      if (
+        (path === '/' || path.endsWith('/index.html')) &&
+        (!hash || hash === '' || hash === '#home') &&
+        (href === '/' || href === '/index.html' || href === '#home')
+      ) {
+        link.classList.add('active');
+        return;
+      }
+    });
+  }
+
+  window.addEventListener('load', setActiveNavLink);
+  window.addEventListener('hashchange', setActiveNavLink);
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => setTimeout(setActiveNavLink, 100));
   });
-}
-
-window.addEventListener('load', setActiveNavLink);
-window.addEventListener('hashchange', setActiveNavLink);
-
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    setTimeout(setActiveNavLink, 100);
-  });
-});
 
   // Scrollspy using Intersection Observer
-const sections = document.querySelectorAll('main section[id]');
-const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  const nav = document.querySelector('nav');
+  const sections = document.querySelectorAll('main section[id]');
+  const navLinksHash = [...document.querySelectorAll('.nav-links a[href^="#"]')];
 
-const observerOptions = {
-  root: null,
-  rootMargin: `-80px 0px 0px 0px`, // adjust -nav height
-  threshold: 0.3, // 30% of section visible
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    const id = entry.target.getAttribute('id');
-    const link = document.querySelector(`.nav-links a[href="#${id}"]`);
-    if (entry.isIntersecting) {
-      navLinks.forEach(a => a.classList.remove('active'));
-      link?.classList.add('active');
-    }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const id = entry.target.id;
+      const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+      if (entry.isIntersecting) {
+        navLinksHash.forEach(a => a.classList.remove('active'));
+        link?.classList.add('active');
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: `-${nav.offsetHeight + 10}px 0px -50% 0px`,
+    threshold: 0
   });
-}, observerOptions);
 
-// Observe each section
-sections.forEach(sec => observer.observe(sec));
-
+  sections.forEach(sec => observer.observe(sec));
 </script>
 </body>
 </html>
