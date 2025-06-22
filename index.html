@@ -322,65 +322,75 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector('nav');
-  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-  const sections = Array.from(document.querySelectorAll('main section[id]'));
-  const scrollBtn = document.getElementById('scrollBtn');
+  const navLinks = document.querySelectorAll('.nav-links a[href^="/#"], .nav-links a[href="/"]');
+  const sections = [
+    { id: "hero", link: document.querySelector('.nav-links a[href="/"]') },
+    { id: "projects", link: document.querySelector('.nav-links a[href="/#projects"]') }
+  ];
 
-  function scrollTo(targetId) {
+  function scrollToOffset(targetId) {
     const t = document.querySelector(targetId);
     if (!t) return;
-    const top = t.getBoundingClientRect().top + window.pageYOffset
-               - nav.offsetHeight - 20;
+    const top = t.getBoundingClientRect().top + window.pageYOffset - nav.offsetHeight - 20;
     window.scrollTo({ top, behavior: 'smooth' });
   }
 
-  // On load, handle hash
-  if (window.location.hash) {
-    setTimeout(() => scrollTo(window.location.hash), 100);
+  // Initial hash scroll
+  if (window.location.hash === "#projects") {
+    setTimeout(() => scrollToOffset("#projects"), 100);
   }
 
-  // Smooth scroll for nav links
+  // Click scroll behavior
   navLinks.forEach(link => {
-    const href = link.getAttribute("href");
     link.addEventListener("click", e => {
-      if (href.startsWith("#")) {
+      const href = link.getAttribute("href");
+      if (href === "/#projects" || href === "/") {
         e.preventDefault();
+        const target = href === "/" ? "#hero" : "#projects";
         history.pushState(null, "", href);
-        scrollTo(href);
+        scrollToOffset(target);
       }
     });
   });
 
-  // Scroll-down arrow
-  scrollBtn?.addEventListener("click", e => {
+  // Scroll sticky arrow
+  document.getElementById('scrollBtn')?.addEventListener('click', e => {
     e.preventDefault();
-    scrollTo('#design-trifecta');
+    scrollToOffset("#design-trifecta");
   });
 
-  // Intersection Observer for scrollspy
-  const observer = new IntersectionObserver(entries => {
+  // Hamburger toggle
+  window.toggleNav = function() {
+    document.querySelector('.nav-links').classList.toggle('active');
+    document.querySelector('.hamburger').classList.toggle('active');
+    nav.classList.toggle('expanded');
+  };
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.remove('active');
+      document.querySelector('.hamburger').classList.remove('active');
+      nav.classList.remove('expanded');
+    });
+  });
+
+  // Scrollspy using IntersectionObserver
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      const id = entry.target.id;
-      const link = document.querySelector(`.nav-links a[href="#${id}"]`);
       if (entry.isIntersecting) {
         navLinks.forEach(a => a.classList.remove('active'));
-        link?.classList.add('active');
+        const match = sections.find(s => s.id === entry.target.id);
+        if (match && match.link) match.link.classList.add('active');
       }
     });
   }, {
     root: null,
-    rootMargin: `-${nav.offsetHeight}px 0px -50% 0px`,
-    threshold: 0
+    rootMargin: `-${nav.offsetHeight + 20}px 0px -50% 0px`,
+    threshold: 0.5
   });
 
-  sections.forEach(sec => observer.observe(sec));
-  
-  // Also toggle HOME on top of the page
-  window.addEventListener('scroll', () => {
-    if (window.pageYOffset < sections[0].offsetTop - nav.offsetHeight) {
-      navLinks.forEach(a => a.classList.remove('active'));
-      document.querySelector('.nav-links a[href="#hero"]')?.classList.add('active');
-    }
+  sections.forEach(s => {
+    const sec = document.getElementById(s.id);
+    if (sec) observer.observe(sec);
   });
 });
 </script>
