@@ -685,7 +685,8 @@ footer {
 
 .cta-text {
   font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
+  font-size: 24px;
+  margin-bottom: 8px;
   font-weight: 500;
   color: #1A1A1A;
   line-height: 1.6;
