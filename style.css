@@ -700,6 +700,7 @@ footer {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   text-decoration: none;
   border-radius: 6px;
   transition: transform 0.2s ease, background-color 0.2s ease;
@@ -709,6 +710,7 @@ footer {
 .cta-button:focus {
   transform: scale(1.05);
   background-color: #E27591; /* slightly darker pink for hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
   outline: none;
 }
 
