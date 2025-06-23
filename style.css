@@ -90,7 +90,7 @@ nav {
 .hero-heading {
   font-family: 'Playfair Display', serif;
   font-size: 48px;
-  line-height: 1.3;
+  line-height: 1.4;
   font-weight: 900;
   text-align: center;
   word-break: normal;
@@ -108,7 +108,7 @@ nav {
 }
 
 .down-arrow {
-  margin-top: 10rem;
+  margin-top: 11rem;
   padding-bottom: 8rem;
   cursor: pointer;
   text-align: center;
