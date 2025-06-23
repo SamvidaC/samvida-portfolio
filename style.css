@@ -691,29 +691,24 @@ footer {
   line-height: 1.6;
 }
 
-.cta-link {
-  position: relative;
-  text-decoration: none;
-  font-weight: 500;
-  color: #E27591;
-  cursor: pointer;
-}
-
-.cta-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 100%;
-  height: 1px;
+.cta-button {
+  display: inline-block;
+  padding: 0.75em 1.5em;
   background-color: #E27591;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
+  color: #FAFAFA;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.cta-link:hover::after {
-  transform: scaleX(1);
+.cta-button:hover,
+.cta-button:focus {
+  transform: scale(1.05);
+  background-color: #E27591; /* slightly darker pink for hover */
+  outline: none;
 }
 
 /* Apply to skill cards or other elements */
