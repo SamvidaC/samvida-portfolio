@@ -686,7 +686,7 @@ footer {
 .cta-text {
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   font-weight: 600;
   color: #1A1A1A;
   line-height: 1.6;
@@ -709,7 +709,7 @@ footer {
 .cta-button:hover,
 .cta-button:focus {
   transform: scale(1.05);
-  background-color: #E27591; /* slightly darker pink for hover */
+  background-color: #E27591;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
   outline: none;
 }
