@@ -685,7 +685,7 @@ footer {
 
 .cta-text {
   font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 8px;
   font-weight: 500;
   color: #1A1A1A;
@@ -698,8 +698,8 @@ footer {
   background-color: #E27591;
   color: #FAFAFA;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 18px;
+  font-weight: 500;
+  font-size: 16px;
   text-decoration: none;
   border-radius: 6px;
   transition: transform 0.2s ease, background-color 0.2s ease;
