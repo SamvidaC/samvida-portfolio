@@ -111,7 +111,7 @@ nav {
 
 .down-arrow {
   margin-top: 10rem;
-  padding-bottom: 8rem;
+  padding-bottom: 2rem;
   cursor: pointer;
   text-align: center;
 }
@@ -184,7 +184,7 @@ html {
   font-family: 'Playfair Display', serif;
   font-size: 24px;
   font-weight: 700;
-  margin-top: 10rem;
+  /*margin-top: 10rem;*/
   margin-bottom: 2rem;
   max-width: 100%;
 }
