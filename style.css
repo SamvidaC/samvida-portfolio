@@ -479,7 +479,7 @@ footer {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 2.125fr 1fr;
+  grid-template-columns: 2.025fr 1.1fr;
   gap: 1.8rem;
   align-items: start;
 }
@@ -542,7 +542,7 @@ footer {
 
 .profile-photo {
   width: 100%;
-  height: 520px; /* Further increased height to align box bottoms perfectly */
+  height: 400px; /* Further increased height to align box bottoms perfectly */
   object-fit: cover; /* Ensure photo maintains aspect ratio */
   border-radius: 12px;
   margin: 0;
@@ -572,7 +572,7 @@ footer {
 .fun-facts {
   list-style: none;     
   margin: 0;  
-  padding: 0 0 0 32px; /* Add 8px left padding to balance the alignment */
+  padding: 0 0 0 40px; /* Add 8px left padding to balance the alignment */
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 400;
