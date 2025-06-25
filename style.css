@@ -479,7 +479,7 @@ footer {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 2.025fr 1.1fr;
+  grid-template-columns: 2fr 1.125fr;
   gap: 1.8rem;
   align-items: start;
 }
@@ -542,7 +542,7 @@ footer {
 
 .profile-photo {
   width: 100%;
-  height: 400px; /* Further increased height to align box bottoms perfectly */
+  height: 416px; /* Further increased height to align box bottoms perfectly */
   object-fit: cover; /* Ensure photo maintains aspect ratio */
   border-radius: 12px;
   margin: 0;
@@ -553,8 +553,8 @@ footer {
   font-size: 32px; /* Keeping current size as it fits well */
   font-weight: 900;
   text-align: center;
-  margin-top: 0.75rem;
-  margin-bottom: 1rem; /* Set to 1rem for consistent spacing */
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem; /* Set to 1rem for consistent spacing */
 }
 
 .not-resume-card {
